@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+  </head>
+  <style>
+    div > span {
+      color: red;
+    }
+    p ~ span {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div>
+      <span class="tit010 tit02">span 태그</span>
+      <p>
+        인라인태그
+        <span>span 태그</span>
+      </p>
+      <span>인라인태그</span>
+      <span>인라인태그</span>
+      <span>인라인태그</span>
+    </div>
+  </body>
+</html>
