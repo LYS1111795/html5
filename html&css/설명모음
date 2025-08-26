@@ -4,3 +4,12 @@ alt 마우스로 지정가능
 https://www.torebentsen.com/
 https://www.samsons.kr/
 https://www.etti.kr/?pid=intro
+'
+color: #FF0000;
+FF빨강
+00녹생
+00블루
+
+      ul li img {
+        vertical-align: middle;
+      }
