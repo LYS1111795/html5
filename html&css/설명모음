@@ -1,6 +1,11 @@
-ctrl + / 주석처리 단축키 alt 마우스로 지정가능 https://www.torebentsen.com/
-https://www.samsons.kr/ https://www.etti.kr/?pid=intro ' color: #FF0000; FF빨강
-00녹생 00블루 ul li img { vertical-align: middle; }
+<!-- ctrl + / 주석처리 단축키 
+alt 마우스로 지정가능
+ https://www.torebentsen.com/
+https://www.samsons.kr/ 
+https://www.etti.kr/?pid=intro ' 
+color: #FF0000; FF빨강
+00녹생 00블루 
+ul li img { vertical-align: middle; }
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,5 +15,7 @@ https://www.samsons.kr/ https://www.etti.kr/?pid=intro ' color: #FF0000; FF빨�
     <title>Document</title>
     <style></style>
   </head>
-  <body></body>
+  <body>
+
 </html>
+ -->

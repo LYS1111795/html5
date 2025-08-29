@@ -3,8 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style></style>
+    <title>형지엘리트 연습</title>
+    <style>
+      @font-face {
+        font-family: "Poppins";
+        src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 456px;
+      }
+      .img2 img {
+        width: 142px;
+      }
+      .con {
+        border: 1px solid red;
+        width: 1300px;
+        margin: 0 auto;
+      }
+      .con p:first-child {
+        font-family: "Poppins";
+        font-size: 50px;
+        font-weight: 900;
+      }
+      .con p:nth-child(2) {
+        font-family: "Pretendard";
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 60px;
+      }
+      .elite > p,
+      .elite div {
+        float: left;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="con">
+      <p>OUR BUSINESS</p>
+      <p>
+        형지엘리트는 다양한 분야에서 품질과 스타일을 <br />
+        겸비한 다양한 솔루션을 제공합니다.
+      </p>
+      <div class="elite">
+        <p>
+          <img
+            src="https://www.hyungji-elite.com/inc/img/main/business_img01.jpg"
+            alt=""
+          />
+        </p>
+        <div>
+          <p class="img2">
+            <img
+              src="https://www.hyungji-elite.com/inc/img/main/business_logo01.svg"
+              alt=""
+            />
+          </p>
+          <p>엘리트 학생복</p>
+          <p>
+            56년 교복 산업을 선도해온 <br />
+            대한민국 NO.1 엘리트
+          </p>
+          <p>
+            더 편한 교복은 물론 체육복, 학생 용품까지! <br />
+            학생용품 토탈 솔루션을 제공합니다
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
