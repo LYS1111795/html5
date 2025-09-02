@@ -3,8 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style></style>
+    <title>백그라운드 이미지 반복연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 500px;
+        /* background-image: url(./images/img_flwr.gif), url(./images/img_flwr.gif),
+          url(./images/paper.gif);
+        background-repeat: no-repeat, no-repeat, repeat;
+        background-size: 100px, 200px;
+        background-position: left top, right bottom; */
+        background: url(./images/img_flwr.gif) left top/100px no-repeat,
+          url(./images/img_flwr.gif) right bottom/200px no-repeat,
+          url(./images/paper.gif) repeat;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <p></p>
+  </body>
 </html>
