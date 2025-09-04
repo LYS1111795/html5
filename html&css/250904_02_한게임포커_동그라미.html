@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한게임 포커-boxsizing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #eff0f4;
+      }
+      ul {
+        list-style: none;
+        width: 1310px;
+        margin: 50px auto;
+      }
+      ul li {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+
+        line-height: 250px;
+        float: left;
+        margin-left: 15px;
+      }
+      ul li:first-child {
+        margin-left: 0;
+      }
+      ul li img {
+        width: 180px;
+        border-radius: 50%;
+        vertical-align: middle;
+      } /*원본 이미지는 투명해서 보이지 않으나 내가 가져온 것은 흰배경까지 가지고와서 뾰족하게보인다*/
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img
+          src="https://hangame-images.toastoven.net/hangame/poker/branding/images/01.png"
+          alt="01"
+        />
+      </li>
+      <li>
+        <img
+          src="https://hangame-images.toastoven.net/hangame/poker/branding/images/02.png"
+          alt="02"
+        />
+      </li>
+      <li>
+        <img
+          src="https://hangame-images.toastoven.net/hangame/poker/branding/images/03.png"
+          alt="03"
+        />
+      </li>
+      <li>
+        <img
+          src="https://hangame-images.toastoven.net/hangame/poker/branding/images/04.png"
+          alt="04"
+        />
+      </li>
+      <li>
+        <img
+          src="https://hangame-images.toastoven.net/hangame/poker/branding/images/05.png"
+          alt="05"
+        />
+      </li>
+    </ul>
+  </body>
+</html>
