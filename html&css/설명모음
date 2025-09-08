@@ -74,34 +74,27 @@ display: flex; 명령 후:
 자식들을 가로선 위에서 어떻게 배치할지 결정하는 명령입니다.
 
 justify-content: flex-start; 👉 왼쪽으로 전부 붙어! (기본값)
-
 justify-content: center; 👉 가운데로 다 모여!
-
 justify-content: flex-end; 👉 오른쪽으로 전부 붙어!
-
 justify-content: space-between; 👉 양쪽 끝에 한 명씩 붙고 나머지는 중간에 똑같은 간격으로 서!
 
 2. align-items (세로 정렬)
 자식들의 키가 제각각일 때, 어느 높이 선에 맞춰 정렬할지 결정하는 명령입니다.
 
 align-items: flex-start; 👉 위쪽 선에 발 맞춰!
-
 align-items: center; 👉 가운데(허리) 선에 맞춰! (가장 많이 씀)
-
 align-items: flex-end; 👉 아래쪽 선에 발 맞춰!
 
 3. flex-direction (정렬 방향 바꾸기)
 기본적으로 가로 정렬인데, "아니야, 전부 다시 세로로 모여!" 라고 정렬 방향 자체를 바꾸는 강력한 명령입니다.
 
 flex-direction: row; 👉 가로로 정렬해! (기본값)
-
 flex-direction: column; 👉 세로로 다시 정렬해!
 
 ## 정리
 딱 이것만 기억하세요.
 
 정렬하고 싶은 것들을 감싸는 부모를 찾는다.
-
 부모에게 display: flex; 명령을 내린다.
 
 부모에게 3가지 명령(justify-content, align-items, flex-direction)을 내려서 자식들을 원하는 위치로 보낸다.
