@@ -9,57 +9,37 @@
         margin: 0;
         padding: 0;
       }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: #f9f9f9;
-      }
 
       ul {
         list-style: none;
-        display: flex;
-        gap: 16px;
         width: 1048px;
-        justify-content: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
       }
 
       ul li {
         width: 96px;
+        height: 96px;
+      }
+      ul li :first-child {
+        padding: 17px;
+        width: 100%;
+        box-sizing: border-box;
         background: #f4f4fc;
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        border-radius: 10px;
       }
 
-      ul li img {
-        width: 48px;
-        height: 48px;
+      ul li p img {
+        width: 100%;
       }
 
       ul li p:last-child {
-        margin-top: 12px;
-        font-size: 14px;
-        color: #333;
+        margin-top: 18px;
         text-align: center;
+        font-family: "Spoqa Han Sans";
+        font-weight: 400;
       }
-
-      /* ul li {
-        width: 96px;
-        height: 96px;
-        background: #f4f4fc;
-        border-radius: 10px;
-        display: flex;
-
-      }
-
-      ul li img {
-        width: 60px;
-        height: 60px;
-      }*/
     </style>
   </head>
   <body>
