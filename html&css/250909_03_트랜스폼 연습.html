@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>트랜스폼 연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: red;
+        /*공식으로 생각해도 됨*/
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      } /*공식으로 생각해도 됨*/
+      div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <div>
+      <span>인라인태그 </span>
+    </div>
+  </body>
+</html>

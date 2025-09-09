@@ -102,3 +102,13 @@ flex-direction: column; 👉 세로로 다시 정렬해!
 우리가 만들었던 아이콘 박스에서 아이콘과 텍스트를 중앙에 오게 한 것도, 보라색 박스(li div)가 부모가 되어서 그 안의 자식(img)에게 justify-content: center;, align-items: center; 명령을 내렸기 때문이에요.
 
 이제 Flex가 조금 다르게 보이시나요?
+
+
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png	
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg2.png
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg3.png
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg4.png
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg5.png
+https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png
