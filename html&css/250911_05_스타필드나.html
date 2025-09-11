@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타필드 연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 1220px;
+        height: 280px;
+        margin: 50px auto;
+        display: flex;
+        gap: 16px;
+      }
+
+      ul li {
+        flex: 1;
+        height: 100%;
+        border-radius: 12px;
+        background-position: center;
+        transition: 0.3s;
+        background-size: cover;
+      }
+      ul li:hover {
+        flex: 2;
+      }
+
+      ul li:nth-child(1) {
+        background-image: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg);
+      }
+      ul li:nth-child(2) {
+        background-image: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg);
+      }
+      ul li:nth-child(3) {
+        background-image: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

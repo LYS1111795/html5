@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>트랜지션 나</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 1200px;
+        height: 200px;
+        margin: 50px auto;
+        display: flex;
+      }
+      ul li {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+      }
+      ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      ul li div.box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        /* transition: property duration timing-function delay; */
+        transition: 1s;
+        display: flex;
+        flex-direction: column; /*메인축이수직이라서*/
+        justify-content: center; /*수직정렬*/
+        align-items: center; /*수평정렬*/
+      }
+      ul li:nth-child(1) div.box {
+        left: 100%;
+      }
+      ul li:nth-child(1):hover div.box {
+        left: 0;
+      }
+      ul li:nth-child(2) div.box {
+        top: -100%;
+      }
+      ul li:nth-child(2):hover div.box {
+        top: 0;
+      }
+      ul li:nth-child(3) div.box {
+        left: -100%;
+      }
+      ul li:nth-child(3):hover div.box {
+        left: 0;
+      }
+      ul li:nth-child(4) div.box {
+        transform: scale(0);
+      }
+      ul li:nth-child(4):hover div.box {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="./images/photo1.jpg" alt="" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="./images/photo2.jpg" alt="" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="./images/photo3.jpg" alt="" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="./images/photo4.jpg" alt="" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

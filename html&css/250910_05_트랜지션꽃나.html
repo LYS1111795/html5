@@ -19,6 +19,7 @@
       ul li {
         flex: 1;
         overflow: hidden;
+        position: relative; /*도움받은것*/
       }
       ul li img {
         width: 100%;
@@ -38,8 +39,22 @@
       ul:nth-child(3) li:hover img {
         transform: rotateY(180deg);
       }
-      /* ul:nth-child(4) li:hover img {
-      } */
+
+      ul:nth-child(4) li::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        transform: translateY(100%);
+        transition: transform 0.5s ease-in-out;
+      }
+      ul:nth-child(4) li:hover::after {
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body>
