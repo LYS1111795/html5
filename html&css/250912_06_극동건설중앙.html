@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>극동건설-중앙</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul li {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+        margin: 100px auto;
+      }
+      ul li .line {
+        position: absolute;
+        background: #07348c;
+        /* 모든 라인에 transition을 미리 설정 */
+        transition: 0.5s ease-in-out;
+      }
+
+      ul li .line.top,
+      ul li .line.bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: center; /* 중앙에서 커지도록 설정 */
+      }
+      ul li .line.top {
+        top: 0;
+      }
+      ul li .line.bottom {
+        bottom: 0;
+      }
+
+      ul li .line.left,
+      ul li .line.right {
+        width: 5px;
+        height: 100%;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: center; /* 중앙에서 커지도록 설정 */
+      }
+      ul li .line.left {
+        left: 0;
+      }
+      ul li .line.right {
+        right: 0;
+      }
+
+      /* 모든 라인을 동시에 나타나게 함 */
+      ul li:hover .line {
+        transform: scaleX(1) scaleY(1);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <span class="line top"></span>
+        <span class="line right"></span>
+        <span class="line bottom"></span>
+        <span class="line left"></span>
+      </li>
+    </ul>
+  </body>
+</html>
