@@ -9,7 +9,24 @@
         margin: 0;
         padding: 0;
       }
+      div {
+        height: 100px;
+      }
+      p {
+        width: 500px;
+        height: 0;
+        background-color: #ccc;
+        overflow: hidden;
+        transition: 1s;
+      }
+      div:hover p {
+        height: 200px;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <p>11111111111</p>
+    </div>
+  </body>
 </html>
