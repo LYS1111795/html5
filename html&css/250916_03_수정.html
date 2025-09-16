@@ -3,13 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>버켄스탁</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .top {
+        background-color: #004084;
+        height: 30px;
+      }
+      .top > ul {
+        width: 860px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px;
+      }
+      .top > ul a {
+        color: #fff;
+        font-size: 12px;
+      }
+
+      .wrap {
+        width: 860px;
+        margin: 0 auto;
+      }
+      .wrap .logo {
+        width: 860px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+      }
+      .wrap .menu {
+        width: 860px;
+        margin: 0 auto;
+      }
+      .wrap .menu ul {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+      }
+      .wrap .visual {
+        height: 150px;
+        overflow: hidden;
+      }
+      .wrap .icon {
+        width: 860px;
+        margin: 0 auto;
+      }
+      .wrap .icon ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+      }
+      .wrap .sub {
+        width: 860px;
+        margin: 0 auto;
+      }
+      .wrap .sub ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .wrap .sub ul li {
+        position: relative;
+      }
+      .wrap .sub ul li img {
+        display: block;
+      }
+      .wrap .sub ul li .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        color: white;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1.5;
+        opacity: 0;
+      }
+      .wrap .sub ul li:hover .overlay {
+        opacity: 1;
+      }
+
+      .wrap .foot {
+        margin: 0 auto;
+        width: 860px;
+      }
+      .wrap .foot ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .wrap .foot ul li:first-child {
+        background-color: #f2f2f2;
+        width: 350px;
+        flex-shrink: 0;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .wrap .foot ul li:first-child a {
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="top">
+      <ul>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">/로그인</a></li>
+        <li><a href="#">/장바구니</a></li>
+        <li><a href="">/고객센터</a></li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <div class="logo">
+        <a href="#"
+          ><img src="./images/birkenstock/images/logo1.png" alt=""
+        /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">COLLECTION</a></li>
+          <li><a href="#">MEN</a></li>
+          <li><a href="#">WOMEN</a></li>
+          <li><a href="#">BOYS</a></li>
+          <li><a href="#">GIRLS</a></li>
+          <li><a href="#">SERVICES</a></li>
+        </ul>
+      </div>
+      <div class="visual">
+        <img src="./images/birkenstock/images/visual.png" alt="" />
+      </div>
+      <div class="icon">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/icon1.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/icon2.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/icon3.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/icon4.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="sub">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/sub1.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/sub2.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/sub3.png" alt="" />
+              <div class="overlay">
+                <p>이보다 더 'Cool'<br />할수는 없다 <br />+</p>
+              </div></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="foot">
+        <ul>
+          <li>
+            건강한 신발을 만드는 <br />버켄스탁과 함께 <br />
+            다양한 나를 만나보세요 <br /><a href="#">지금 만나러가기></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/sub4.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/sub5.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/birkenstock/images/sub6.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
