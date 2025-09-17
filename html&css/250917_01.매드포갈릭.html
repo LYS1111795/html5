@@ -9,7 +9,258 @@
         margin: 0;
         padding: 0;
       }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      body {
+        background: #000;
+      }
+      .wrap {
+        width: 1504px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .utilty ul li:not(:last-child) a::after {
+        content: "|";
+        margin-left: 15px;
+        color: #fff;
+      }
+
+      .footmenu li:not(:last-child) a::after {
+        content: "|";
+        margin-left: 20px;
+        color: #fff;
+      }
+
+      .header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+        margin-bottom: 60px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+      }
+
+      .menu {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .menu ul {
+        display: flex;
+        padding: 10px;
+        gap: 40px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .menu > ul > li {
+        position: static;
+        padding: 20px 0;
+      }
+      .menu > ul > li > a:hover {
+        color: #fff;
+      }
+
+      .submenu {
+        position: absolute;
+        top: 102px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s ease, visibility 0s linear 0.3s;
+      }
+
+      .menu > ul > li:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0s, visibility 0s linear 0s;
+      }
+
+      .submenu li a {
+        position: relative;
+        padding-bottom: 5px;
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      .submenu li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      .submenu li a:hover::after {
+        width: 100%;
+      }
+      .submenu li a:hover {
+        color: #fff;
+      }
+
+      .utilty ul {
+        display: flex;
+        padding: 10px;
+        gap: 15px;
+        font-size: 12px;
+      }
+      .visual > img {
+        width: 100%;
+      }
+      .bottom {
+        text-align: left;
+        padding: 40px 0;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .copyright {
+        padding: 30px 0;
+      }
+      .footmenu {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 10px;
+        gap: 10px;
+      }
+      .sns1 {
+        display: flex;
+      }
+      .sns1 li:first-child a {
+        background-position: -70px 0;
+      }
+      .sns1 li:last-child a {
+        background-position: -105px 0;
+      }
+      .sns1 li a {
+        display: block;
+        width: 35px;
+        height: 30px;
+        background-image: url(https://www.madforgarlic.com/resources/pc/images/common/btn_sns_B.png);
+      }
+
+      .sns2 {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .sns2 li:first-child a {
+        width: 263px;
+        background-position: -10px 0;
+      }
+
+      .sns2 li a {
+        display: block;
+        width: 132px;
+        height: 35px;
+        background-image: url(https://www.madforgarlic.com/resources/pc/images/common/btn_app_B.png);
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <h1 class="logo">
+          <a href="#"
+            ><img
+              src="https://www.madforgarlic.com/resources/pc/images/common/logoB_B2.png"
+              alt=""
+          /></a>
+        </h1>
+        <div class="menu">
+          <ul>
+            <li><a href="#">BRAND</a></li>
+            <li>
+              <a href="#">MENU</a>
+              <ul class="submenu">
+                <li><a href="#">APPETIZER & SALAD</a></li>
+                <li><a href="#">PASTA & RICE</a></li>
+                <li><a href="#">PIZZA</a></li>
+                <li><a href="#">STEAK</a></li>
+                <li><a href="#">MAD CUSTOMIZED SET</a></li>
+                <li><a href="#">LUNCH SET</a></li>
+                <li><a href="#">BEVERAGE</a></li>
+                <li><a href="#">LIQUOR</a></li>
+                <li><a href="#">DESSERT & SIDE</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">STORE</a>
+              <ul class="submenu">
+                <li><a href="#">SEARCH</a></li>
+                <li><a href="#">CONCEPT</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MEMBERSHIP</a>
+              <ul class="submenu">
+                <li><a href="#">멤버십 소개</a></li>
+                <li><a href="#">멤버십 가입</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">EVENT</a>
+              <ul class="submenu">
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">제휴 & 상품권</a></li>
+                <li><a href="#">MAD CHALLENGE</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="utilty">
+          <ul>
+            <li><a href="">LOG IN</a></li>
+            <li><a href="">JOIN</a></li>
+            <li><a href="">CUSTOMER</a></li>
+            <li><a href="">RECRUIT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="visual">
+        <img
+          src="https://cdnt.madforgarlic.com/madforgarlic/202503/20250304_ACB_1741050726866.jpg"
+          alt=""
+        />
+      </div>
+      <div class="bottom">
+        <p>
+          (주)엠에프지코리아 서울시 강남구 학동로 306, 곤비빌딩 B2F / 우편번호:
+          06098 <br />대표문의: 02-2286-8800 <br />
+          사업자번호: 261-81-16391 ㅣ 대표자: 윤다예 COPYRIGHT
+        </p>
+        <p class="copyright">ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="foot">
+        <ul class="sns1">
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+        <ul class="footmenu">
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">TERMS OF SERVICE</a></li>
+          <li><a href="#">CUSTOMER</a></li>
+          <li><a href="#">RECRUIT</a></li>
+        </ul>
+        <ul class="sns2">
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
