@@ -30,8 +30,20 @@
         display: flex;
         gap: 20px;
       }
-      .topwrap .top ul li {
+      .topwrap .top ul li a {
         color: #fff;
+      }
+      .topwrap .top ul li a:hover {
+        color: red;
+      }
+      .topwrap .top ul li a:after {
+        content: "/";
+      }
+      .topwrap .top ul li a:hover:after {
+        color: #fff;
+      }
+      .topwrap .top ul li:last-child a:after {
+        content: "";
       }
       .logo1 {
         text-align: center;
@@ -64,10 +76,11 @@
       }
       ul.icon li {
         position: relative;
+        cursor: pointer;
       }
       ul.icon li::after {
         position: absolute;
-        left: 2px;
+        left: 3px;
         top: 2px;
         width: 100px;
         height: 100px;
@@ -76,15 +89,49 @@
         text-align: center;
         border-radius: 50%;
         line-height: 100px;
+        opacity: 0;
       }
-
+      ul.icon li:hover::after {
+        opacity: 1;
+        transition: 0.5s;
+      }
       ul.icon li:first-child::after {
         content: "ABOUT";
+      }
+      ul.icon li:nth-child(2)::after {
+        content: "COLLECTION";
+      }
+      ul.icon li:nth-child(3)::after {
+        content: "SHOP";
+      }
+      ul.icon li:nth-child(4)::after {
+        content: "SERVICES";
       }
       ul.sub {
         width: 1182px;
         margin: 50px auto;
         display: flex;
+      }
+      ul.sub li {
+        position: relative;
+      }
+      ul.sub li a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      ul.sub li:hover a {
+        opacity: 1;
       }
       ul.link {
         width: 1182px;
@@ -164,9 +211,32 @@
         <li><img src="./images/birkenstock/images/icon4.png" alt="" /></li>
       </ul>
       <ul class="sub">
-        <li><img src="./images/birkenstock/images/sub1.png" alt="" /></li>
-        <li><img src="./images/birkenstock/images/sub2.png" alt="" /></li>
-        <li><img src="./images/birkenstock/images/sub3.png" alt="" /></li>
+        <li>
+          <img src="./images/birkenstock/images/sub1.png" alt="" />
+          <a href="#">
+            <p>
+              2018년 여름신상 <br />
+              지금 바로 만나보세요! <br />
+              +
+            </p>
+          </a>
+        </li>
+        <li>
+          <img src="./images/birkenstock/images/sub2.png" alt="" />
+          <a href="#">
+            <p>상품구매하기</p>
+          </a>
+        </li>
+        <li>
+          <img src="./images/birkenstock/images/sub3.png" alt="" />
+          <a href="#">
+            <p>
+              이보다 더 'Cool' <br />
+              할수는 없다 <br />
+              +
+            </p>
+          </a>
+        </li>
       </ul>
       <ul class="link">
         <li>
