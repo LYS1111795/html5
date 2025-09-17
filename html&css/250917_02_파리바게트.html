@@ -51,8 +51,38 @@
         font-weight: 500;
       }
 
-   
+      .menu-left li a,
+      .menu-right li a {
+        position: relative; /* ::after의 기준점 */
+        padding-bottom: 5px; /* 밑줄과 글자 사이의 간격 */
+      }
 
+   /* 1. a 태그의 아래쪽 패딩을 늘려서 밑줄이 내려갈 공간을 확보합니다. */
+      .menu-left li a,
+      .menu-right li a {
+        position: relative; /* ::after의 기준점 */
+        padding-bottom: 35px; /* 밑줄을 아래로 내리기 위해 패딩 값 증가! */
+      }
+
+      /* 2. 밑줄(::after)이 왼쪽에서 시작하도록 수정합니다. */
+      .menu-left li a::after,
+      .menu-right li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0; /* 중앙 정렬 대신 왼쪽(0)에서 시작하도록 변경! */
+               
+        width: 0; /* 평소에는 너비를 0으로 하여 숨깁니다. */
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s ease-in-out; /* 부드러운 애니메이션 효과 */
+      }
+      
+      /* 3. a에 마우스를 올리면(hover) 밑줄의 너비를 100%로 만듭니다. */
+      .menu-left li a:hover::after,
+      .menu-right li a:hover::after {
+          width: 100%;
+      }
       .brand a {
         font-size: 25px;
         color: #fff;
@@ -88,12 +118,7 @@
         justify-content: flex-start;
         margin-top: 50px;
       }
-    span{
-      display: inline-block;
-      font-weight: 700;
-      letter-spacing: .05em;
-      border-bottom: 2px solid #111;
-    }
+    
  
 </style>
       
