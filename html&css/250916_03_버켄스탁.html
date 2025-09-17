@@ -113,15 +113,11 @@
       .wrap .foot ul {
         display: flex;
         justify-content: space-between;
-        /* align-items: center;를 지우면 기본값인 stretch가 적용됩니다. */
-        /* align-items: stretch; 라고 명시적으로 써줘도 좋습니다. */
       }
 
       .wrap .foot ul li:first-child {
         width: 350px;
         flex-shrink: 0;
-
-        /* 요청하신 배경색을 추가합니다. */
         background-color: #f2f2f2;
 
         /* 늘어난 공간 안에서 텍스트를 정렬하기 위해 flex를 사용합니다. */
@@ -134,7 +130,6 @@
         font-size: 14px;
         line-height: 1.6;
       }
-      /* ------------------------------------ */
 
       .wrap .foot ul li:first-child a {
         display: inline-block;
