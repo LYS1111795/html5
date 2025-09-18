@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      nav {
+        height: 90px;
+        background: #023586;
+      }
+      nav > div {
+        width: 1420px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav > div > ul {
+        display: flex;
+        gap: 20px;
+      }
+      nav > div > ul > li {
+        position: relative;
+      }
+
+      nav > div > ul > li > a {
+        position: relative;
+        color: #fff;
+        vertical-align: middle;
+      }
+      nav > div > ul > li > a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        bottom: -38px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        padding: 0 10px;
+        transform-origin: 0 0;
+        transition: 0.5s;
+      }
+      nav > div > ul > li:hover > a::after {
+        transform: translateX(-50%) scale(1);
+      }
+      nav > div > ul:nth-child(3) li:nth-child(5):hover a::after {
+        transform: translateX(-50%) scale(0);
+      }
+      nav > div > ul .sub {
+        position: absolute;
+        left: -10px;
+        top: 55px;
+        width: 320px;
+        height: 128px;
+        padding: 24px;
+        background: #fff;
+      }
+      ul.visual {
+        display: flex;
+      }
+      ul.visual li {
+        flex: 1;
+      }
+      ul.visual li img {
+        width: 100%;
+      }
+      .slide {
+        width: 1420px;
+        margin: 50px auto;
+        text-align: center;
+      }
+      .promotion {
+        width: 1420px;
+        margin: 0 auto;
+      }
+      .promotion > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .promotion > ul {
+        display: flex;
+        gap: 20px;
+      }
+      .promotion > ul li {
+        flex: 1;
+      }
+      .promotion > ul li a {
+        display: block;
+      }
+      .promotion > ul li a p:nth-child(2) {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .promotion > ul li img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <ul>
+          <li><a href="#">창업안내</a></li>
+          <li><a href="#">파바 메거진</a></li>
+          <li><a href="#">파바 스토리</a></li>
+          <li>
+            <a href="#">상품 안내</a>
+            <ul class="sub">
+              <li><a href="#">전체</a></li>
+              <li><a href="#">브레드</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">샌드위치/샐러드</a></li>
+              <li><a href="#">선물</a></li>
+              <li><a href="#">디저트/스낵</a></li>
+              <li><a href="#">커피/음료</a></li>
+              <li><a href="#">간편식</a></li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          <img
+            src="	https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/02/Paris_Baguette_logo_BG.gif"
+            alt="logo"
+          />
+        </p>
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">매장 정보</a></li>
+          <li><a href="#">온라인 주문</a></li>
+          <li><a href="#">프로모션</a></li>
+          <li>
+            <a href="#"
+              ><span class="material-symbols-outlined"> search </span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="visual">
+      <li>
+        <a href="#"
+          ><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000-3.jpg"
+            alt=""
+        /></a>
+      </li>
+      <li>
+        <a href="#"
+          ><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%83%E1%85%A5%E1%84%91%E1%85%B5%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000_%E1%84%83%E1%85%A5%E1%84%91%E1%85%B5.jpg"
+            alt=""
+        /></a>
+      </li>
+      <li>
+        <a href="#"
+          ><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000_4.jpg"
+            alt=""
+        /></a>
+      </li>
+    </ul>
+    <div class="slide">
+      <img
+        src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/08/alba_PC_1096x211.jpg"
+        alt=""
+      />
+    </div>
+    <div class="promotion">
+      <div>
+        <h1><a href="#">promotion</a></h1>
+        <p><a href="#">SHOW MORE</a></p>
+      </div>
+      <ul>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_%E1%84%8B%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF_1000x1000-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_%E1%84%8B%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF_1000x1000-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_%E1%84%8B%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF_1000x1000-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_%E1%84%8B%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF_1000x1000-600x600.jpg"
+                alt=""
+              />
+            </p>
+            <p>
+              <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+              <span>READ MORE</span>
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

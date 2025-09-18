@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPC</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      nav {
+        height: 105px; /* 높이를 주는 것*/
+        padding: 0 54px; /*안쪽 여백을 주는 것 위아래는 0, 왼쪽 오른쪽은 54px을 줘라*/
+        display: flex; /*가로로 정렬하거라*/
+        justify-content: space-between; /*끝에 맞춰서 정렬해야해*/
+        align-items: center; /*세로로 딱 가운데에 서있거라*/
+      }
+
+      nav .menu {
+        display: flex; /* 메뉴는 가로로 정렬되거라*/
+        gap: 63px; /*메뉴끼리 너무 붙어 있으니 떨어져 있거라*/
+        font-size: 23px;
+        font-weight: bold;
+      }
+
+      .right-menu {
+        display: flex; /* 오른쪽 메뉴도 가로로 서거라*/
+        align-items: center; /* 서로 삐뚤하게 세로로 서있지말고 줄맞춰 정렬해라*/
+        gap: 20px; /*너무 붙어 있으니 떨어져라*/
+      }
+
+      .right-menu .careers-link {
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #f2f2f2;
+        padding: 8px 15px; /*위아래는 8px로 오른쪽왼쪽은 15px만큼 떨어지거라*/
+        border-radius: 20px;
+      }
+
+      .right-menu .global-icon img {
+        vertical-align: middle; /*이미지는 다른 애들처럼 똑바로 정렬해서 서있거라*/
+      }
+
+      .visual img {
+        width: 1793px; /*이미지 가로 사이즈는 이정도여야 한다*/
+        padding: 0 54px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <p>
+        <a href="#"><img src="https://www.spc.co.kr/img/logo.svg" alt="" /></a>
+      </p>
+      <ul class="menu">
+        <li><a href="#">ABOUT SPC</a></li>
+        <li><a href="#">HISTORY</a></li>
+        <li><a href="#">BRAND</a></li>
+        <li><a href="#">SPC NOW</a></li>
+        <li><a href="#">COMPLIANCE</a></li>
+        <li><a href="#">ESG</a></li>
+        <li><a href="#">SUPPORT</a></li>
+      </ul>
+      <div>
+        <a href="#">CAREERS</a>
+        <a href="#">
+          <img
+            src="https://www.spc.co.kr/img/front/icon/icon_global.svg"
+            alt="글로벌 아이콘"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <div class="visual">
+      <p>일상을 맛있게 행복하게</p>
+      <p>Happiness in every bite</p>
+      <img
+        src="https://www.spc.co.kr/files/banner/2024/07/387a5d7a-85b6-4f25-a1b6-1872a9e32cbc.webp"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
