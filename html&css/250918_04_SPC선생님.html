@@ -146,19 +146,20 @@
       #wrap .row3 > li:last-child ul li {
         flex: 1 1 40%;
         border-radius: 25px;
-        background-size: 100%;
+        background-size: cover;
         background-position: 0 0;
         padding: 20px;
       }
 
       #wrap .row2 > li:last-child ul li,
       #wrap .row3 > li:last-child ul li {
+        background-size: 110%;
         background-position: center;
         transition: 1s;
       }
       #wrap .row2 > li:last-child ul li:hover,
       #wrap .row3 > li:last-child ul li:hover {
-        background-size: 120%;
+        background-size: 130%;
       }
 
       #wrap .row2 > li:last-child ul li:nth-child(1),
@@ -201,9 +202,14 @@
       #wrap .row4 > li {
         flex: 1;
         border-radius: 25px;
-        background-size: cover;
+        background-size: 100%;
         background-position: center;
+        transition: 1s;
       }
+      #wrap .row4 > li:hover {
+        background-size: 110%;
+      }
+
       #wrap .row4 > li a {
         display: block;
         width: 100%;
@@ -219,15 +225,6 @@
       }
       #wrap .row4 > li:nth-child(2) {
         background-image: url(https://www.spc.co.kr/img/front/main/contact.webp);
-      }
-
-      #wrap .row4 > li {
-        background-position: center;
-        transition: 1s;
-      }
-
-      #wrap .row4 > li a:hover {
-        background-size: 120%;
       }
     </style>
   </head>
