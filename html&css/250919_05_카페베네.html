@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페베네</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .wrap {
+        width: 1190px;
+        margin: 0 auto;
+      }
+
+      .toplang {
+        text-align: right;
+        padding: 10px 0;
+        font-size: 13px;
+      }
+      .toplang a {
+        color: #000;
+        margin-left: 5px;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+      }
+
+      .menu ul {
+        display: flex;
+        gap: 40px;
+      }
+
+      .menu a {
+        font-weight: bold;
+      }
+
+      .btn a {
+        background-color: #00a6e3;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .visual {
+        width: 100%;
+        text-align: center;
+      }
+
+      .visual img {
+        max-width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="wrap">
+        <div class="toplang">
+          <a href="#">KR</a>
+          <span>|</span>
+          <a href="#">EN</a>
+        </div>
+        <div class="nav">
+          <div class="logo">
+            <img
+              src="http://www.caffebene.co.kr/images/common/logo.png"
+              alt="로고"
+            />
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">Caffebene</a></li>
+              <li><a href="#">MENU</a></li>
+              <li><a href="#">STORE</a></li>
+              <li><a href="#">MEMBERSHIP</a></li>
+              <li><a href="#">GLOBAL</a></li>
+              <li><a href="#">CONTENTS</a></li>
+            </ul>
+          </div>
+          <div class="btn">
+            <ul>
+              <li><a href="#">가맹문의</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="visual">
+      <img
+        src="http://www.caffebene.co.kr/uploads/banner/20241128813084.jpg"
+        alt="visual"
+      />
+    </div>
+  </body>
+</html>
