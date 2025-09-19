@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 연습3 대전시청</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      table {
+        /* border: 1px solid; */
+        /* border-collapse: collapse; HTML 테이블에서 인접한 셀들의 테두리선을 서로 겹쳐서 하나의 선처럼 표시하라는 CSS 속성 */
+        border-spacing: 20px;
+        margin: 100px;
+        width: 933px;
+      }
+      table tr:first-child td {
+        border-top-color: #000;
+      }
+      table tr td {
+        border: 1px solid #ccc;
+        padding: 7px;
+        text-align: center;
+      }
+
+      table tr td.tit {
+        background: #eee;
+        text-align: center;
+      }
+      table tr td.ad {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="tit">구분</td>
+        <td class="tit">운영단체</td>
+        <td class="tit">주소</td>
+        <td class="tit">전화번호</td>
+      </tr>
+      <tr>
+        <td colspan="2">광역푸드뱅크</td>
+        <td>사회복지협의회</td>
+        <td class="ad">중구 보문로 246</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td rowspan="8">기초</td>
+        <td>동구푸드뱅크</td>
+        <td>성공회나눔의집</td>
+        <td class="ad">동구 대전로 735</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>중구푸드뱅크</td>
+        <td>성락사회복지관</td>
+        <td class="ad">중구 선화로 43번길 13(용두동)</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>서구푸드뱅크</td>
+        <td>구세군여성의집</td>
+        <td class="ad">서구 오량4길 61(복수동)</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>유성구푸드뱅크</td>
+        <td>송강사회복지관</td>
+        <td class="ad">유성구 봉산로 45(송강동)</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>대덕구푸드뱅크</td>
+        <td>성 우 보 육 원</td>
+        <td class="ad">대덕구 신탄진로 101(연축동)</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>농수산물지원센터</td>
+        <td>대전가톨릭사회복지회</td>
+        <td class="ad">유성구 노은동로 33(노은동)</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>사랑의먹거리나눔운동</td>
+        <td>사랑의먹거리나눔운동</td>
+        <td class="ad">중구 대전천서로 257번길 38(문창동)</td>
+        <td>531-3711</td>
+      </tr>
+      <tr>
+        <td>대전나눔과기쁨</td>
+        <td>대전나눔과기쁨</td>
+        <td class="ad">동구 중앙로 193번길 90(중동)</td>
+        <td>531-3711</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td colspan="2" class="tit">구분</td>
+        <td class="tit">주소</td>
+        <td class="tit">전화번호</td>
+      </tr>
+      <tr>
+        <td rowspan="2">동구</td>
+        <td>2호점(동구점)</td>
+        <td class="ad">동구 동대전로 102-1(대동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td>7호점(동구점)</td>
+        <td class="ad">동구 동구청로 203번길 1(판암동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td rowspan="2">중구</td>
+        <td>5호점 (중구점)</td>
+        <td class="ad">중구 보문로142(대사동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td>9호점 (유천점)</td>
+        <td class="ad">중구 유천로 93(유천동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td rowspan="2">서구</td>
+        <td>1호점 (서구점)</td>
+        <td class="ad">서구 계룡로219번길 17(월평동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td>8호점 (도마점)</td>
+        <td class="ad">서구 배재로 99-1(도마동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td rowspan="2">유성구</td>
+        <td>4호점 (송강점)</td>
+        <td class="ad">유성구 봉산로 36번길 1(봉산동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td>6호점 (유성점)</td>
+        <td class="ad">유성구 유성대로730번길 51(장대동)</td>
+        <td>633-1377</td>
+      </tr>
+      <tr>
+        <td rowspan="1">대덕구</td>
+        <td>3호점 (대덕점)</td>
+        <td class="ad">대덕구 계룡로 608번길 15(법동)</td>
+        <td>633-1377</td>
+      </tr>
+    </table>
+  </body>
+</html>
