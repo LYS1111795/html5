@@ -3,13 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>테이블 연습</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
+      table {
+        border-collapse: collapse; /*테이블의 테두리가 깔끔해진다*/
+        width: 800px;
+        margin: 50px auto;
+        table-layout: fixed; /*중요*/
+      }
+      table tr td,
+      table tr th {
+        border: 1px solid;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        height: 200px;
+        vertical-align: top;
+      }
+      table tr td:first-child {
+        width: 50%;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <table>
+      <tr>
+        <td rowspan="2">111111111111111111111111111111</td>
+        <td colspan="2">22</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>제목1</th>
+          <th>제목2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>내용1</td>
+          <td>내용2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>하단1</td>
+          <td>하단2</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
 </html>
