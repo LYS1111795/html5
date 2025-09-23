@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>신세계 푸드</title>
+    <title>신세계 푸드 선생님</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       @font-face {
         font-family: "Pretendard";
         src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
@@ -76,67 +80,64 @@
         font-weight: 900;
         font-display: swap;
       }
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
       ul {
         list-style: none;
+      }
+      ul.core {
+        width: 940px;
+        margin: 100px auto;
         display: flex;
-        width: 1000px;
         flex-wrap: wrap;
         gap: 40px;
-        margin: 50px auto;
-        font-family: "Pretendard";
       }
-
-      ul li:first-child {
-        width: 450px;
+      ul.core li {
+        flex: 1 1 40%;
         height: 480px;
-        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg);
-        border-radius: 70px 0px;
+        border-radius: 70px 0;
+        display: flex;
+        align-items: center;
       }
-
-      ul li:nth-child(2) {
-        width: 450px;
-        height: 480px;
-        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg);
-        border-radius: 70px 0px;
+      ul.core li:nth-child(1) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg);
       }
-      ul li:nth-child(3) {
-        width: 450px;
-        height: 480px;
-        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg);
-        border-radius: 70px 0px;
+      ul.core li:nth-child(2) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg);
       }
-      ul li:nth-child(4) {
-        width: 450px;
-        height: 480px;
-        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg);
-        border-radius: 70px 0px;
+      ul.core li:nth-child(3) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg);
       }
-
-      ul li div {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px 0;
-        position: relative;
-        top: 35%;
-        color: #fff;
+      ul.core li:nth-child(4) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg);
+      }
+      ul.core li:nth-child(odd) {
+        /* odd는 첫번째 세번째 값 엇갈림*/
+        margin-top: -55px;
+      }
+      ul.core li div {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
         text-align: center;
+        color: #fff;
+        font-family: "Pretendard", sans-serif;
       }
-      ul li div h1 {
-        padding-bottom: 20px;
+      ul.core li div h1 {
+        font-size: 32px;
+        font-weight: 600;
       }
-
-      ul li:nth-child(even) {
-        position: relative;
-        top: 50px;
-      } /*신세계 푸드 엇갈림 */
+      ul.core li div p {
+        font-size: 20px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        line-height: 1.5;
+      }
     </style>
   </head>
   <body>
-    <ul>
+    <ul class="core">
       <li>
         <div>
           <h1>Taste & Quality</h1>
