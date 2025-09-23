@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP그룹</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div.btn {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      div.btn label {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      div.photo {
+        position: relative;
+        width: 100%;
+        height: 480px;
+      }
+
+      div.photo p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      div.photo p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #photo1:checked ~ div p:first-child img,
+      #photo2:checked ~ div p:nth-child(2) img,
+      #photo3:checked ~ div p:nth-child(3) img,
+      #photo4:checked ~ div p:nth-child(4) img,
+      #photo5:checked ~ div p:nth-child(5) img,
+      #photo6:checked ~ div p:nth-child(6) img {
+        opacity: 1;
+      }
+
+      #photo1:checked ~ div.btn label:first-child,
+      #photo2:checked ~ div.btn label:nth-child(2),
+      #photo3:checked ~ div.btn label:nth-child(3),
+      #photo4:checked ~ div.btn label:nth-child(4),
+      #photo5:checked ~ div.btn label:nth-child(5),
+      #photo6:checked ~ div.btn label:nth-child(6) {
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="radio" name="photo" id="photo1" checked />
+    <input type="radio" name="photo" id="photo2" />
+    <input type="radio" name="photo" id="photo3" />
+    <input type="radio" name="photo" id="photo4" />
+    <input type="radio" name="photo" id="photo5" />
+    <input type="radio" name="photo" id="photo6" />
+
+    <div class="btn">
+      <label for="photo1">CEO 인사말</label>
+      <label for="photo2">연혁</label>
+      <label for="photo3">미션·비전</label>
+      <label for="photo4">CI</label>
+      <label for="photo5">계열사</label>
+      <label for="photo6">글로벌 사업장</label>
+    </div>
+
+    <div class="photo">
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual01_1.jpg" alt="" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual02.jpg" alt="" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual_vision.jpg" alt="" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual04_2.jpg" alt="" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual_nadia.jpg" alt="" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual_global.jpg" alt="" />
+      </p>
+    </div>
+  </body>
+</html>

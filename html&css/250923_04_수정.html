@@ -3,13 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TP그룹</title>
     <style>
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 1. 전체를 감싸는 컨테이너를 만들어줍니다. */
+      .gallery-wrapper {
+        width: 100%;
+      }
+
+      /* 2. 실제 라디오 버튼은 눈에 보이지 않게 숨깁니다. */
+      .gallery-wrapper > input[type="radio"] {
+        display: none;
+      }
+
+      /* 3. 버튼들을 담는 div.btn 스타일 */
+      div.btn {
+        display: flex;
+        justify-content: center; /* 버튼들을 가로 중앙에 배치 */
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+      div.btn label {
+        padding: 10px 20px;
+        color: #888;
+        font-weight: bold;
+        cursor: pointer;
+        border-bottom: 2px solid transparent; /* 밑줄이 생길 공간 확보 */
+        transition: all 0.3s;
+      }
+      div.btn label:hover {
+        color: #000;
+      }
+
+      /* --- 여기가 핵심 수정 부분입니다 --- */
+      /* 4. 이미지를 담는 div.photo 스타일에 높이를 지정합니다. */
+      div.photo {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1600 / 438;
+        line-height: 0;
+      }
+      /* ------------------------------------ */
+
+      div.photo p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      div.photo p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0; /* 평소에는 모든 이미지를 숨깁니다. */
+        transition: opacity 0.7s ease; /* 부드러운 전환 효과 */
+      }
+
+      /* 5. 체크된 버튼과 이미지를 보여주는 마법의 코드 */
+
+      /* 체크된 버튼의 스타일 */
+      #photo1:checked ~ div.btn label:first-child,
+      #photo2:checked ~ div.btn label:nth-child(2),
+      #photo3:checked ~ div.btn label:nth-child(3),
+      #photo4:checked ~ div.btn label:nth-child(4),
+      #photo5:checked ~ div.btn label:nth-child(5),
+      #photo6:checked ~ div.btn label:nth-child(6) {
+        color: #000;
+        border-bottom-color: #000;
+      }
+
+      /* 체크된 이미지만 보여주기 */
+      #photo1:checked ~ div.photo p:first-child img,
+      #photo2:checked ~ div.photo p:nth-child(2) img,
+      #photo3:checked ~ div.photo p:nth-child(3) img,
+      #photo4:checked ~ div.photo p:nth-child(4) img,
+      #photo5:checked ~ div.photo p:nth-child(5) img,
+      #photo6:checked ~ div.photo p:nth-child(6) img {
+        opacity: 1;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <!-- 전체를 감싸는 컨테이너를 추가하면 관리가 편합니다. -->
+    <div class="gallery-wrapper">
+      <input type="radio" name="photo" id="photo1" checked />
+      <input type="radio" name="photo" id="photo2" />
+      <input type="radio" name="photo" id="photo3" />
+      <input type="radio" name="photo" id="photo4" />
+      <input type="radio" name="photo" id="photo5" />
+      <input type="radio" name="photo" id="photo6" />
+
+      <div class="btn">
+        <label for="photo1">CEO 인사말</label>
+        <label for="photo2">연혁</label>
+        <label for="photo3">미션·비전</label>
+        <label for="photo4">CI</label>
+        <label for="photo5">계열사</label>
+        <label for="photo6">글로벌 사업장</label>
+      </div>
+      <div class="photo">
+        <p>
+          <img src="https://tp-inc.com/images/sub/sub_visual01_1.jpg" alt="" />
+        </p>
+        <p>
+          <img src="https://tp-inc.com/images/sub/sub_visual02.jpg" alt="" />
+        </p>
+        <p>
+          <img
+            src="https://tp-inc.com/images/sub/sub_visual_vision.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img src="https://tp-inc.com/images/sub/sub_visual04_2.jpg" alt="" />
+        </p>
+        <p>
+          <img
+            src="https://tp-inc.com/images/sub/sub_visual_nadia.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://tp-inc.com/images/sub/sub_visual_global.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
