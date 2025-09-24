@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스티키 비디오 스크롤</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;}
+      u {
+        text-decoration: none;
+      }
+      body {
+        /*
+          스크롤을 위해 바디의 높이를 설정해본다 
+          100vh = 화면 높이 100% vh는 부모와 상관없이 크기를 채워준다고 한다
+        */
+        height: 400vh; /* 비디오 4개 = 400vh */
+      }
+      
+      /*  섹션을 스티키로(달라붙게하기)만들어본다 */
+      .vid-section {
+        position: sticky;
+        top: 0; /* 화면 상단에 붙여본다 */
+        width: 100%;
+        height: 100vh; 
+      }
+
+      /* 비디오가 섹션을 꽉 채우도록 해준다 */
+      .vid-section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 찌그러지지 않게 채워본다 */
+      }
+      /*아 너무 어렵다...이해가 안된다*/
+  
+    </style>
+  </head>
+  <body>
+    <!-- 선생님께서 video를 section으로 감싸줘야한다고 하심 -->
+    <section class="vid-section">
+      <video autoplay muted loop>
+        <source src="./video/main_social_visual0.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <section class="vid-section">
+      <video autoplay muted loop>
+        <source src="./video/main_social_visual.mp4" type="video/mp4" />
+      </video>
+    </section>
+    
+    <section class="vid-section">
+     <video controls autoplay muted loop>
+       <source src="./video/main_visual_3.mp4" type="video/mp4" />
+     </video>
+    </section>
+
+    <section class="vid-section">
+      <video controls autoplay muted loop>
+        <source src="./video/main_visual_4.mp4" type="video/mp4" />
+    </section>
+  </body>
+</html>
+
+
