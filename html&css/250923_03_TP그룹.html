@@ -14,13 +14,21 @@
         display: flex;
         justify-content: center;
         padding: 20px 0;
+        gap: 40px;
       }
 
       div.btn label {
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
         cursor: pointer;
       }
-
+      div.btn label::after {
+        content: "|";
+        position: absolute;
+        padding: 0 20px;
+      }
+      div.btn label:last-child:after {
+        content: "";
+      }
       div.photo {
         position: relative;
         width: 100%;
@@ -39,6 +47,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        opacity: 0;
       }
 
       #photo1:checked ~ div p:first-child img,
@@ -56,6 +65,10 @@
       #photo4:checked ~ div.btn label:nth-child(4),
       #photo5:checked ~ div.btn label:nth-child(5),
       #photo6:checked ~ div.btn label:nth-child(6) {
+        text-decoration: underline;
+        text-decoration-color: cadetblue;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 3px;
       }
     </style>
   </head>

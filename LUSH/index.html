@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUSH</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+        font-weight: 100;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+          format("woff");
+        font-weight: 200;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+          format("woff");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+          format("woff");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+          format("woff");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+          format("woff");
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+          format("woff");
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+          format("woff");
+        font-weight: 900;
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-family: "Pretendard", sans-serif;
+      }
+
+      body {
+        position: relative;
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 95px;
+        z-index: 10;
+      }
+      header h1 a {
+        font-weight: 800;
+        font-size: 32px;
+      }
+      .gnb ul {
+        display: flex;
+        gap: 40px;
+      }
+
+      .gnb ul a {
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .visual img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="#">LUSH</a></h1>
+      <div class="gnb">
+        <ul>
+          <li><a href="#">러쉬소개</a></li>
+          <li><a href="#">캠페인</a></li>
+          <li><a href="#">스파</a></li>
+          <li><a href="#">매장안내</a></li>
+          <li><a href="#">기업 구매 / 협업 문의</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="visual">
+      <p><img src="./images/visual_main.gif" alt="" /></p>
+    </div>
+  </body>
+</html>
