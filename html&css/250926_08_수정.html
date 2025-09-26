@@ -3,13 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>filter</title>
     <style>
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box; /* 레이아웃 계산을 쉽게 만듭니다. */
+      }
+      body {
+        background: #000;
+        color: #fff;
+
+        /* --- 여기가 핵심 수정 부분입니다 --- */
+        /* body를 Flexbox 감독으로 만들어 자식들을 정렬합니다. */
+        display: flex;
+        justify-content: space-between; /* 자식들을 양쪽 끝으로 보냅니다. */
+        align-items: center; /* 세로 중앙 정렬 */
+        padding: 20px 40px; /* 위아래, 좌우 여백 */
+        /* ------------------------------------ */
+      }
+
+      /* p태그들에게는 이제 불필요한 스타일이 많습니다. */
+      /* p 태그 사이의 간격을 위해 margin을 살짝 줍니다. */
+      p {
+        margin: 0 10px;
+      }
+
+      .mall {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+      }
+
+      .logo img {
+        /* filter 속성은 SVG 색상을 바꿀 때 유용하지만, 지금 로고는 이미 흰색이라 필요 없습니다. */
+        width: 150px;
+        display: block; /* 이미지 아래 불필요한 여백 제거 */
+      }
+      .mall img {
+        filter: invert(1); /* 검은색 아이콘을 흰색으로 바꿉니다. */
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <p class="logo">
+      <a href="#">
+        <img
+          src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/logo_white.svg"
+          alt="글라스락 로고"
+        />
+      </a>
+    </p>
+
+    <p class="mall">
+      <a href="#" style="display: flex; align-items: center; gap: 8px">
+        <img
+          src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_topmall_cart_bk.svg"
+          alt="장바구니"
+        /><span>글라스락몰</span>
+      </a>
+    </p>
+    <p><a href="#">한국어</a></p>
+
+    <div class="hamburger">
+      <span
+        style="
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: #fff;
+          margin-bottom: 6px;
+        "
+      ></span>
+      <span
+        style="
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: #fff;
+          margin-bottom: 6px;
+        "
+      ></span>
+      <span
+        style="display: block; width: 24px; height: 2px; background: #fff"
+      ></span>
+    </div>
+  </body>
 </html>
