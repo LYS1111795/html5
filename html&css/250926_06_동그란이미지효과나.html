@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동그라미 이미지 효과</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+      ul li {
+        width: 322px;
+        height: 322px;
+        cursor: pointer; /*커서를 손가락 모양으로 바뀌어준다*/
+        transition: 0s;
+      }
+      ul li:hover {
+        background-position: 0 -653px;
+        animation: move 1s infinite;
+      }
+      ul li:nth-child(1) {
+        background-image: url(./images/me_bg_01.png);
+      }
+      ul li:nth-child(2) {
+        background-image: url(./images/me_bg_01.png);
+      }
+      ul li:nth-child(3) {
+        background-image: url(./images/me_bg_01.png);
+      }
+      @keyframes move {
+        0%,
+        100% {
+          transform: translateY(0);
+          animation-timing-function: ease-in;
+        }
+        50% {
+          transform: translateY(10px);
+          animation-timing-function: ease-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>
