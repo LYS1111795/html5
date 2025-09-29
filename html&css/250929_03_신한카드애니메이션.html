@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신한카드 애니메이션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      ul.list {
+        display: flex;
+        justify-content: center;
+      }
+
+      ul li p {
+        width: 120px;
+        height: 120px;
+      }
+
+      ul li:first-child:hover p {
+        background-image: url(./images/ap_main_ad_play3.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+
+      ul li:first-child p {
+        background-image: url(./images/ap_main_ad3.png);
+      }
+
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><span>></span></p>
+            <h1>Data서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>혁신적인</span><span>></span></p>
+            <h1>솔루션서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">상권분석,시장 모니터링</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>스마트한</span><span>></span></p>
+            <h1>광고서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">최적의 고객 타켓팅</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>탁월한</span><span>></span></p>
+            <h1>API서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data 실시간 활용</p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
