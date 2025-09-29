@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>올리브영 사진 가리기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      div {
+        position: relative;
+      }
+      div p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 1s;
+      }
+      img {
+        width: 100%;
+      }
+      div:hover p:last-child {
+        transform: scale(10);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p><img src="./images/key_msg_back.jpeg" alt="" /></p>
+      <p><img src="./images/key_msg_front_pc.svg" alt="" /></p>
+    </div>
+  </body>
+</html>
