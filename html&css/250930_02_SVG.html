@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      svg {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="400" height="400">
+      <rect
+        width="300"
+        height="100"
+        style="fill: rgb(0, 0, 255); stroke-width: 3; stroke: rgb(0, 0, 0)"
+      />
+    </svg>
+
+    <svg width="400" height="400">
+      <rect
+        width="300"
+        height="100"
+        style="fill: rgb(0, 0, 255); stroke-width: 3; stroke: rgb(0, 0, 0)"
+        x="50"
+        y="100"
+      />
+    </svg>
+
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+    </svg>
+
+    <svg height="140" width="500">
+      <ellipse
+        cx="200"
+        cy="80"
+        rx="100"
+        ry="50"
+        style="fill: yellow; stroke: purple; stroke-width: 2"
+      />
+    </svg>
+
+    <svg height="500" width="500">
+      <line
+        x1="0"
+        y1="0"
+        x2="200"
+        y2="200"
+        style="stroke: rgb(255, 0, 0); stroke-width: 2"
+      />
+    </svg>
+
+    <svg height="500" width="500">
+      <polygon
+        points="200,10 250,190 160,210 300,210"
+        style="fill: lime; stroke: purple; stroke-width: 1"
+      />
+    </svg>
+
+    <svg height="500" width="500">
+      <polygon
+        points="20,0 480,0 20, 20"
+        style="fill: lime; stroke: purple; stroke-width: 1"
+      />
+    </svg>
+
+    <svg height="500" width="500">
+      <polygon
+        points="20,0 480,0 500,20 500,480 480,500 20,500 0,480, 0,20"
+        style="fill: lime; stroke: purple; stroke-width: 1"
+      />
+    </svg>
+
+    <svg height="200" width="500">
+      <polyline
+        points="20,20 40,25 60,40 80,120 120,140 200,180"
+        style="fill: none; stroke: black; stroke-width: 3"
+      />
+    </svg>
+
+    <svg height="210" width="400">
+      <path d="M150 0 L75 200 L225 200 Z" />
+    </svg>
+
+    <svg height="210" width="400">
+      <path d="m150 0 l-75 200 l150 0 Z" />
+    </svg>
+
+    <svg height="210" width="400">
+      <polygon points="150,0 75,200 225,200" />
+    </svg>
+
+    <svg height="30" width="200">
+      <text x="0" y="15" fill="red">I love SVG!</text>
+    </svg>
+
+    <svg width="500" height="500">
+      <g stroke="green" stroke-width="4" fill="yellow">
+        <circle cx="0" cy="0" r="40" />
+        <circle cx="500" cy="0" r="40" />
+        <circle cx="0" cy="500" r="40" />
+        <circle cx="500" cy="500" r="40" />
+      </g>
+    </svg>
+    <img src="./images/star.svg" alt="" />
+    <svg width="500" height="500">
+      <polygon
+        points="293,157.2 325.8,223.8 399.3,234.5 346.1,286.3 358.7,359.4 293,324.9 227.3,359.4 239.9,286.3 
+	186.7,234.5 260.2,223.8 "
+        fill="yellow"
+      />
+    </svg>
+
+    <svg width="500" height="500">
+      <g stoke="#000">
+        <path
+          d="M402.2,318.4c0.4-0.3,0.9-0.3,1.3,0l9.4,8.4c0.4,0.4,0.4,1,0.1,1.4c-0.4,0.4-1,0.4-1.4,0.1l-0.3-0.3v8.3
+            c0,1.4-1.2,2.6-2.6,2.6H397c-1.4,0-2.6-1.2-2.6-2.6v-8.3l-0.3,0.3c-0.4,0.4-1,0.3-1.4-0.1c-0.4-0.4-0.3-1,0.1-1.4L402.2,318.4z
+             M402.8,320.5l-6.5,5.8v10.1c0,0.4,0.3,0.6,0.6,0.6h1.9v-4.2c0-1.6,1.3-2.9,2.9-2.9h1.9c1.6,0,2.9,1.3,2.9,2.9v4.2h1.9
+            c0.4,0,0.6-0.3,0.6-0.6v-10.1L402.8,320.5z M400.9,337h3.9v-4.2c0-0.5-0.4-1-1-1h-1.9c-0.5,0-1,0.4-1,1V337z"
+        />
+      </g>
+    </svg>
+
+    <svg width="500" height="500">
+      <polygon
+        class="st0"
+        points="282.5,159 181.5,159 110,230.5 110,331.5 181.5,403 282.5,403 354,331.5 354,230.5"
+        fill="yellow"
+      />
+    </svg>
+  </body>
+</html>
