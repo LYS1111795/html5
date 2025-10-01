@@ -7,6 +7,9 @@ color: #FF0000; FF빨강
 00녹생 00블루 
 ul li img { vertical-align: middle; }
 
+
+! + 엔터를 누르면 아래가 나옴
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
