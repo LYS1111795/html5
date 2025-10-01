@@ -9,14 +9,73 @@
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
+      svg {
+        width: 500px;
+        height: 500px;
+
+        transition: 0.5s;
       }
-      a {
-        text-decoration: none;
-        color: #333;
+      svg.rect {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+      }
+      svg.cir {
+        transform: rotate(-90deg);
+        stroke-dasharray: 1260;
+        stroke-dashoffset: 1260;
+        position: relative;
+        z-index: 1;
+      }
+
+      svg.rect:hover {
+        stroke-dashoffset: 0;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        cursor: pointer;
+      }
+      div h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      svg.cir:hover {
+        animation: ani 1s forwards;
+      }
+      @keyframes ani {
+        0% {
+          stroke-dashoffset: 1260;
+        }
+        100% {
+          stroke-dashoffset: 200;
+        }
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <svg class="rect">
+      <rect
+        x="10"
+        y="10"
+        stroke-linecap="square"
+        width="300"
+        height="100"
+        style="fill: none; stroke-width: 10; stroke: rgb(0, 0, 0)"
+      />
+    </svg>
+    <div>
+      <svg class="cir">
+        <circle
+          cx="250"
+          cy="250"
+          r="200"
+          style="fill: none; stroke-width: 10; stroke: rgb(0, 0, 0)"
+        />
+      </svg>
+      <h1>Html</h1>
+    </div>
+  </body>
 </html>
