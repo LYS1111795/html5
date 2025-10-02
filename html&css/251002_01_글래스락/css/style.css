@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+input {
+  display: none;
+}
+
+#fullmenu {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  background: #fff;
+}
+
+#fullmenu ul {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+#fullmenu ul li {
+  margin: 25px 0;
+}
+
+#fullmenu ul li a {
+  font-size: 27px;
+}
+
+section {
+  height: 100vh;
+}
+
+section.visual {
+  position: relative;
+  background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/bg_inno1.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.visual nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1720px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
