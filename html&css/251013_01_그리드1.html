@@ -21,16 +21,45 @@
         background: #ccc;
         /* display: grid; */
         display: inline-grid;
-        grid-template-columns: 100px 100px 300px;
-        /* grid-template-rows: 100px; */
-        grid-auto-rows: 100px;
+        grid-template-columns: 100px 100px 200px;
+        grid-template-areas: "a a b" "c d d" "e f f" "g h h" "i i i";
+        grid-template-rows: 100px;
+        /* grid-auto-rows: 100px; */
         /* column-gap: 20px;
         row-gap: 40px; */
         gap: 40px 20px; /* row-gap column-gap*/
       }
 
-      .grid-container .grid-item{
+      .grid-container .grid-item {
         background: #ddd;
+      }
+
+      .grid-container .grid-item:nth-child(1){
+        grid-area: a;
+      }
+      .grid-container .grid-item:nth-child(2){
+        grid-area: b;
+      }
+      .grid-container .grid-item:nth-child(3){
+        grid-area: c;
+      }
+      .grid-container .grid-item:nth-child(4){
+        grid-area: d;
+      }
+      .grid-container .grid-item:nth-child(5){
+        grid-area: e;
+      }
+      .grid-container .grid-item:nth-child(6){
+        grid-area: f;
+      }
+      .grid-container .grid-item:nth-child(7){
+        grid-area: g;
+      }
+      .grid-container .grid-item:nth-child(8){
+        grid-area: h;
+      }
+      .grid-container .grid-item:nth-child(9){
+        grid-area: i;
       }
     </style>
   </head>
