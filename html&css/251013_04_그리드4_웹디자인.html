@@ -3,24 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>그리드</title>
+    <title>그리드4</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-
       .grid-container {
-        width: 1200px;
-        background: #ccc;
         display: grid;
+        width: 1200px;
         margin: 0 auto;
         grid-template-columns: 200px 200px 400px 200px 200px;
         grid-template-areas:
@@ -31,7 +22,6 @@
           "copyright copyright copyright copyright flogo";
         grid-template-rows: 100px 300px 200px 50px 50px;
       }
-
       .grid-container .hlogo {
         grid-area: hlogo;
         background: #aaa;
@@ -56,6 +46,10 @@
         grid-area: c4;
         background: #aaa;
       }
+      .grid-container .flogo {
+        grid-area: flogo;
+        background: #bbb;
+      }
       .grid-container .fmenu {
         grid-area: fmenu;
         background: #ccc;
@@ -63,10 +57,6 @@
       .grid-container .copyright {
         grid-area: copyright;
         background: #ddd;
-      }
-      .grid-container .flogo {
-        grid-area: flogo;
-        background: #bbb;
       }
     </style>
   </head>
@@ -79,8 +69,8 @@
       <div class="c3"></div>
       <div class="c4"></div>
       <div class="flogo"></div>
+      <div class="fmenu"></div>
       <div class="copyright"></div>
-      <div class="sns"></div>
     </div>
   </body>
 </html>

@@ -3,84 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>그리드</title>
+    <title>그리드5</title>
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
+      /* .wrap {
+      } */
+      .wrap .head {
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid;
       }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-
-      .grid-container {
+      .wrap .head .top {
         width: 1200px;
-        background: #ccc;
-        display: grid;
         margin: 0 auto;
-        grid-template-columns: 200px 200px 400px 200px 200px;
-        grid-template-areas:
-          "hlogo menu menu menu menu"
-          "slide slide slide slide slide"
-          "c1 c1 c3 c4 c4"
-          "fmenu fmenu fmenu fmenu flogo"
-          "copyright copyright copyright copyright flogo";
-        grid-template-rows: 100px 300px 200px 50px 50px;
+        height: 100%;
+        display: flex;
+        align-items: center;
       }
-
-      .grid-container .hlogo {
-        grid-area: hlogo;
-        background: #aaa;
-      }
-      .grid-container .menu {
-        grid-area: menu;
+      .wrap .head .top .hlogo {
+        width: 200px;
         background: #bbb;
       }
-      .grid-container .slide {
-        grid-area: slide;
+      .wrap .head .top .menu {
+        flex: 1;
         background: #ccc;
       }
-      .grid-container .c1 {
-        grid-area: c1;
+      .wrap .slide {
+        width: 1200px;
+        margin: 0 auto;
+        height: 300px;
+        background: #ccc;
+      }
+      .wrap .con {
+        width: 1200px;
+        margin: 0 auto;
+        height: 200px;
+        display: flex;
+      }
+      .wrap .con > div {
+        flex: 1;
+        height: 100%;
+      }
+      .wrap .con .c1 {
         background: #ddd;
       }
-      .grid-container .c3 {
-        grid-area: c3;
+      .wrap .con .c3 {
         background: #eee;
       }
-      .grid-container .c4 {
-        grid-area: c4;
+      .wrap .con .c4 {
         background: #aaa;
       }
-      .grid-container .fmenu {
-        grid-area: fmenu;
-        background: #ccc;
+      .wrap .foot {
+        border-top: 1px solid;
+        height: 100px;
       }
-      .grid-container .copyright {
-        grid-area: copyright;
-        background: #ddd;
+      .wrap .foot .bottom {
+        display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 200px 1000px;
+        grid-template-rows: 50px 50px;
+        grid-template-areas: "flogo fmenu" "flogo copyright";
       }
-      .grid-container .flogo {
+      .wrap .foot .bottom .flogo {
         grid-area: flogo;
+        background: #aaa;
+      }
+      .wrap .foot .bottom .fmenu {
+        grid-area: fmenu;
         background: #bbb;
+      }
+      .wrap .foot .bottom .copyright {
+        grid-area: copyright;
+        background: #ccc;
       }
     </style>
   </head>
   <body>
-    <div class="grid-container">
-      <div class="hlogo"></div>
-      <div class="menu"></div>
+    <div class="wrap">
+      <div class="head">
+        <div class="top">
+          <div class="hlogo">로고</div>
+          <div class="menu">메뉴</div>
+        </div>
+      </div>
       <div class="slide"></div>
-      <div class="c1"></div>
-      <div class="c3"></div>
-      <div class="c4"></div>
-      <div class="flogo"></div>
-      <div class="copyright"></div>
-      <div class="sns"></div>
+      <div class="con">
+        <div class="c1"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+      </div>
+      <div class="foot">
+        <div class="bottom">
+          <div class="flogo">로고</div>
+          <div class="fmenu">하단메뉴</div>
+          <div class="copyright">카피라이트</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
