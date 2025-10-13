@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>가로메뉴2</title>
+    <title>Document</title>
     <style>
       * {
         margin: 0;
@@ -71,19 +71,16 @@
         height: 0;
         overflow: hidden;
         transition: 0.5s;
-      }
-      .menu > ul > li:first-child .sub {
         border-left: 1px solid #333;
-      }
-      .menu > ul > li:last-child .sub {
         border-right: 1px solid #333;
+        box-sizing: border-box;
       }
       .menu > ul > li .sub li a {
         line-height: 30px;
         display: block;
         width: 100%;
       }
-      .menu > ul:hover > li .sub {
+      .menu > ul > li:hover .sub {
         height: 120px;
         border-bottom: 1px solid #333;
       }

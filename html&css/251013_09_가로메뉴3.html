@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>가로메뉴3</title>
+    <title>Document</title>
     <style>
       * {
         margin: 0;
@@ -17,6 +17,7 @@
         color: #333;
       }
       .grid-container {
+        position: relative;
         display: grid;
         width: 1200px;
         margin: 0 auto;
@@ -67,33 +68,40 @@
         left: 0;
         top: 50px;
         width: 100%;
-        background: #fff;
+        background: #000;
         height: 0;
         overflow: hidden;
         transition: 0.5s;
-        border-left: 1px solid #333;
-        border-right: 1px solid #333;
-        box-sizing: border-box;
+        z-index: 1;
       }
-      /* .menu > ul > li:first-child .sub {
-        border-left: 1px solid #333;
-      }
-      .menu > ul > li:last-child .sub {
-        border-right: 1px solid #333;
-      } */
       .menu > ul > li .sub li a {
         line-height: 30px;
         display: block;
         width: 100%;
+        color: #fff;
       }
-      .menu > ul > li:hover > li .sub {
+      .menu > ul:hover > li .sub {
         height: 120px;
-        border-bottom: 1px solid #333;
       }
-      .menu > ul > li:hover > a,
-      .menu > ul > li .sub li a:hover {
+      .menu > ul > li:hover > a {
         background: #000;
         color: #fff;
+      }
+      .menu > ul > li .sub li a:hover {
+        background: #fff;
+        color: #000;
+      }
+      .menu .bg {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        background: #000;
+        left: 0;
+        top: 75px;
+        transition: 0.5s;
+      }
+      .menu > ul:hover ~ .bg {
+        height: 120px;
       }
       .grid-container .slide {
         grid-area: slide;
@@ -167,6 +175,7 @@
             </ul>
           </li>
         </ul>
+        <div class="bg"></div>
       </div>
       <div class="slide"></div>
       <div class="c1"></div>
