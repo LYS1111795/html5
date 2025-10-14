@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block; /* 메뉴 가로 배치 */
+      position: relative; /* 서브메뉴의 기준점 */
+    }
+
+    /* 서브메뉴 숨기기 */
+    nav ul ul {
+      display: none; /* 기본적으로 서브메뉴를 숨김 */
+      position: absolute; /* 메인 메뉴 li 기준으로 위치 조정 */
+      top: 100%;
+      left: 0;
+    }
+
+    /* 메뉴에 마우스를 올리면 서브메뉴 보이기 */
+    nav ul li:hover > ul {
+      display: block;
+    }
+  </style>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴 1</a></li>
+        <li>
+          <a href="#">메뉴 2</a>
+          <ul>
+            <li><a href="#">서브메뉴 2-1</a></li>
+            <li><a href="#">서브메뉴 2-2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">메뉴 3</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
