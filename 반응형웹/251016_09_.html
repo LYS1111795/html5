@@ -16,7 +16,72 @@
         text-decoration: none;
         color: #333;
       }
+      .con {
+        width: 100%;
+        max-width: 1280px;
+      }
+
+      .con .txt{
+        font-size: 18px;
+        padding: 10px;
+      }
+
+
+         @media screen and (max-width: 1024px) {
+        #con {
+          width: 95%;
+        }
+        #con > div .txt {
+          margin-top: 15px;
+          font-size: 14px;
+        }
+        #con > div .txt br.mo {
+          display: none;
+        }
+        #con > div .txt h4 {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        #con {
+          gap: 20px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        #con {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <ul class="con">
+      <li>
+        <div class="txt">
+          <h1>채용절차</h1>
+          <p>
+            글로벌 전문가 양성을 위한<br />
+            신입사원부터 경력사원까지
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h1>채용공고</h1>
+          <p>
+            삼성인이 지향하는 열정과 <br />
+            도전정신을 갖춘 인재를 찾습니다
+          </p>
+        </div>
+        <li>
+          <div class="txt">
+            <h1></h1>
+            <p></p>
+          </div>
+        </li>
+      </li>
+    </ul>
+  </body>
 </html>
