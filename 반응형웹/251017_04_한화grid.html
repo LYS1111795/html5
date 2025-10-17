@@ -13,8 +13,8 @@
         list-style: none;
       }
       ul.company {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
         padding: 0 80px;
       }
@@ -24,8 +24,6 @@
         border-radius: 10px;
         padding: 25px 22px;
         box-sizing: border-box;
-        /* flex: 1 0 30%; */
-        width: calc((100% - 30px) / 3);
       }
       ul.company li::after {
         content: "→"; /*ㅁ선택후 한자*/
@@ -66,13 +64,16 @@
       @media screen and (max-width: 768px) {
         ul.company {
           padding: 0 30px;
+          grid-template-columns: repeat(2, 1fr);
         }
         ul.company li {
           padding: 12px 16px;
-          width: calc((100% - 20px) / 2);
         }
       }
       @media screen and (max-width: 670px) {
+        ul.company {
+          grid-template-columns: 1fr;
+        }
         ul.company li {
           width: 100%;
         }
