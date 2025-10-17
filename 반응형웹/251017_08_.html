@@ -1,22 +1,78 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Off Canvas</title>
+
     <style>
       * {
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
+
+      body {
+        overflow: hidden;
       }
-      a {
-        text-decoration: none;
-        color: #333;
+
+      #wrap {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      #wrap_box {
+        width: 100%;
+        display: flex;
+      }
+
+      #wrap_box > div {
+        flex: 1 0 30%;
+        height: 400px;
+      }
+
+      #box_a {
+        background: #aaa;
+      }
+
+      #box_b {
+        background: #bbb;
+      }
+
+      #box_c {
+        background: #ccc;
+      }
+
+      @media screen and (max-width: 768px) {
+        #wrap_box > div {
+          flex: 1 0 50%;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        #wrap_box > div {
+          flex: 1 0 100%;
+        }
+
+        #wrap_box > div:nth-child(1) {
+          margin-left: -100%;
+        }
       }
     </style>
   </head>
-  <body></body>
+
+  <body>
+    <div id="wrap">
+      <div id="wrap_box">
+        <div id="box_a">a</div>
+
+        <div id="box_b">b</div>
+
+        <div id="box_c">c</div>
+      </div>
+    </div>
+  </body>
 </html>
