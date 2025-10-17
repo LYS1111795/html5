@@ -110,6 +110,19 @@
         z-index: 10;
       }
 
+      header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.164);
+        z-index: 10;
+      }
+
       header h1 a {
         font-weight: 800;
         font-size: 32px;
@@ -138,23 +151,39 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.3); /* 반투명 검은색 (0.3 = 30%) */
-        z-index: 2; /* 이미지(1)보다는 위, 헤더(10)보다는 아래 */
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
       }
+
       .txt {
         position: absolute;
-        left: 15%; /* 왼쪽에서 15% 떨어진 곳에 위치 */
-        bottom: 25%; /* 아래에서 25% 떨어진 곳에 위치 */
-        z-index: 5; /* 오버레이(2)보다는 위, 헤더(10)보다는 아래 */
+        left: 25%;
+        bottom: 50%;
+        z-index: 5;
         color: #fff;
         font-family: "Pretendard", sans-serif;
-        font-size: 3vw; /* 화면 너비에 따라 크기 조절 */
+        font-size: 3vw;
         font-weight: 700;
         line-height: 1.3;
       }
+
       .visual img {
         width: 100%;
         display: block;
+      }
+
+      .vis_btn {
+        position: absolute;
+        left: 25%;
+        bottom: 40%;
+        z-index: 5;
+        display: flex;
+        gap: 10px;
+      }
+
+      .vis_btn p img {
+        width: 200px;
+        height: auto;
       }
     </style>
   </head>
@@ -177,6 +206,24 @@
         지친 피부에 <br />
         충전이 필요한 지금!
       </p>
+      <div class="vis_btn">
+        <p>
+          <a href="#">
+            <img
+              src="https://weare.lush.co.kr/images/btn_app_apple.png"
+              alt="애플스토어"
+            />
+          </a>
+        </p>
+        <p>
+          <a href="#">
+            <img
+              src="https://weare.lush.co.kr/images/btn_app_google.png"
+              alt="구글플레이"
+            />
+          </a>
+        </p>
+      </div>
     </div>
   </body>
 </html>
