@@ -14,7 +14,6 @@
         list-style: none;
     }
     body {
-        font-family: "Malgun Gothic", sans-serif;
         color: #333;
     }
 
@@ -71,36 +70,47 @@
         margin: 0 20px;
     }
 
-
     .list .label {
         display: block; 
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 22px;
+        font-weight: normal;
         margin-bottom: 10px; 
     }
     .list .value {
         display: block;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
     }
 
    
     @media screen and (max-width: 1024px) {
         .list {
-           
             grid-template-columns: repeat(2, 1fr); 
             gap: 15px;
         }
     }
    
-@media screen and (max-width: 746px) {
+    @media screen and (max-width:1018px){
+      .list .label {
+        display: block; 
+        font-size: 17px;
+        margin-bottom: 5px; 
+    }
+    
+    .list .value {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+    }    
+   }
+
+    @media screen and (max-width: 746px) {
     .list {
         grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
     }
     
     .list > li {
-
         flex-direction: column; 
         justify-content: center; 
         align-items: center; 
@@ -109,13 +119,13 @@
 
     .list .label {
         display: block; 
-        font-size: 14px;
+        font-size: 17px;
         margin-bottom: 5px; 
     }
     
     .list .value {
         display: block;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
     }
 }
