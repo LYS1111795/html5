@@ -3,53 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>삼성중공업 주식회사</title>
     <style>
-      * {
+    * {
         margin: 0;
         padding: 0;
-      }
-      ul {
+        box-sizing: border-box;
+    }
+    ul {
         list-style: none;
-      }
-      a {
-        text-decoration: none;
+    }
+    body {
+        font-family: "Malgun Gothic", sans-serif;
         color: #333;
-      }
-      @media screen and(max-width:1024px) {
-      }
-      @media screen and(max-width:746px) {
-      }
+    }
+
+    .con {
+        width: 90%;
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .date {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 40px;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+  
+    .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+   
+    .list > li {
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+
+    .list > li::after {
+        content: "";
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #333;
+        width: calc(100% - 40px); 
+        margin: 0 20px;
+    }
+
+
+    .list .label {
+        display: block; 
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px; 
+    }
+    .list .value {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+   
+    @media screen and (max-width: 1024px) {
+        .list {
+           
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px;
+        }
+    }
+   
+@media screen and (max-width: 746px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    
+    .list > li {
+
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 15px 10px;
+    }
+
+    .list .label {
+        display: block; 
+        font-size: 14px;
+        margin-bottom: 5px; 
+    }
+    
+    .list .value {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+</style>
     </style>
   </head>
   <body>
-    <h1>삼성중공업 주식회사</h1>
-    <p>[기준일 2024.12.31]</p>
-    <ul>
-      <li>
-        <p>대표이사</p>
-        <p>최성안</p>
-      </li>
-      <li>
-        <p>창립일</p>
-        <p>1974년 8월 5일</p>
-      </li>
-      <li>
-        <p>종업원수</p>
-        <p>10,112명</p>
-      </li>
-      <li>
-        <p>자본금</p>
-        <p>8,801억원</p>
-      </li>
-      <li>
-        <p>매출액</p>
-        <p>99,031억원</p>
-      </li>
-      <li>
-        <p>총자산</p>
-        <p>169,979억원</p>
-      </li>
-    </ul>
+    <div class="con">
+      <h1>삼성중공업 주식회사</h1>
+      <p class="date">[기준일 2024.12.31]</p>
+      
+      <ul class="list">
+        <li>
+          <span class="label">대표이사</span>
+          <span class="value">최성안</span>
+        </li>
+        <li>
+          <span class="label">창립일</span>
+          <span class="value">1974년 8월 5일</span>
+        </li>
+        <li>
+          <span class="label">종업원수</span>
+          <span class="value">10,112명</span>
+        </li>
+        <li>
+          <span class="label">자본금</span>
+          <span class="value">8,801억원</span>
+        </li>
+        <li>
+          <span class="label">매출액</span>
+          <span class="value">99,031억원</span>
+        </li>
+        <li>
+          <span class="label">총자산</span>
+          <span class="value">169,979억원</span>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
