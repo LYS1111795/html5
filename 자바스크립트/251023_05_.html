@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
+      .on {
+        color: red;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <p class="a1 b1 c1" id="demo">ClassList속성</p>
+    <h1></h1>
+    <button>toggle</button>
+    <button>클래스리스트</button>
+    <script>
+      //document.querySelector("p").classList.add("on");
+      //document.querySelector("p").classList.remove("on");
+      document.querySelector("button").onclick = function () {
+        document.querySelector("p").classList.toggle("on");
+      };
+      // document.querySelector("p").classList.replace("on", "active");
+      console.log(document.querySelector("p").classList.length);
+      console.log(document.querySelector("p")).classList.contains("a2");
+      //document.getElementsByTagName("button")[1];
+      let list = document.getElementById("demo").classList;
+      let text = "";
+      for (let x of list.entries()) {
+        text += x + "<br>";
+      }
+      document.querySelector("h1").innerHTML = text;
+      console.log(list.value);
+      console.log(list.item(0));
+    </script>
+  </body>
 </html>
