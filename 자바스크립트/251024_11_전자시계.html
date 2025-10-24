@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style></style>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      function clock() {
+        let now = new Date();
+
+        let hour = now.getHours();
+        let minutes = now.getMinutes();
+        let second = now.getSeconds();
+        let milliseconds = now.getMilliseconds();
+        let time = `${hour} : ${minutes} : ${second} : ${milliseconds}`;
+        document.getElementById("demo").innerText = time;
+      }
+      /*setInterval(function () {
+        clock();
+      }, 1); */
+
+      setInterval(clock, 1);
+
+      /* setInterval(function () {
+         실행문;
+       }, 시간(초)); */
+    </script>
+  </body>
+</html>
