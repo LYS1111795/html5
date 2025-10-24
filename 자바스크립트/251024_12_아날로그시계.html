@@ -56,10 +56,16 @@
     <script>
       function clock() {
         let now = new Date();
-
-        let hour = now.getHours();
-        let minutes = now.getMinutes();
-        let second = now.getSeconds();
+        let hour = (360 / 12) * now.getHours() + now.getUTCMinutes() * 0.5;
+        let minutes = (360 / 60) * now.getMinutes();
+        let second = (360 / 60) * now.getSeconds();
+        document.getElementById("hour").style.transform = `rotate(${hour}deg)`;
+        document.getElementById(
+          "minute"
+        ).style.transform = `rotate(${minute}deg)`;
+        document.getElementById(
+          "second"
+        ).style.transform = `rotate(${second}deg)`;
       }
       setInterval(clock, 1);
     </script>
