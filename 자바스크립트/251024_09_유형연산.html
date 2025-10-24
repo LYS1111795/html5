@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = 10;
+      let y = 20;
+      let z = "10";
+      document.write(`x == z : ${x == z}<br>`);
+      document.write("x == z :", x == z, "<br>");
+      document.write(`x === z : ${x === z}<br>`);
+      document.write(`x != z : ${x != z}<br>`);
+      document.write(`x !== z : ${x !== z}<br>`);
+      document.write(`x > y : ${x > y}<br>`);
+      document.write(`x >= y : ${x >= y}<br>`);
+      document.write(`x < y : ${x < y}<br>`);
+      document.write(`x <= y : ${x <= y}<br>`);
+      let result = x > y ? "x는 y보다크다" : "x는 y보다 작다";
+      //조건 ? 참인값 : 거짓인값
+      document.write(result);
+    </script>
+  </body>
+</html>
