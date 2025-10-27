@@ -8,6 +8,7 @@
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
       ul {
         list-style: none;
@@ -16,7 +17,103 @@
         text-decoration: none;
         color: #333;
       }
+
+      .con {
+        width: 80%;
+        max-width: 900px;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: bold;
+        color: #b89d6e;
+        margin-bottom: 5px;
+      }
+
+      .nav {
+        border-top: 1px solid #b89d6e;
+      }
+
+      .nav li {
+        position: relative;
+        padding: 0;
+        cursor: pointer;
+        border-bottom: 1px solid #b89d6e;
+      }
+
+      .nav li h4 {
+        color: #b89d6e;
+        font-size: 20px;
+        font-weight: normal;
+        padding: 20px 0;
+        padding-left: 20px;
+      }
+
+      .nav li p {
+        display: none;
+        padding: 20px 30px;
+        background-color: #fff;
+      }
+      .nav li.on p {
+        display: block;
+      }
+      .nav li p img {
+        width: 100%;
+        display: block;
+        height: auto;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <h1>RETAIL</h1>
+    <h1>Slices - Almond Base</h1>
+    <ul class="nav">
+      <li>
+        <h4>+ AMERICAN</h4>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <h4>+ CHEDDAR</h4>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <h4>+ PROVOLONE</h4>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <h4>+ PEPPER JACK</h4>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+    </ul>
+    <script>
+      let items = document.querySelectorAll(".nav li");
+      items.forEach(function (v, k, ar) {
+        v.onclick = function () {
+          this.classList.toggle("on");
+        };
+      });
+    </script>
+  </body>
 </html>

@@ -4,19 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <ul class="btn">
@@ -27,15 +15,16 @@
     </ul>
 
     <p class="con">
-      <img src="../html&css/images/photo1.jpg" alt="" />
+      <img src="../Html5&CSS/images/photo1.jpg" alt="" />
     </p>
     <script>
       let btn = document.querySelectorAll(".btn li");
       btn.forEach(function (v, k, ar) {
         v.onclick = function (e) {
           e.preventDefault();
+          let imgSrc = document.querySelector(".con img").src;
           document.querySelector(".con img").src =
-            "../html&css/images/photo" + (k + 1) + ".jpg";
+            "../Html5&CSS/images/photo" + (k + 1) + ".jpg";
         };
       });
     </script>

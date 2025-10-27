@@ -4,25 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-    </style>
   </head>
   <body>
     <script>
-      let str1 = "nice to meet you";
+      let str1 = "nice to meet you E";
       let str2 = new String("How are you today?");
-
+      document.write(str1 + "<br>");
       document.write(str1.search("m") + "<br>");
       document.write(str2.search("h") + "<br>");
       document.write(str2.search("H") + "<br>");
@@ -55,7 +42,7 @@
       document.write(str3.substring(-1) + "<br>");
       document.write(str3.substr(0, 5) + "<br>");
       document.write(str3.substr(-5, 5) + "<br>");
-      document.write(str3.replace(str3.substr(-6, 6), "******") + "<br>");
+      document.write(str3.replace(str3.substr(-6), "******") + "<br>");
       document.write(str3.length + "<br>");
       document.write(str1.split(" ")[1] + "<br>");
     </script>
