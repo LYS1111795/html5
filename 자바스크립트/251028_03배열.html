@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const cars = [];
+      cars[0] = "Saab";
+      cars[1] = "Volvo";
+      cars[2] = "BMW";
+      document.write(cars[1] + "<br>");
+      const cars1 = ["Saab", "Volvo", "BMW"];
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.join(" ") + "<br>");
+      fruits.pop();
+      document.write(fruits.join(" ") + "<br>");
+      fruits.push("Kiwi");
+      document.write(fruits.join(" ") + "<br>");
+      fruits.shift();
+      document.write(fruits.join(" ") + "<br>");
+      fruits.unshift("Lemon");
+      document.write(fruits.join(" ") + "<br>");
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(myChildren + "<br>");
+      myChildren.splice(2, 0, "홍길동");
+      document.write(myChildren + "<br>");
+      myChildren.sort();
+      document.write(myChildren + "<br>");
+      myChildren.reverse();
+      document.write(myChildren + "<br>");
+
+      car2.sort().reverse();
+      document.write(car2 + "<br>");
+    </script>
+  </body>
+</html>
