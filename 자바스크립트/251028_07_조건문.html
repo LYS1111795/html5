@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>이미지 보이기</p>
+    <p id="demo"></p>
+
+    <script>
+      let imgShow = true;
+      document.querySelector("p").onclick = function () {
+        if (imgShow) {
+          document.getElementById(
+            "demo"
+          ).innerHTML = `<img src="../html&css/images/photo1.jpg" alt="photo1" />`;
+          this.innerText = "이미지 숨기기";
+        } else {
+          document.getElementById("demo").innerHTML = " ";
+          this.innerText = "이미지 보이기";
+        }
+        imgShow = !imgShow;
+      };
+    </script>
+  </body>
+</html>

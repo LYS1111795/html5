@@ -20,12 +20,12 @@
   </head>
   <body>
     <script>
-      const cars = [];
-      cars[0] = "Saab";
-      cars[1] = "Volvo";
-      cars[2] = "BMW";
-      document.write(cars[1] + "<br>");
-      const cars1 = ["Saab", "Volvo", "BMW"];
+      // const cars = [];
+      // cars[0] = "Saab";
+      // cars[1] = "Volvo";
+      // cars[2] = "BMW";
+      // document.write(cars[1] + "<br>");
+      // const cars1 = ["Saab", "Volvo", "BMW"];
 
       const fruits = ["Banana", "Orange", "Apple", "Mango"];
       document.write(fruits.join(" ") + "<br>");
@@ -49,8 +49,38 @@
       myChildren.reverse();
       document.write(myChildren + "<br>");
 
-      car2.sort().reverse();
-      document.write(car2 + "<br>");
+      // cars2.sort().reverse();
+      // document.write(cars2 + "<br>");
+
+      const arr1 = ["아반떼", "소나타", "그랜저", "제네시스", "SM5"];
+      const obj1 = { color: "파랑", size: "20px", width: "300px" };
+      document.write(Object.keys(arr1) + "<br>");
+      document.write(Object.keys(obj1) + "<br>");
+      document.write(typeof arr1 + "<br>");
+      document.write(typeof obj1 + "<br>");
+
+      document.write(
+        (arr1 instanceof Array) +
+          "<br>" +
+          (arr1 instanceof Object) +
+          "<br>" +
+          (arr1 instanceof String) +
+          "<br>" +
+          (arr1 instanceof Number) +
+          "<br>" +
+          "<br>"
+      );
+      document.write(
+        (obj1 instanceof Array) +
+          "<br>" +
+          (obj1 instanceof Object) +
+          "<br>" +
+          (obj1 instanceof String) +
+          "<br>" +
+          (obj1 instanceof Number) +
+          "<br>" +
+          "<br>"
+      );
     </script>
   </body>
 </html>

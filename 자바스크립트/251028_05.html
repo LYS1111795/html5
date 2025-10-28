@@ -16,7 +16,24 @@
         text-decoration: none;
         color: #333;
       }
+      p {
+        margin-bottom: 10px;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <p>red</p>
+    <p>blue</p>
+    <p>gray</p>
+    <p>green</p>
+    <p>#8ac007</p>
+    <p>#ccc</p>
+    <p>#ddd</p>
+
+    <script>
+      document.querySelectorAll("p").forEach(function (v, k) {
+        v.style.backgroundColor = v.innerText;
+      });
+    </script>
+  </body>
 </html>
