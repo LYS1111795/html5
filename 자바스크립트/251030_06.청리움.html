@@ -57,10 +57,13 @@
         height: 100%;
         background-size: cover;
         background-position: center;
-        display: none;
+        /* display: none; */
+        opacity: 0;
+        color: #fff;
       }
       .space .contents .con.on {
-        display: block;
+        /* display: block; */
+        opacity: 1;
       }
       .space .con p {
         height: 100%;
@@ -169,10 +172,18 @@
       let btn = document.querySelectorAll(".title ul li");
       let con = document.querySelectorAll(".con");
       btn[0].querySelector("a").classList.add("on");
+      con[0].classList.add("on");
       con.forEach(function (v, k) {
         v.style.backgroundImage = `url(https://www.cheongrium.com/static/images/spaceinfo/main_space_${
           k + 1
         }.jpg)`;
+        if (k == 5) {
+          v.style.backgroundImage = `url(https://www.cheongrium.com/static/images/spaceinfo/main_space_8.jpg)`;
+        } else if (k == 6) {
+          v.style.backgroundImage = `url(https://www.cheongrium.com/static/images/spaceinfo/main_space_9.jpg)`;
+        } else if (k == 7) {
+          v.style.backgroundImage = `url(https://www.cheongrium.com/static/images/spaceinfo/main_space_10.jpg)`;
+        }
       });
       btn.forEach(function (v, k, ar) {
         v.onclick = function (e) {
@@ -180,7 +191,11 @@
           ar.forEach(function (v) {
             v.querySelector("a").classList.remove("on");
           });
+          con.forEach(function (v) {
+            v.classList.remove("on");
+          });
           this.querySelector("a").classList.add("on");
+          con[k].classList.add("on");
         };
       });
     </script>
