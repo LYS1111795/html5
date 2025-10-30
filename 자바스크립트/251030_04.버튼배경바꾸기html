@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn1">빨강</button>
+    <button class="btn2">노랑</button>
+    <button class="btn3">파랑</button>
+    <button class="btn4">그린</button>
+    <script>
+      let color = ["red", "yellow", "blue", "green"];
+      let btn = document.querySelectorAll("button");
+      btn.forEach(function (v, k) {
+        v.style.backgroundColor = color[k];
+        v.onclick = function () {
+          document.querySelector("body").style.backgroundColor = color[k];
+        };
+      });
+    </script>
+  </body>
+</html>
