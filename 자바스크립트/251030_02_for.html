@@ -16,7 +16,22 @@
         text-decoration: none;
         color: #333;
       }
+      div {
+        float: left;
+        width: 100px;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <script>
+      let str = "";
+      for (let i = 2; 1 <= 19; i++) {
+        str += `<div>`;
+        str += `<h1>${i}단</h1>`;
+        for (let j = 1; j <= 9; j++) {
+          str += `${i}X${j}=${i * j}`;
+        }
+      }
+    </script>
+  </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = { color: "red", name: "hong", age: 20, gender: "men" };
+      let arr = ["하나", 200, "둘", 300];
+      let txt = "";
+      /* for (let i = 0; i < 4; i++) {
+        //0 1 2
+        txt += arr[i] + " ";
+      } */
+      for (let x in obj) {
+        txt += obj[x] + " ";
+      }
+      document.write(txt);
+      let txt1 = "";
+      for (let x in arr) {
+        txt1 += arr[x] + " ";
+      }
+      document.write(txt1);
+    </script>
+  </body>
+</html>
