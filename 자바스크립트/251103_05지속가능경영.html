@@ -60,13 +60,24 @@
     </ul>
     <script>
       //https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_1_1.jpg
-      // document.querySelectorAll(".lis ii").onmouseenter = function(function(v,k){
-      document.querySelectorAll(".list ii").forEach((v, k, ar) => {
+      // document.querySelectorAll(".lis li").forEach(function(v,k){
+      document.querySelectorAll(".list li").forEach((v, k, ar) => {
         v.onmouseenter = () => {
-          ar.forEach(function (v, k) {
+          ar.forEach(function (v, i) {
             v.querySelector(
               "img"
-            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_1_1.jpg`;
+            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_${
+              k + 1
+            }_${i + 1}.jpg`;
+          });
+        };
+        v.onmouseleave = () => {
+          ar.forEach(function (v, i) {
+            v.querySelector(
+              "img"
+            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_${
+              i + 1
+            }.jpg`;
           });
         };
       });
