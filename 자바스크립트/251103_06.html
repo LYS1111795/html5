@@ -9,14 +9,20 @@
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <script>
+      // document.onkeydown = function (e) {
+      //   console.log(e.KeyCode);
+      // };
+
+      // document.onkeyup = function (e) {
+      //   console.log(e.KeyCode);
+      // };
+      document.onkeypress = function (e) {
+        console.log(e.KeyCode);
+      };
+    </script>
+  </body>
 </html>
