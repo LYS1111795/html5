@@ -22,25 +22,22 @@
         justify-content: center;
       }
       .list li {
-        position: relative;
         flex: 1;
         cursor: pointer;
-      }
-      .list li img {
-        width: 100%;
-        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 616px;
+        background-size: cover;
+        /* transition: 0.5s; */
       }
       .list li .txt {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         color: #fff;
         white-space: nowrap;
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 28px;
+        gap: 50px;
       }
       .list li .txt .detail {
         display: none;
@@ -52,10 +49,9 @@
         height: 32px;
         border-radius: 50%;
         background: #fff;
-        margin: 28px auto 0;
+        margin: 50px auto 0;
       }
       .list li .txt span::before {
-        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -66,6 +62,7 @@
         background-size: 462px 434px;
         background-position: -19px -418px;
         background-repeat: no-repeat;
+        content: "";
       }
       .list li .txt .detail.on {
         display: block;
@@ -75,10 +72,10 @@
   <body>
     <ul class="list">
       <li>
-        <img
+        <!-- <img
           src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_1.jpg"
           alt=""
-        />
+        /> -->
         <div class="txt">
           <h1>협력사 상생</h1>
           <div class="detail">
@@ -90,45 +87,46 @@
         </div>
       </li>
       <li>
-        <img
+        <!-- <img
           src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_2.jpg"
           alt=""
-        />
+        /> -->
         <div class="txt">
           <h1>ME:RACLE</h1>
           <div class="detail">
             <p>
-              더 건강하고 <br />아름다운 세상을 만들기 위한<br />올리브영의 노력
+              입점 브랜드의 성장과 <br />글로벌 진출을 <br />함께하는 파트너
             </p>
             <span></span>
           </div>
         </div>
       </li>
       <li>
-        <img
+        <!-- <img
           src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_3.jpg"
           alt=""
-        />
+        /> -->
         <div class="txt">
           <h1>환경경영</h1>
           <div class="detail">
             <p>
-              자원순환 가치를 바탕으로 <br />지속가능한 뷰티&헬스 <br />생태계
-              구축
+              입점 브랜드의 성장과 <br />글로벌 진출을 <br />함께하는 파트너
             </p>
             <span></span>
           </div>
         </div>
       </li>
       <li>
-        <img
+        <!-- <img
           src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_4.jpg"
           alt=""
-        />
+        /> -->
         <div class="txt">
           <h1>품질경영</h1>
           <div class="detail">
-            <p>믿을 수 있는 <br />제품과 서비스로 <br />고객 가치 창출</p>
+            <p>
+              입점 브랜드의 성장과 <br />글로벌 진출을 <br />함께하는 파트너
+            </p>
             <span></span>
           </div>
         </div>
@@ -138,24 +136,27 @@
       //https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_1_1.jpg
       // document.querySelectorAll(".lis li").forEach(function(v,k){
       document.querySelectorAll(".list li").forEach((v, k, ar) => {
+        ar.forEach(function (v, k) {
+          v.style.backgroundImage = `url(https://corp.oliveyoung.com/img/sustain/img_sustain_pc_${
+            k + 1
+          }.jpg)`;
+        });
         v.onmouseenter = () => {
           ar.forEach(function (v, i) {
-            v.querySelector(
-              "img"
-            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_${
+            v.style.backgroundImage = `url(https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_${
               k + 1
-            }_${i + 1}.jpg`;
+            }_${i + 1}.jpg)`;
             v.querySelector(".detail").classList.remove("on");
+            v.style.transition = "0.5s";
           });
           v.querySelector(".detail").classList.add("on");
         };
         v.onmouseleave = () => {
           ar.forEach(function (v, i) {
-            v.querySelector(
-              "img"
-            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_${
+            v.style.backgroundImage = `url(https://corp.oliveyoung.com/img/sustain/img_sustain_pc_${
               i + 1
-            }.jpg`;
+            }.jpg)`;
+            v.style.transition = "0s";
           });
         };
       });
