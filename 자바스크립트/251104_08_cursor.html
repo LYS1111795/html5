@@ -14,13 +14,27 @@
       }
       .customPointer {
         position: fixed;
+        left: -200px;
+        top: -200px;
         width: 60px;
         height: 60px;
-        background-image: url(https://cdn.imweb.me/upload/S20240112577c82953a84f/a28527ef71348.png);
-        background-repeat: no-repeat;
-        background-size: 45px 57px;
-        background-position: right bottom;
+        background-color: rgba(255, 0, 0, 0.5);
+        border-radius: 50%;
         z-index: 9999;
+        pointer-events: none;
+        /* 해당요소가 마우스 이벤트를 받지 않도록 무시하는 속성 */
+        animation: move 2s infinite;
+      }
+      @keyframes move {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(2);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
       }
     </style>
   </head>
