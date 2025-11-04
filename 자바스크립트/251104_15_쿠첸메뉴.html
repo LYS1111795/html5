@@ -78,7 +78,7 @@
       header .head .top ul.menu > li .sub.on {
         opacity: 1;
         transition: 0.3s;
-        background: #ccc;
+        /* background: #ccc; */
       }
       header .head .top ul.menu > li:first-child .sub > ul {
         display: flex;
@@ -211,11 +211,70 @@
         />
       </video>
     </section>
+    <div id="content" style="height: 1000px"></div>
     <script>
       let sub = document.querySelectorAll(".sub");
       let subUL = document.querySelectorAll(".sub>ul");
       let gnb = document.querySelectorAll(".menu>li");
-      console.log(subUL[0].offsetHeight);
+      // console.log(subUL[3].offsetHeight);
+      function subinit() {
+        sub.forEach(function (v, k) {
+          v.style.height = 0 + "px";
+          v.classList.remove("on");
+        });
+        document.querySelector(".head").style.height = 80 + "px";
+      }
+      gnb.forEach(function (v, k, ar) {
+        v.onmouseenter = function () {
+          try {
+            let ht = sub[k].querySelector("ul").offsetHeight;
+            console.log(ht);
+            gnb[k].querySelector(".sub").style.height = ht + "px";
+            gnb[k].querySelector(".sub").classList.add("on");
+            document.querySelector(".head").style.height = ht + 80 + "px";
+            document.querySelector(".head").style.backgroundColor = "#fff";
+          } catch (error) {}
+        };
+        v.onmouseleave = function () {
+          subinit();
+        };
+      });
+      document.querySelector(".head").onmouseenter = function () {
+        subinit();
+        gnb.forEach(function (v) {
+          v.querySelector("a").classList.add("on");
+        });
+        document.querySelector(".head").style.backgroundColor = "#fff";
+        document.querySelector(".logo img").src =
+          "https://www.cuchen.com/img/logo-d.svg";
+      };
+      document.querySelector(".head").onmouseleave = function () {
+        document.querySelector(".head").style.backgroundColor = "transparent";
+        document.querySelector(".logo img").src =
+          "https://www.cuchen.com/img/logo.svg";
+        gnb.forEach(function (v) {
+          v.querySelector("a").classList.remove("on");
+        });
+      };
+      function gnbfnc() {}
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        if (ht > 0) {
+          document.querySelector(".head").style.backgroundColor = "#fff";
+          gnb.forEach(function (v) {
+            v.querySelector("a").classList.add("on");
+          });
+          document.querySelector(".logo img").src =
+            "https://www.cuchen.com/img/logo-d.svg";
+        } else {
+          document.querySelector(".head").style.backgroundColor = "transparent";
+          gnb.forEach(function (v) {
+            v.querySelector("a").classList.remove("on");
+          });
+          document.querySelector(".logo img").src =
+            "https://www.cuchen.com/img/logo.svg";
+        }
+      };
     </script>
   </body>
 </html>
