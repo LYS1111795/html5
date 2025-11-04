@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스 좌표 출력</title>
+    <style>
+      body {
+        margin: 1000px 0;
+      }
+      p {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <p>clientX : <input type="text" id="clientX" /></p>
+    <p>clientY : <input type="text" id="clientY" /></p>
+    <p>pageX : <input type="text" id="pageX" /></p>
+    <p>pageY : <input type="text" id="pageY" /></p>
+    <p>screenX : <input type="text" id="screenX" /></p>
+    <p>screenY : <input type="text" id="screenY" /></p>
+
+    <script>
+      document.onmousemove = function (e) {
+        document.querySelector("#clientX").value = e.clientX;
+        document.querySelector("#clientY").value = e.clientY;
+        document.querySelector("#pageX").value = e.pageX;
+        document.querySelector("#pageY").value = e.pageY;
+        document.querySelector("#screenX").value = e.screenX;
+        document.querySelector("#screenY").value = e.screenY;
+      };
+    </script>
+  </body>
+</html>
