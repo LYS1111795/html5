@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>스크롤 기반 연속 영상 재생 (부드러운 전환)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <script>
+      window.addEventListener("wheel", function (e) {
+        console.log(e.deltaY);
+        if (e.deltaY > 0) {
+          console.log("마우스를 내리고 있어요");
+        } else if (e.deltaY < 0) {
+          console.log("마우스를 올리고 있어요");
+        }
+      });
+    </script>
+  </body>
+</html>

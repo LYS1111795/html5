@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>스크롤 기반 연속 영상 재생 (부드러운 전환)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        overflow: hidden;
+      }
+      #videoSection {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+      }
+      .video-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+      }
+      #content {
+        position: relative;
+        height: 1000px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="videoSection">
+      <video id="videoA" class="video-layer" muted autoplay></video>
+      <video id="videoB" class="video-layer" muted style="opacity: 0"></video>
+    </section>
+    <section id="content"></section>
+
+    <script>
+      const videoA = document.getElementById("videoA");
+      const videoB = document.getElementById("videoB");
+
+      // 영상 세트 (정방향)
+      const videoSets = [
+        {
+          intro:
+            "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_1_intro.mp4",
+          loop: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_2_loop.mp4",
+        },
+        {
+          intro:
+            "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_3.mp4",
+          loop: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_4_loop.mp4",
+        },
+        {
+          intro:
+            "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_5.mp4",
+          loop: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_6_loop.mp4",
+        },
+      ];
+
+      // 역방향 세트
+      const reverseSets = [
+        {
+          intro:
+            "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_R_2.mp4",
+          loop: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_2_loop.mp4",
+        },
+        {
+          intro:
+            "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_R_3.mp4",
+          loop: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_4_loop.mp4",
+        },
+      ];
+
+      let currentIndex = 0;
+      let isTransitioning = false;
+      let currentVideo = videoA; // 현재 재생 중인 비디오
+      let nextVideo = videoB; // 전환용 비디오
+
+      // 영상 세트 재생 함수 (인트로 → 루프)
+      function playSet(set) {
+        isTransitioning = true;
+        currentVideo.src = set.intro;
+        currentVideo.loop = false;
+        currentVideo.play();
+
+        // 루프 영상 미리 로드
+        nextVideo.src = set.loop;
+        nextVideo.loop = true;
+        nextVideo.load();
+
+        // 인트로가 끝나면 자연스럽게 전환
+        currentVideo.onended = () => {
+          nextVideo.currentTime = 0;
+          nextVideo.play();
+
+          // fade 전환
+          nextVideo.style.opacity = 1;
+          currentVideo.style.opacity = 0;
+
+          // 두 비디오 역할 교체
+          [currentVideo, nextVideo] = [nextVideo, currentVideo];
+          isTransitioning = false;
+        };
+      }
+
+      // 초기 재생
+      playSet(videoSets[0]);
+
+      // 스크롤 감지 (디바운스)
+      let scrollTimeout;
+      window.addEventListener("wheel", (e) => {
+        if (isTransitioning) return;
+        clearTimeout(scrollTimeout);
+
+        scrollTimeout = setTimeout(() => {
+          if (e.deltaY > 0) {
+            // 아래로 스크롤
+            console.log(currentIndex);
+            if (currentIndex < videoSets.length - 1) {
+              currentIndex++;
+              document.querySelector("body").style.overflow = "hidden";
+              playSet(videoSets[currentIndex]);
+            } else if (currentIndex == 2) {
+              document.querySelector("#videoSection").style.position =
+                "relative";
+              document.querySelector("body").style.overflow = "visible";
+            }
+          } else if (e.deltaY < 0) {
+            // 위로 스크롤
+            document.querySelector("#videoSection").style.position = "fixed";
+            document.querySelector("body").style.overflow = "hidden";
+            if (currentIndex > 0) {
+              currentIndex--;
+              const reverseSet =
+                reverseSets[currentIndex] || videoSets[currentIndex];
+              playSet(reverseSet);
+            }
+          }
+        }, 200);
+      });
+    </script>
+  </body>
+</html>
