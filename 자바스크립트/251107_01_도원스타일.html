@@ -48,6 +48,26 @@
       .swiper-slide img.on {
         transform: scale(1);
       }
+      .txt > div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+        text-align: center;
+        color: #fff;
+      }
+      .txt > div h1 {
+        font-size: 60px;
+        transform: scale(1.2);
+        opacity: 0;
+        line-height: 1.2;
+      }
+      .txt > div h1.on {
+        opacity: 1;
+        transform: scale(1);
+        transition: 3s 1s;
+      }
       #controls {
         position: absolute;
         top: 70%;
@@ -148,12 +168,16 @@
     <!-- Initialize Swiper -->
     <script>
       let slide = document.querySelectorAll(".swiper-slide");
+      let txt = document.querySelectorAll(".txt>div");
       document.querySelector(".start").innerHTML = "1";
       document.querySelector(".end").innerHTML = slide.length;
       //slide[0] slide[1] slide[2]
-      function slideimg() {
+      function slideinit() {
         slide.forEach(function (v) {
           v.querySelector("img").classList.remove("on");
+        });
+        txt.forEach(function (v) {
+          v.querySelector("h1").classList.remove("on");
         });
       }
       var swiper = new Swiper(".mySwiper", {
@@ -163,7 +187,7 @@
         effect: "fade",
         loop: true,
         autoplay: {
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         },
         pagination: {
@@ -177,8 +201,9 @@
         on: {
           slideChange: function () {
             console.log(this.realIndex);
-            slideimg();
+            slideinit();
             slide[this.realIndex].querySelector("img").classList.add("on");
+            txt[this.realIndex].querySelector("h1").classList.add("on");
             document.querySelector(".start").innerHTML = this.realIndex + 1;
           },
         },
