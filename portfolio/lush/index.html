@@ -150,7 +150,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 1300px;
         background-color: rgba(0, 0, 0, 0.4);
         z-index: 1;
       }
@@ -253,6 +253,7 @@
       }
 
       .survey {
+        position: relative;
         width: 1432px;
         height: 362px;
         margin: 80px auto;
@@ -262,17 +263,42 @@
         flex-direction: column;
         justify-content: center;
         color: #fff;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
       }
+
+      .survey::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+      }
+
       .survey h5 {
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 5px;
+        position: relative;
+        z-index: 1;
       }
       .survey h3 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
       }
+      .survey > p {
+        color: #fff;
+        z-index: 1;
+      }
+
+      .
     </style>
   </head>
   <body>
@@ -351,6 +377,37 @@
       <h5>설문조사</h5>
       <h3>여러분의 러쉬 경험을 남겨주세요!</h3>
       <p>바로 참여하기</p>
+    </div>
+
+    <div class="info">
+      <h5>러쉬 소개</h5>
+      <div class="infoimg">
+        <p><img src="./images/main_lush_info1.jpg" alt="" /></p>
+        <h5>러쉬 소개</h5>
+        <p>
+          러쉬는 자연에서 얻은 신선한 재료와 동물실험을 하지 않는 정 <br />
+          직한 재료를 사용하여 모든 제품을 손으로 만듭니다.
+        </p>
+        <p><img src="./images/main_lush_info2.jpg" alt="" /></p>
+        <h5>러쉬 역사</h5>
+        <p>
+          1995년, 러쉬는 영국의 항구도시 풀(Poole)에 <br />
+          서 탄생했습니다.
+        </p>
+        <p><img src="./images/main_lush_info3.jpg" alt="" /></p>
+        <h5>이념과 가치</h5>
+        <p>
+          신선한 과일과 채소, 최상의 에센셜 오일, 그리고 안전한 원료를 <br />
+          사용하여 효과적인 제품을 만들 수 있다는 것을 믿습니다.
+        </p>
+        <p><img src="./images/main_lush_info4.jpg" alt="" /></p>
+        <h5>브랜드 정책</h5>
+        <p>
+          동물과 자연과 사람이 조화롭게 공존하는 세상을 바라는 러쉬 <br />
+          비즈니스의 중심에는 강력한 브랜드 윤리가 자리 잡고있습니 <br />
+          다
+        </p>
+      </div>
     </div>
   </body>
 </html>
