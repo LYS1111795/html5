@@ -5,18 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
+      .con1 {
+        padding: 50px;
+        border: 1px solid;
       }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $(".con1").focusin(function () {
+          $(this).css({ backgroundColor: "#ccc" });
+          //$(this).css( "backgroundColor": "#ccc" );
+        });
+        $(".con1").focusout(function () {
+          $(this).css({ backgroundColor: "#fff" });
+        });
+        let i = 0;
+        /*$("#demo").click(function(){
+          console.log(1++);
+        }); */
+        /* $("#demo").on("click", function () {
+          console.log(i++);
+          if (i > 5) {
+            $(this).off("click");
+          }
+        }); */
+        $("#demo").on({
+          click: function () {
+            $(this).text("클릭함");
+          },
+          dblclick: function () {
+            $(this).text("더블클릭함");
+          },
+          mouseenter: function () {
+            $(this).text("마우스올림");
+          },
+        });
+        $("#demo2").on({
+          mousedown: function () {
+            $(this).text("마우스다운");
+          },
+          mouseup: function () {
+            $(this).text("마우스업");
+          },
+        });
+        $(document).keydown(function (event) {
+          console.log(event.keyCode);
+        });
+      });
+    </script>
   </head>
-  <body></body>
+  <body>
+    <p id="demo">클릭</p>
+    <p id="demo2">마우스</p>
+    <div class="con1">
+      <input type="text" name="" id="" /> <br />
+      <input type="text" name="" id="" />
+    </div>
+  </body>
 </html>
