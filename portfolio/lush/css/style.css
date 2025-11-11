@@ -298,6 +298,7 @@ header > p {
   margin-bottom: 5px;
   position: relative;
   z-index: 1;
+  margin-left: 150px;
 }
 .survey h3 {
   font-size: 32px;
@@ -305,12 +306,40 @@ header > p {
   margin-bottom: 30px;
   position: relative;
   z-index: 1;
+  margin-left: 150px;
 }
 .survey > p {
   color: #fff;
-  z-index: 1;
-}
-.infoimg {
+  border: 1px solid #fff;
+  width: 200px;
+  height: 30px;
+  margin-left: 350px;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 3;
+  margin-left: 150px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.infoimg {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.infoimg .item {
+  flex: 1 1 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.infoimg .item img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
