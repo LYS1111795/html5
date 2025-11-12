@@ -12,11 +12,10 @@
       ul {
         list-style: none;
       }
-
       div {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         height: 720px;
         background-size: cover;
       }
@@ -57,6 +56,7 @@
         background-image: url(https://weare.lush.co.kr/images/main_value05.jpg);
       }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   </head>
   <body>
     <div>
@@ -112,7 +112,8 @@
       </ul>
     </div>
     <script>
-      document.querySelectorAll(".list li").forEach(function (v, k, ar) {
+      //https://weare.lush.co.kr/images/main_value01.jpg
+      /*document.querySelectorAll(".list li").forEach(function (v, k, ar) {
         v.classList.add("bg");
         v.onclick = function () {
           ar.forEach(function (v) {
@@ -124,7 +125,27 @@
             .classList.remove("bg1", "bg2", "bg3", "bg4", "bg5", "bg6");
           document.querySelector("div").classList.add("bg" + (k + 1));
         };
-      });
+      });*/
+      $(".list li").addClass("bg");
+      $(".list li").hover(
+        function () {
+          let i = $(this).index();
+          console.log(i);
+          $(".list li").removeClass("bg");
+          $(this).addClass("bg");
+          $("div").removeClass();
+          $("div").addClass("bg" + (i + 1));
+        },
+        function () {
+          $(".list li").addClass("bg");
+        }
+      );
+      $("div").hover(
+        function () {},
+        function () {
+          $("div").removeClass();
+        }
+      );
     </script>
   </body>
 </html>
