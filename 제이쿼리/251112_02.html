@@ -9,8 +9,16 @@
         margin: 0;
         padding: 0;
       }
+      p {
+        height: 100px;
+        background: #ccc;
+      }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+      $(function () {});
+    </script>
   </head>
   <body>
     <p>제이쿼리</p>
@@ -29,7 +37,7 @@
         });
       });
       $("#toggle").click(function () {
-        $("p").toggle(1000, "swing");
+        $("p").toggle(1000, "easeInOutBounce");
       });
     </script>
   </body>

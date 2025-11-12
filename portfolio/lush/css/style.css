@@ -89,6 +89,7 @@ a {
 body {
   position: relative;
   font-family: "Pretendard", sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -224,7 +225,7 @@ header > p {
   font-weight: 700;
   margin-top: 10px;
   color: #333;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
 }
 
 .service {
@@ -325,13 +326,134 @@ header > p {
 }
 
 .info {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 0;
+  max-width: 1432px;
+  margin: 80px auto;
+  padding: 0 50px;
 }
+
 .info h2 {
+  font-size: 18px;
+  font-weight: 800;
   text-align: left;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.info ul li h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #525252;
+  margin-bottom: 10px;
+}
+
+.info ul li p {
+  color: #686868;
+}
+
+.info ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.info ul li {
+  width: calc(25% - 22.5px);
+  text-align: left;
+}
+
+.info ul li:nth-child(1) {
+  margin-top: 0px;
+}
+.info ul li:nth-child(2) {
+  margin-top: 35px;
+}
+.info ul li:nth-child(3) {
+  margin-top: -30px;
+}
+.info ul li:nth-child(4) {
+  margin-top: -50px;
+}
+
+.info ul li .img-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.info ul li:nth-child(1) .img-wrap {
+  height: 560px;
+}
+.info ul li:nth-child(2) .img-wrap {
+  height: 300px;
+}
+.info ul li:nth-child(3) .img-wrap {
+  height: 436px;
+}
+.info ul li:nth-child(4) .img-wrap {
+  height: 560px;
+}
+
+.info ul li .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.info ul li .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.info ul li .quote {
+  color: #fff;
   font-size: 32px;
-  margin-bottom: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 20px;
+}
+
+.info ul li .img-wrap:hover img {
+  /* transform: scale(1.05); */
+  transform: scale(1.0501);
+}
+
+.info ul li .img-wrap:hover .overlay {
+  opacity: 1;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.share_img img {
+  width: 780px;
+  height: 530px;
+}
+.txt4 {
+  flex-direction: column;
+  padding: 0 20px;
+  letter-spacing: -2px;
+}
+
+.txt4 h3 {
+  padding: 30px 0;
+  color: #222;
 }
