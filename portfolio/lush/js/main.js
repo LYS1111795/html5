@@ -68,6 +68,5 @@ function handleShopMoveMotion() {
     shopImgTarget.style.transform = `translate3d(0px, ${moveY}px, 0px) scale(1.1)`;
   }
 }
-
 window.addEventListener("scroll", handleShopMoveMotion);
 handleShopMoveMotion();
