@@ -70,3 +70,25 @@ function handleShopMoveMotion() {
 }
 window.addEventListener("scroll", handleShopMoveMotion);
 handleShopMoveMotion();
+
+//value
+$(".list li").addClass("bg");
+$(".list li").hover(
+  function () {
+    let i = $(this).index();
+    console.log(i);
+    $(".list li").removeClass("bg");
+    $(this).addClass("bg");
+    $("#main_value").removeClass();
+    $("#main_value").addClass("bg" + (i + 1));
+  },
+  function () {
+    $(".list li").addClass("bg");
+  }
+);
+$("#main_value").hover(
+  function () {},
+  function () {
+    $("#main_value").removeClass();
+  }
+);

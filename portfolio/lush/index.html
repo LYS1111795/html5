@@ -5,51 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LUSH</title>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 720px;
-        background-size: cover;
-      }
-      div ul.list {
-        width: 894px;
-        height: 454px;
-        display: flex;
-        gap: 94px 177px;
-        flex-wrap: wrap;
-      }
-      div ul.list li {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .bg {
-        background-color: #222;
-      }
-      .bg1 {
-        background-image: url(./images/main_value01.jpg);
-      }
-      .bg2 {
-        background-image: url(./images/main_value02.jpg);
-      }
-      .bg3 {
-        background-image: url(./images/main_value03.jpg);
-      }
-      .bg4 {
-        background-image: url(./images/main_value04.jpg);
-      }
-      .bg5 {
-        background-image: url(./images/main_value06.jpg);
-      }
-      .bg6 {
-        background-image: url(.r/images/main_value05.jpg);
-      }
-    </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   </head>
   <body>
@@ -235,7 +190,7 @@
       </div>
     </section>
 
-    <div>
+    <div id="main_value">
       <ul class="list">
         <li>
           <p>
@@ -269,8 +224,49 @@
         </li>
       </ul>
     </div>
-
+    <footer class="main-footer">
+      <div class="notice">
+        <ul>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">영상정보관리지침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </div>
+      <div class="address">
+        <ul>
+          <li>
+            <address>
+              서울 강남구 학동로 336 (메이트리 빌딩(matree B/D)) 1층 주식회사
+              러쉬코리아
+            </address>
+          </li>
+          <li>사이트 운영자 : 주식회사 러쉬코리아 | 대표이사 : 우미령</li>
+          <li>사업자 등록번호 : 201-81-77964 사업자정보확인</li>
+          <li>
+            통신판매업 신고번호 : 2012-서울서초-0647 | 개인정보보호책임자 :
+            장승웅
+          </li>
+          <li>COPYRIGHT © LUSHKOREA.CO.LTD.ALL RIGHTS RESERVED.</li>
+        </ul>
+      </div>
+      <div class="customer">
+        <ul>
+          <li>고객센터</li>
+          <li>1644-2357</li>
+          <li>webmaster@lush.co.kr</li>
+          <li>상담전화 13:00 ~16:00 (평일)</li>
+          <li>상담톡 10:00 ~16:00 (평일)</li>
+        </ul>
+      </div>
+      <div class="present">
+        <ul>
+          <li>기업선물</li>
+          <li>070-4713-8543</li>
+          <li>order@lush.co.kr</li>
+        </ul>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
-    <footer class="main-footer"></footer>
   </body>
 </html>

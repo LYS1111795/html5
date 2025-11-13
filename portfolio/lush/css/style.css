@@ -601,3 +601,62 @@ header > p {
   color: #fff;
   padding: 30px 50px;
 }
+
+/**/
+#main_value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 720px;
+  background-size: cover;
+}
+#main_value ul.list {
+  width: 894px;
+  height: 454px;
+  display: flex;
+  gap: 94px 177px;
+  flex-wrap: wrap;
+}
+#main_value ul.list li {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg {
+  background-color: #222;
+}
+.bg1 {
+  background-image: url(../images/main_value01.jpg);
+}
+.bg2 {
+  background-image: url(../images/main_value02.jpg);
+}
+.bg3 {
+  background-image: url(../images/main_value03.jpg);
+}
+.bg4 {
+  background-image: url(../images/main_value04.jpg);
+}
+.bg5 {
+  background-image: url(../images/main_value06.jpg);
+}
+.bg6 {
+  background-image: url(../images/main_value05.jpg);
+}
+/**/
+
+.main-footer {
+  height: 342px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.main-footer .notice {
+  font-size: 18px;
+  font-weight: 400;
+}
