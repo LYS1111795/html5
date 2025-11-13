@@ -20,6 +20,24 @@ window.onscroll = function () {
   }
 };
 
+const surveyImgTarget = document.querySelector(".survey_img img");
+const surveyContainer = surveyImgTarget.parentElement.parentElement;
+
+function handleSurveyMoveMotion() {
+  const rect = surveyContainer.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    const movementRate = 0.07;
+    const viewCenter = window.innerHeight / 2;
+    const offset = rect.top - viewCenter;
+    const moveY = offset * movementRate * -1;
+    surveyImgTarget.style.transform = `translate3d(0px, ${moveY}px, 0px) scale(1.1)`;
+  }
+}
+
+window.addEventListener("scroll", handleSurveyMoveMotion);
+handleSurveyMoveMotion();
+
 const shareImgTarget = document.querySelector(".share_img img");
 const container = shareImgTarget.parentElement;
 function handleMoveMotion() {
@@ -35,3 +53,21 @@ function handleMoveMotion() {
 }
 window.addEventListener("scroll", handleMoveMotion);
 handleMoveMotion();
+
+const shopImgTarget = document.querySelector(".shop_img img");
+const shopContainer = shopImgTarget.parentElement.parentElement;
+
+function handleShopMoveMotion() {
+  const rect = shopContainer.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    const movementRate = 0.07;
+    const viewCenter = window.innerHeight / 2;
+    const offset = rect.top - viewCenter;
+    const moveY = offset * movementRate;
+    shopImgTarget.style.transform = `translate3d(0px, ${moveY}px, 0px) scale(1.1)`;
+  }
+}
+
+window.addEventListener("scroll", handleShopMoveMotion);
+handleShopMoveMotion();
