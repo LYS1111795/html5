@@ -15,6 +15,9 @@
         $("button").each(function (k, v) {
           console.log(v);
           $(v).css({ "background-color": $(v).text() });
+          $(v).click(function () {
+            $("body").css({ "background-color": $(v).text() });
+          });
         });
       });
     </script>
