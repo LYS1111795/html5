@@ -97,7 +97,7 @@
       $(function () {
         let page = $("#page ul li");
         let sections = $("section");
-        let sec = $("#section1").offset();
+        let sec = $("#section2").offset();
         console.log(sec);
         $(page).eq(0).find("a").addClass("bgblue");
         $(page).each(function (k, v) {
@@ -111,20 +111,49 @@
             );
           });
         });
-        function chg() {
-          $("#page ul li a").removeClass();
-          $(page).find("a").addClass("onwhite");
-          $(page).eq(k).find("a").addClass("bgwight");
-        }
+
         $(window).scroll(function () {
-          sections.each(function (v, k) {
+          sections.each(function (k, v) {
+            function chg() {
+              $("#page ul li a").removeClass();
+              $(page).find("a").addClass("onwhite");
+              $(page).eq(k).find("a").addClass("bgwhite");
+            }
             let secTop = $(this).offset().top;
             let ht = $(window).scrollTop();
             console.log(ht);
             if (ht >= secTop - 140) {
-              $("#page ul li a").removeClass();
-              $(page).find("a").addClass("onwhite");
-              $(page).eq(k).find("a").addClass("bgwight");
+              if (k == 0) {
+                //첫번째섹션
+                $("#page ul li a").removeClass();
+                $(page).find("a").addClass("onblue");
+                $(page).eq(k).find("a").addClass("bgblue");
+                $(".logo img").attr(
+                  "src",
+                  "https://www.jpdc.co.kr/pub/site/samdasoo/new_images/logo.png"
+                );
+              } else if (k == 1) {
+                //두번째섹션
+                chg();
+                $(".logo img").attr(
+                  "src",
+                  "https://www.jpdc.co.kr/pub/site/samdasoo/new_images/foot_logo.png"
+                );
+                $(".water").css("opacity", "1");
+              } else if (k == 2) {
+                //세번째섹션
+                chg();
+                if (ht >= secTop + $(window).height() / 2) {
+                  $(".water").css("opacity", "0");
+                }
+              } else if (k == 3) {
+                //네번째섹션
+                chg();
+                $(".logo img").attr(
+                  "src",
+                  "https://www.jpdc.co.kr/pub/site/samdasoo/new_images/logo.png"
+                );
+              }
             }
           });
         });
