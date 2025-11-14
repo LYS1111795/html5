@@ -111,6 +111,23 @@
             );
           });
         });
+        function chg() {
+          $("#page ul li a").removeClass();
+          $(page).find("a").addClass("onwhite");
+          $(page).eq(k).find("a").addClass("bgwight");
+        }
+        $(window).scroll(function () {
+          sections.each(function (v, k) {
+            let secTop = $(this).offset().top;
+            let ht = $(window).scrollTop();
+            console.log(ht);
+            if (ht >= secTop - 140) {
+              $("#page ul li a").removeClass();
+              $(page).find("a").addClass("onwhite");
+              $(page).eq(k).find("a").addClass("bgwight");
+            }
+          });
+        });
       });
     </script>
   </head>
