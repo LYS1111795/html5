@@ -5,18 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      .box {
+        width: 50px;
+        height: 50px;
       }
-      ul {
-        list-style: none;
+      .green {
+        background: green;
       }
-      a {
-        text-decoration: none;
-        color: #333;
+      .blue {
+        background: blue;
+      }
+      .red {
+        background: red;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box red"></div>
+    <script>
+      gsap.to(".green", {
+        x: 500,
+        duration: 5,
+        rotation: 360,
+        // repeat: -1,
+        // yoyo: true,
+      });
+      gsap.set(".blue", { x: 40, backgroundColor: "pink" });
+      gsap.fromTo(
+        ".red",
+        { x: 100 },
+        { y: 500, duration: 5, ease: "bounce.out" }
+      );
+    </script>
+  </body>
 </html>
