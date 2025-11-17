@@ -759,53 +759,50 @@ header > p {
   font-weight: 200;
 }
 
-.sec_wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.lush_info_wrap {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.infomation1 {
-  width: 1500px;
-  /* margin: 80px auto; 를 제거하고 상하 마진만 남깁니다. */
-  margin: 80px 0;
+.lush_info_wrap li {
+  margin-bottom: 80px;
+}
+
+.lush_info_wrap li {
   display: flex;
-  justify-content: space-between; /* 양쪽 끝으로 밀어내거나 (필요 시) */
-  /* 또는 justify-content: flex-start; 로 내부 정렬은 시작점에 맞춥니다. */
   align-items: center;
-  gap: 60px;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  padding: 0 20px;
 }
 
-.infomation1 .img_con {
+.img_con {
   width: 704px;
   height: 560px;
-  margin: 0;
+}
+.img_con_txt {
+  width: 392px;
+  margin-left: 130px;
 }
 
-.infomation1 .img_con img {
+.img_con img {
   width: 100%;
-  height: 100%;
-  display: block;
+  height: auto;
 }
 
-.txt_con {
-  width: 736px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.txt_con h3 {
+.img_con_txt h3 {
   font-size: 32px;
-  font-weight: 700;
+  margin-bottom: 20px;
+  font-weight: bold;
   line-height: 1.3;
-  color: #000;
-  margin-bottom: 25px;
 }
 
-.txt_con p {
+.img_con_txt p {
   font-size: 16px;
-  line-height: 1.5;
-  color: #666;
+  color: #555;
+  line-height: 1.4;
 }

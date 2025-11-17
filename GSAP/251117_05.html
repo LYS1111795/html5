@@ -140,6 +140,7 @@
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script>
       const ani1 = gsap.timeline();
@@ -153,9 +154,9 @@
       ScrollTrigger.create({
         animation: ani1,
         trigger: "#section1",
-        markers: true,
+        //markers: true,
         //start: "top top",
-        //end: "2000 10% ",
+        // end: "2000 10%",
         pin: true,
         scrub: true,
       });
@@ -163,17 +164,30 @@
         defaults: { opacity: 0, borderRadius: 200 },
       });
       ani2
-        .from("section2 .i1", { y: -100 })
-        .from("section2 .i2", { y: 100 })
-        .from("section2 .i3", { y: -100 });
+        .from("#section2 .i1", { y: -100 })
+        .from("#section2 .i2", { y: 100 })
+        .from("#section2 .i3", { y: -100 });
       ScrollTrigger.create({
         animation: ani2,
         trigger: "#section2",
         markers: true,
         //start: "top top",
-        //end: "2000 10% ",
+        // end: "2000 10%",
         pin: true,
         scrub: true,
+      });
+      gsap.from("#section3 .item_img", {
+        y: -100,
+        autoAlpha: 0,
+        stagger: {
+          amount: 3,
+          from: "random",
+        },
+        scrollTrigger: {
+          trigger: "#section3",
+          pin: true,
+          scrub: true,
+        },
       });
     </script>
   </body>
