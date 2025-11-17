@@ -714,7 +714,7 @@ header > p {
   margin-left: 650px;
 }
 
-/*서브페이지*/
+/*러쉬소개*/
 
 .vis_info_txt {
   position: absolute;
@@ -805,4 +805,127 @@ header > p {
   font-size: 16px;
   color: #555;
   line-height: 1.4;
+}
+
+/*러쉬역사*/
+
+.lush_history_wrap {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 250px 20px;
+}
+
+.lush_history_wrap li {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.img_con {
+  width: 60%;
+}
+
+.img_con img {
+  width: 100%;
+  height: auto;
+}
+
+.img_con_txt {
+  width: 40%;
+}
+
+.img_con_txt h3 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.img_con_txt p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/*브랜드*/
+
+.brand_txt {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.brand_title_left {
+  width: 45%;
+}
+.brand_title_left h2 {
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.brand_content_right {
+  width: 50%;
+}
+.brand_content_right p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.brand_txt h2 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.brand_txt p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.lush_brand_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.lush_brand_wrap > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  padding: 0;
+}
+
+.img_brand_con {
+  width: 45%;
+}
+.img_brand_con img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img_brand_txt {
+  width: 50%;
+}
+
+.img_brand_txt h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.img_brand_txt p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
