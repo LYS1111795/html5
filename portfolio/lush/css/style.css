@@ -869,6 +869,7 @@ header > p {
 .brand_title_left h2 {
   font-size: 30px;
   line-height: 1.5;
+  letter-spacing: -1px;
 }
 
 .brand_content_right {
@@ -876,6 +877,7 @@ header > p {
 }
 .brand_content_right p {
   font-size: 15px;
+  font-weight: 200;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -901,7 +903,7 @@ header > p {
 .lush_brand_wrap > li {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 80px;
   padding: 0;
 }
@@ -926,6 +928,7 @@ header > p {
 
 .img_brand_txt p {
   font-size: 15px;
+  font-weight: 200;
   line-height: 1.6;
   margin-bottom: 15px;
 }
