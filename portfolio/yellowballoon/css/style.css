@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "ChangwonDangamRounded";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ChangwonDangamRound-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  font-family: "ChangwonDangamRounded";
+  font-size: 35px;
+}
+
+.data {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content2 {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  text-align: left;
+  color: white;
+  z-index: 1;
+  font-family: "ChangwonDangamRounded";
+  font-size: 30px;
+}
