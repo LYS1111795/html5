@@ -337,6 +337,7 @@ ul.yb li:nth-child(even) {
 }
 .trip li:hover {
   flex: 2;
+  color: #000;
 }
 
 .trip li:nth-child(1) {
@@ -362,4 +363,14 @@ ul.yb li:nth-child(even) {
 }
 .trip li:nth-child(8) {
   background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_8.jpg);
+}
+
+.trip > li > p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
 }
