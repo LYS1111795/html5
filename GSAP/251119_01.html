@@ -264,15 +264,17 @@
 
       const ani9 = gsap.timeline();
       ani9
-        .to("#section9 .li", { scale: 20 })
-        .to("#section9 .li", { duration: 0.1, scale: 20 })
-        .to("#section9 .li", { scale: 1 });
+        .to("#section9 .li", {
+          scale: 20,
+        })
+        .to("#section9 .li", {
+          scale: 1,
+        });
       ScrollTrigger.create({
         animation: ani9,
         trigger: "#section9",
         pin: true,
         scrub: true,
-        markers: true,
       });
     </script>
   </body>
