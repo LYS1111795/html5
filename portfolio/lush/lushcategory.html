@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        min-width: 1224px;
+      }
+
+      .lush_category {
+        margin-top: 176px;
+        position: relative;
+        margin-left: calc(50% - 612px);
+        overflow: hidden;
+      }
+      .lush_category .swiper-pagination-bullet {
+        width: 19px;
+        height: 2px;
+        font-size: 0;
+        border-radius: 0;
+        background-color: #757575;
+      }
+      .lush_category .swiper {
+        padding-bottom: 40px;
+        width: 100%;
+        height: 100%;
+      }
+      .lush_category .lush_category_swiper .swiper-wrapper > .swiper-slide {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      .category_img {
+        position: relative;
+        width: 475px;
+        height: 560px;
+      }
+      .category_img img {
+        width: 100%;
+      }
+      .lush_pro {
+        overflow: hidden;
+        width: calc(100% - 475px);
+        padding-left: 50px;
+      }
+      .lush_pro .title_area {
+        padding: 0 0 64px 64px;
+        font-weight: 700;
+      }
+      .lush_pro .title_area .tit {
+        font-size: 18px;
+        margin-bottom: 32px;
+      }
+      .lush_pro .title_area .description {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -2px;
+      }
+      .lush_pro_swiper {
+        padding-left: 64px;
+      }
+      .lush_pro_swiper .swiper-slide {
+        margin-right: 66px;
+        width: 288px;
+        height: 288px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .lush_pro_swiper .pro_img {
+        position: relative;
+      }
+      .lush_pro_swiper .txt {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        line-height: 24px;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+      }
+      .lush_pro_swiper .pro_img:hover .txt {
+        opacity: 1;
+        top: 50%;
+        transition: all ease-in-out 0.5s;
+        z-index: 99;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="lush_category">
+        <div class="swiper lush_category_swiper">
+          <div class="swiper-wrapper">
+            <!-- 배쓰 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_bath@3x.png"
+                    alt="bath main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">배쓰</h2>
+                  <p class="description">
+                    당신에게 향기로운 입욕을<br />선물합니다
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_01@3x.png"
+                          alt="bath_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_02@3x.png"
+                          alt="bath_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_03@3x.png"
+                          alt="bath_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_04@3x.png"
+                          alt="bath_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_05@3x.png"
+                          alt="bath_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_06@3x.png"
+                          alt="bath_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_07@3x.png"
+                          alt="bath_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_08@3x.png"
+                          alt="bath_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_09@3x.png"
+                          alt="bath_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/bath/bath_10@3x.png"
+                          alt="bath_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 샤워 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_shower@3x.png"
+                    alt="shower main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">샤워</h2>
+                  <p class="description">
+                    일렁이는 향기와 함께 피부를<br />건강하게 지켜주세요.
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_01@3x.png"
+                          alt="shower_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_02@3x.png"
+                          alt="shower_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_03@3x.png"
+                          alt="shower_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_04@3x.png"
+                          alt="shower_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_05@3x.png"
+                          alt="shower_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_06@3x.png"
+                          alt="shower_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_07@3x.png"
+                          alt="shower_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_08@3x.png"
+                          alt="shower_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_09@3x.png"
+                          alt="shower_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/shower/shower_10@3x.png"
+                          alt="shower_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 바디 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_body@3x.png"
+                    alt="body main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">샤워</h2>
+                  <p class="description">
+                    늘 당신의 피부를 향긋하고<br />건강하게 빚내 줄거예요.
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_01@3x.png"
+                          alt="body_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_02@3x.png"
+                          alt="body_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_03@3x.png"
+                          alt="body_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_04@3x.png"
+                          alt="body_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_05@3x.png"
+                          alt="body_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_06@3x.png"
+                          alt="body_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_07@3x.png"
+                          alt="body_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_08@3x.png"
+                          alt="body_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_09@3x.png"
+                          alt="body_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/body/body_10@3x.png"
+                          alt="body_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 헤어 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_hair@3x.png"
+                    alt="hair main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">헤어</h2>
+                  <p class="description">
+                    건강한 재료만 담아<br />매일 더 싱그러울 거에요.
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_01@3x.png"
+                          alt="hair_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_02@3x.png"
+                          alt="hair_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_03@3x.png"
+                          alt="hair_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_04@3x.png"
+                          alt="hair_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_05@3x.png"
+                          alt="hair_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_06@3x.png"
+                          alt="hair_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_07@3x.png"
+                          alt="hair_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_08@3x.png"
+                          alt="hair_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_09@3x.png"
+                          alt="hair_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/hair/hair_10@3x.png"
+                          alt="hair_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 페이스 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_face@3x.png"
+                    alt="face main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">페이스</h2>
+                  <p class="description">
+                    신선한 재료로 만들어<br />믿을 수 있는 제품이에요.
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_01@3x.png"
+                          alt="face_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_02@3x.png"
+                          alt="face_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_03@3x.png"
+                          alt="face_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_04@3x.png"
+                          alt="face_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_05@3x.png"
+                          alt="face_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_06@3x.png"
+                          alt="face_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_07@3x.png"
+                          alt="face_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_08@3x.png"
+                          alt="face_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_09.png"
+                          alt="face_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/face/face_10@3x.png"
+                          alt="face_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 메이크업 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_makeup@3x.png"
+                    alt="makeup main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">메이크업</h2>
+                  <p class="description">
+                    다른 누구도 아닌,<br />가장 나다운 느낌 표현해 보세요.
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_01@3x.png"
+                          alt="makeup_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_02@3x.png"
+                          alt="makeup_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_03@3x.png"
+                          alt="makeup_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_04@3x.png"
+                          alt="makeup_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_05@3x.png"
+                          alt="makeup_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_06@3x.png"
+                          alt="makeup_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_07@3x.png"
+                          alt="makeup_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_08@3x.png"
+                          alt="makeup_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_09@3x.png"
+                          alt="makeup_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/makeup/makeup_10@3x.png"
+                          alt="makeup_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 프래그런스 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_fragrance@3x.png"
+                    alt="fragrance main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">프래그런스</h2>
+                  <p class="description">
+                    자연과 음악, 시가 주는 영감으로<br />빚어낸 특별한 향기
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_01@3x.png"
+                          alt="fragrance_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_02@3x.png"
+                          alt="fragrance_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_03@3x.png"
+                          alt="fragrance_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_04@3x.png"
+                          alt="fragrance_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_05@3x.png"
+                          alt="fragrance_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_06@3x.png"
+                          alt="fragrance_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_07@3x.png"
+                          alt="fragrance_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_08@3x.png"
+                          alt="fragrance_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_09@3x.png"
+                          alt="fragrance_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/fragrance/fragrance_10@3x.png"
+                          alt="fragrance_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 기프트 -->
+            <div class="swiper-slide">
+              <div class="category_img">
+                <p>
+                  <img
+                    src="https://weare.lush.co.kr/images/product/main_gift@3x.png"
+                    alt="gift main"
+                  />
+                </p>
+              </div>
+              <!-- 상품이미지 -->
+              <div class="lush_pro">
+                <div class="title_area">
+                  <h2 class="tit">기프트</h2>
+                  <p class="description">
+                    환경을 배려한 선물의 감동은<br />긴 여운을 남길 거예요.
+                  </p>
+                </div>
+                <div class="swiper lush_pro_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_01@3x.png"
+                          alt="gift_01"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_02@3x.png"
+                          alt="gift_02"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_03@3x.png"
+                          alt="gift_03"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_04@3x.png"
+                          alt="gift_04"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_05@3x.png"
+                          alt="gift_05"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_06@3x.png"
+                          alt="gift_06"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_07@3x.png"
+                          alt="gift_07"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_08@3x.png"
+                          alt="gift_08"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_09@3x.png"
+                          alt="gift_09"
+                        />
+                      </p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="pro_img">
+                        <img
+                          src="https://weare.lush.co.kr/images/product/gift/gift_10@3x.png"
+                          alt="gift_10"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination">
+          <span class="swiper-pagination-bullet"></span
+          ><span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+        </div>
+      </section>
+    </div>
+    <script>
+      /* main 카테고리소개 > 상품이미지 */
+      const $lush = $(".lush_pro_swiper");
+      const lushAll = [];
+
+      $lush.each(function () {
+        const autoSwiper = new Swiper(this, {
+          slidesPerView: "auto",
+          grabCursor: true,
+          autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+          },
+          on: {
+            reachEnd: function () {
+              categorySwiper.slideNext();
+            },
+          },
+        });
+        $(".lush_pro_swiper").on("mouseenter", function () {
+          autoSwiper.autoplay.stop();
+        });
+        $(".lush_pro_swiper").on("mouseleave", function () {
+          autoSwiper.autoplay.start();
+        });
+        lushAll.push(autoSwiper);
+      });
+
+      // main 카테고리소개 > 상품이미지 초기화
+      function lushInitiator() {
+        lushAll.forEach(function (eachSWiper) {
+          eachSWiper.autoplay.stop();
+        });
+      }
+      lushInitiator();
+
+      // main 카테고리소개
+      const categorySwiper = new Swiper(".lush_category_swiper", {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        speed: 500,
+        grabCursor: true,
+        rewind: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        on: {
+          slideChange: function () {
+            lushInitiator();
+            lushAll[categorySwiper.realIndex].slideTo(0, 0, false);
+            lushAll[categorySwiper.realIndex].autoplay.start();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
