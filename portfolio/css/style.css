@@ -1,3 +1,99 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url(../webfonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: "SourceSansPro-Regular";
+  src: url(../webfonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: "SourceSansPro-Semibold.";
+  src: url(../webfonts/SourceSansPro-Semibold.ttf);
+}
+
+@font-face {
+  font-family: "SourceSansPro-Black";
+  src: url(../webfonts/SourceSansPro-Black.ttf);
+}
+
 a,
 button,
 input,
@@ -14,7 +110,6 @@ h5,
   border: none;
   text-decoration: none;
   background: none;
-
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,149 +121,185 @@ ul {
   padding: 0;
 }
 
-.scroll,
-.scroll * {
-  box-sizing: border-box;
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
 }
-.scroll {
+
+.full-page-section {
+  height: 100vh;
   background: #f3e5d2;
-  height: 4320px;
   position: relative;
+  padding: 0 5%;
   overflow: hidden;
 }
-.nav {
-  width: 590px;
-  height: 18px;
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   position: absolute;
-  left: 1168px;
-  top: 23px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 20px 5%;
 }
-.lee-yoing-suk {
+
+.logo {
   color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Bold", sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
-  position: absolute;
-  left: -1005px;
-  top: -13px;
+  font-family: "SourceSansPro-Bold", sans-serif;
 }
-.project {
+
+.main-nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+.main-nav a {
   color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Regular", sans-serif;
   font-size: 14px;
   letter-spacing: 0.3em;
   font-weight: 400;
-  position: absolute;
-  right: 75.42%;
-  left: 9.49%;
-  width: 15.08%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-}
-.about-me {
-  color: #000000;
-  text-align: left;
   font-family: "SourceSansPro-Regular", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  font-weight: 400;
-  position: absolute;
-  right: 31.02%;
-  left: 45.25%;
-  width: 23.73%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
 }
-.contact {
+
+.portfolio-title-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.portfolio-text {
   color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Regular", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  font-weight: 400;
-  position: absolute;
-  right: 0.68%;
-  left: 84.58%;
-  width: 14.75%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-}
-.main {
-  position: absolute;
-  inset: 0;
-}
-.portfolio {
-  color: #000000;
-  text-align: left;
   font-family: "Raleway-BoldItalic", sans-serif;
-  font-size: 300px;
+  font-size: 15vw;
   font-weight: 700;
   font-style: italic;
-  position: absolute;
-  left: 344px;
-  top: 359.88px;
-  width: 1231px;
-  height: 359px;
+  position: relative;
+  z-index: 2;
+  line-height: 1;
 }
+
+.portfolio-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ellipse {
+  position: absolute;
+  width: 70vw;
+  height: 26vw;
+
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  top: 50%;
+  left: 50%;
+}
+
 .ellipse-1 {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 814.13px;
-  height: 391.26px;
-  position: absolute;
-  left: 516.6px;
-  top: 453.04px;
-  transform-origin: 0 0;
-  transform: rotate(-14.883deg) scale(1, 1);
+  transform: translate(-52%, -55%) rotate(-10deg);
 }
+
 .ellipse-2 {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 814.13px;
-  height: 391.26px;
-  position: absolute;
-  left: 516.6px;
-  top: 488.63px;
-  transform-origin: 0 0;
-  transform: rotate(-14.883deg) scale(1, 1);
+  transform: translate(-48%, -45%) rotate(-10deg);
 }
-.vector {
-  width: 3.29%;
-  height: 2.5%;
+
+.star {
   position: absolute;
-  right: 67.05%;
-  left: 29.66%;
-  bottom: 81.49%;
-  top: 16%;
-  overflow: visible;
+  width: 40px;
+  height: 40px;
 }
-.vector2 {
-  width: 2.39%;
-  height: 1.87%;
-  position: absolute;
-  right: 37.46%;
-  left: 60.15%;
-  bottom: 91.46%;
-  top: 6.68%;
-  overflow: visible;
+
+.vector-top {
+  top: 28%;
+  left: 32%;
 }
-.section {
-  height: auto;
-  position: absolute;
-  left: 0px;
-  top: 60px;
-  overflow: visible;
+
+.vector-bottom {
+  bottom: 28%;
+  right: 32%;
 }
-.project2 {
+
+.portfolio-text {
+  color: #000000;
+  font-family: "Raleway-BoldItalic", sans-serif;
+  font-size: 15vw;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  /* ... (헤더 부분은 그대로 유지) ... */
+  .main-header {
+    padding: 20px 4%;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .main-nav ul {
+    gap: 20px;
+  }
+  .main-nav a {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .main-nav {
+    margin-top: 15px;
+  }
+  .main-nav ul {
+    gap: 15px;
+  }
+
+  .portfolio-text {
+    font-size: 18vw;
+  }
+
+  .ellipse {
+    width: 85vw;
+    height: 35vw;
+  }
+
+  .vector-top {
+    top: 35%;
+    left: 15%;
+  }
+
+  .vector-bottom {
+    bottom: 35%;
+    right: 15%;
+  }
+}
+
+/* .project2 {
   position: absolute;
   inset: 0;
 }
@@ -589,4 +720,4 @@ ul {
   left: 1546px;
   top: 2372px;
   overflow: visible;
-}
+} */
