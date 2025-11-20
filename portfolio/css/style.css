@@ -1,585 +1,181 @@
-.scroll,
-.scroll * {
-  box-sizing: border-box;
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-display: swap;
 }
-.scroll {
-  background: #f3e5d2;
-  height: 4320px;
-  position: relative;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Pretendard", sans-serif;
+}
+
+body {
+  background-color: #f3e8d6;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
   overflow: hidden;
 }
-.nav {
-  width: 590px;
-  height: 18px;
-  position: absolute;
-  left: 1168px;
-  top: 23px;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #000;
+  z-index: 100;
 }
-.lee-yoing-suk {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Bold", sans-serif;
-  font-size: 35px;
+
+.logo {
+  font-size: 18px;
   font-weight: 700;
-  position: absolute;
-  left: -1005px;
-  top: -13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.project {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Regular", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  font-weight: 400;
-  position: absolute;
-  right: 75.42%;
-  left: 9.49%;
-  width: 15.08%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
 }
-.about-me {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Regular", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  font-weight: 400;
-  position: absolute;
-  right: 31.02%;
-  left: 45.25%;
-  width: 23.73%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-.contact {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Regular", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  font-weight: 400;
-  position: absolute;
-  right: 0.68%;
-  left: 84.58%;
-  width: 14.75%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.main {
-  position: absolute;
-  inset: 0;
+
+.content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.portfolio {
-  color: #000000;
-  text-align: left;
-  font-family: "Raleway-BoldItalic", sans-serif;
-  font-size: 300px;
+
+h1 {
+  font-size: 120px;
   font-weight: 700;
   font-style: italic;
-  position: absolute;
-  left: 344px;
-  top: 359.88px;
-  width: 1231px;
-  height: 359px;
+  z-index: 2;
+  position: relative;
+  letter-spacing: -2px;
 }
-.ellipse-1 {
+
+.circle-decoration {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  border: 1px solid #333;
   border-radius: 50%;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 814.13px;
-  height: 391.26px;
-  position: absolute;
-  left: 516.6px;
-  top: 453.04px;
-  transform-origin: 0 0;
-  transform: rotate(-14.883deg) scale(1, 1);
+  transform: rotate(-15deg);
+  z-index: 1;
 }
-.ellipse-2 {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 814.13px;
-  height: 391.26px;
+
+.star {
   position: absolute;
-  left: 516.6px;
-  top: 488.63px;
-  transform-origin: 0 0;
-  transform: rotate(-14.883deg) scale(1, 1);
+  font-size: 40px;
 }
-.vector {
-  width: 3.29%;
-  height: 2.5%;
-  position: absolute;
-  right: 67.05%;
-  left: 29.66%;
-  bottom: 81.49%;
-  top: 16%;
-  overflow: visible;
+
+.star-top {
+  top: -30px;
+  right: 100px;
 }
-.vector2 {
-  width: 2.39%;
-  height: 1.87%;
-  position: absolute;
-  right: 37.46%;
-  left: 60.15%;
-  bottom: 91.46%;
-  top: 6.68%;
-  overflow: visible;
-}
-._1 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 60px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, 1);
-}
-._2 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 1080px;
-}
-._3 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 1150px;
-}
-._4 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 2161px;
-}
-._5 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 2230px;
-}
-._6 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 3241px;
-}
-._7 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 1920px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  top: 3311px;
-}
-.project2 {
-  position: absolute;
-  inset: 0;
-}
-.project3 {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Semibold", sans-serif;
-  font-size: 30px;
-  letter-spacing: 0.3em;
-  font-weight: 600;
-  position: absolute;
-  right: 81.77%;
-  left: 8.59%;
-  width: 9.64%;
-  bottom: 73.75%;
-  top: 25.37%;
-  height: 0.88%;
-}
-._12 {
-  width: 444.29px;
-  height: 510.92px;
-  position: absolute;
-  left: 210px;
-  top: 1271px;
-  overflow: visible;
-}
-._22 {
-  width: 444.29px;
-  height: 510.92px;
-  position: absolute;
-  left: 738px;
-  top: 1271px;
-  overflow: visible;
-}
-._32 {
-  width: 444.29px;
-  height: 510.92px;
-  position: absolute;
-  left: 1266px;
-  top: 1271px;
-  overflow: visible;
-}
-.lush {
-  color: #000000;
-  text-align: center;
-  font-family: "Pretendard-SemiBold", sans-serif;
-  font-size: 30px;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  position: absolute;
-  left: 224px;
-  top: 1840px;
-  width: 399px;
-}
-.html-css {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Light", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: -0.05em;
-  font-weight: 300;
-  position: absolute;
-  left: 235px;
-  top: 1909px;
-  width: 399px;
-}
-.div {
-  color: #000000;
-  text-align: center;
-  font-family: "Pretendard-SemiBold", sans-serif;
-  font-size: 30px;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  position: absolute;
-  left: 752px;
-  top: 1840px;
-  width: 399px;
-}
-.div2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Light", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: -0.05em;
-  font-weight: 300;
-  position: absolute;
-  left: 767px;
-  top: 1909px;
-  width: 399px;
-}
-.div3 {
-  color: #000000;
-  text-align: center;
-  font-family: "Pretendard-SemiBold", sans-serif;
-  font-size: 30px;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-  position: absolute;
-  left: 1289px;
-  top: 1840px;
-  width: 399px;
-}
-.ui {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Light", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: -0.05em;
-  font-weight: 300;
-  position: absolute;
-  left: 1288px;
-  top: 1909px;
-  width: 399px;
-}
-.about-me2 {
-  position: absolute;
-  inset: 0;
-}
-.about-me3 {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Semibold", sans-serif;
-  font-size: 30px;
-  letter-spacing: 0.3em;
-  font-weight: 600;
-  position: absolute;
-  right: 80.89%;
-  left: 8.54%;
-  width: 10.57%;
-  bottom: 48.73%;
-  top: 50.39%;
-  height: 0.88%;
-}
-._13 {
-  width: 24.17%;
-  height: 496px;
-  position: absolute;
-  right: 60.89%;
-  left: 14.95%;
-  top: 2373px;
-  object-fit: cover;
-  aspect-ratio: 464/496;
-}
-._23 {
-  width: 1.46%;
-  height: 0.65%;
-  position: absolute;
-  right: 79.01%;
-  left: 19.53%;
-  bottom: 35.44%;
-  top: 63.91%;
-  overflow: visible;
-}
-._14 {
-  width: 2.81%;
-  height: 1.25%;
-  position: absolute;
-  right: 64.79%;
-  left: 32.4%;
-  bottom: 41.88%;
-  top: 56.88%;
-  overflow: visible;
-}
-.div4 {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-SemiBold", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  position: absolute;
-  left: 966px;
-  top: 2362px;
-}
-.copo-34-naver-com {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: absolute;
-  left: 966px;
-  top: 2398px;
-}
-._2007-2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: absolute;
-  left: 966px;
-  top: 2534px;
-}
-._2013-12 {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: absolute;
-  left: 966px;
-  top: 2701px;
-}
-._2-2019-10 {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: absolute;
-  left: 966px;
-  top: 2736px;
-}
-.excel {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: absolute;
-  left: 966px;
-  top: 2864px;
-}
-.ui-ux-2025-12-18 {
-  color: #000000;
-  text-align: left;
-  font-family: "Pretendard-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: absolute;
-  left: 966px;
-  top: 2575px;
-}
-.education {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Semibold", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  position: absolute;
-  left: 966px;
-  top: 2489px;
-}
-.certifications {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Semibold", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  position: absolute;
-  left: 966px;
-  top: 2662px;
-}
-.tool {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Semibold", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  position: absolute;
-  left: 966px;
-  top: 2824px;
-}
-.contact2 {
-  position: absolute;
-  inset: 0;
-}
-.thank-you {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Black", sans-serif;
-  font-size: 300px;
-  font-weight: 900;
-  position: absolute;
-  left: 205px;
-  top: 3513px;
-}
-._010-3462-9492 {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Black", sans-serif;
-  font-size: 100px;
-  font-weight: 900;
-  position: absolute;
-  left: 1052px;
-  top: 4028px;
-}
-.contact3 {
-  color: #000000;
-  text-align: left;
-  font-family: "SourceSansPro-Semibold", sans-serif;
-  font-size: 30px;
-  letter-spacing: 0.3em;
-  font-weight: 600;
-  position: absolute;
-  right: 81.3%;
-  left: 8.54%;
-  width: 10.16%;
-  bottom: 23.75%;
-  top: 75.37%;
-  height: 0.88%;
-}
-.ellipse-3 {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 744px;
-  height: 744px;
-  position: absolute;
-  left: 1532px;
-  top: 1858px;
-}
-.rectangle-1 {
-  background: #000000;
-  width: 470px;
-  height: 385px;
-  position: absolute;
-  left: 1450px;
-  top: 2230px;
-}
-.layer-1 {
-  width: 431px;
-  height: 430px;
-  position: absolute;
-  left: 0px;
-  top: 2811.44px;
-  overflow: visible;
-}
-.line-1 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 77.6%;
-  height: 0%;
-  position: absolute;
-  right: 0%;
-  left: 22.4%;
-  bottom: 29.93%;
-  top: 70.07%;
-}
-.line-2 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 30.78%;
-  height: 0%;
-  position: absolute;
-  right: 57.97%;
-  left: 11.25%;
-  bottom: 34.7%;
-  top: 65.3%;
-  transform-origin: 0 0;
-  transform: rotate(-90deg) scale(1, 1);
-}
-.vector3 {
-  width: 4.74%;
-  height: 2.34%;
-  position: absolute;
-  right: 14.74%;
-  left: 80.52%;
-  bottom: 42.75%;
-  top: 54.91%;
-  overflow: visible;
+
+.star-bottom {
+  bottom: -30px;
+  left: 100px;
 }
