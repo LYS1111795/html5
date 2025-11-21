@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: Pretendard;
+  font-family: " Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
     format("woff");
   font-weight: 600;
@@ -74,6 +74,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "SourceSansPro-Regula";
+  src: url("../webfonts/SourceSansPro-Regular.ttf");
+}
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../webfonts/SourceSansPro-Bold.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -90,92 +99,45 @@ a {
 }
 
 body {
-  background-color: #f3e8d6;
-  font-family: "Montserrat", sans-serif;
+  background-color: #f3e5d2;
+  font-family: "Pretendard", sans-serif;
   color: #000;
   overflow: hidden;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
+#header {
   width: 100%;
+  border-bottom: 1px solid #000;
+  background-color: #f3e5d2;
+}
+
+nav {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 60px;
+  padding-right: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #000;
-  z-index: 100;
 }
 
-.logo {
-  font-size: 18px;
+nav h1 {
+  font-family: "SourceSansPro-Bold", sans-serif;
+  font-size: 30px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-nav ul {
+.top_menu {
   display: flex;
-  list-style: none;
-  gap: 40px;
+  gap: 60px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #000;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-main {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.content-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-size: 120px;
-  font-weight: 700;
-  font-style: italic;
-  z-index: 2;
-  position: relative;
-  letter-spacing: -2px;
-}
-
-.circle-decoration {
-  position: absolute;
-  width: 600px;
-  height: 200px;
-  border: 1px solid #333;
-  border-radius: 50%;
-  transform: rotate(-15deg);
-  z-index: 1;
-}
-
-.star {
-  position: absolute;
-  font-size: 40px;
-}
-
-.star-top {
-  top: -30px;
-  right: 100px;
-}
-
-.star-bottom {
-  bottom: -30px;
-  left: 100px;
+.top_menu li {
+  font-family: "SourceSansPro-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
 }
