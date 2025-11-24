@@ -812,4 +812,19 @@ a {
     padding-bottom: 80px;
     gap: 50px;
   }
+
+  .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .project2,
+  .about-me2,
+  .contact2 {
+    text-align: center;
+    width: 100%;
+  }
 }
