@@ -98,36 +98,6 @@ a {
   font-family: "Pretendard", sans-serif;
 }
 
-/**/
-a,
-button,
-input,
-select,
-h1,
-h2,
-h3,
-h4,
-h5,
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  background: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-menu,
-ol,
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/**/
-
 .home-page,
 .home-page * {
   box-sizing: border-box;
@@ -144,14 +114,12 @@ ul {
   overflow: hidden;
 }
 .header-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  flex-shrink: 0;
-  width: 1920px;
-  height: 53px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f3e5d2;
 }
 .top-content {
   padding: 0px 166px 0px 162px;
@@ -220,7 +188,8 @@ ul {
   position: relative;
 }
 .visual {
-  padding: 0px 0px 0px 125px;
+  padding-top: 80px;
+  /* padding: 0px 0px 0px 125px; */
   flex-shrink: 0;
   width: 1920px;
   height: 1020px;
@@ -552,6 +521,7 @@ ul {
   font-weight: 400;
   position: relative;
   align-self: stretch;
+  letter-spacing: -1px;
 }
 .edu-block {
   display: flex;
@@ -580,6 +550,7 @@ ul {
   font-weight: 400;
   position: relative;
   align-self: stretch;
+  letter-spacing: -1px;
 }
 .ui-ux-2025-12-18 {
   color: #000000;
@@ -587,6 +558,7 @@ ul {
   font-family: "Pretendard-Regular", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  letter-spacing: -1px;
   position: relative;
   align-self: stretch;
 }
@@ -615,6 +587,7 @@ ul {
   font-family: "Pretendard-Regular", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  letter-spacing: -1px;
   position: relative;
   align-self: stretch;
 }
@@ -624,6 +597,7 @@ ul {
   font-family: "Pretendard-Regular", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  letter-spacing: -1px;
   position: relative;
   align-self: stretch;
 }
@@ -652,6 +626,7 @@ ul {
   font-family: "Pretendard-Regular", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  letter-spacing: -1px;
   position: relative;
   align-self: stretch;
 }
