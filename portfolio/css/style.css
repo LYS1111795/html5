@@ -638,9 +638,10 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 1920px;
-  height: 1020px;
+  width: 100%;
+  min-height: 500px;
   position: relative;
+  padding-bottom: 100vh;
 }
 .section-title3 {
   display: flex;

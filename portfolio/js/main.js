@@ -1,19 +1,27 @@
 $(document).ready(function () {
   const FIXED_HEADER_HEIGHT = 80;
+  const SECTION_GAP_HEIGHT = 20;
+  const TOTAL_OFFSET = FIXED_HEADER_HEIGHT + SECTION_GAP_HEIGHT;
 
-  $(".menu a").on("click", function (e) {
-    e.preventDefault();
-
+  $(".top-content a").on("click", function (e) {
     const targetId = $(this).attr("href");
 
-    if (targetId && $(targetId).length) {
+    if (targetId && targetId.startsWith("#") && $(targetId).length) {
+      e.preventDefault();
+
       const targetPosition = $(targetId).offset().top;
 
-      const scrollTo = targetPosition - FIXED_HEADER_HEIGHT;
+      let finalOffset = TOTAL_OFFSET;
+
+      if (targetId === "#visual-section") {
+        finalOffset = 0;
+      }
+
+      const scrollTo = targetPosition - finalOffset;
 
       $("html, body").animate(
         {
-          scrollTop: scrollTo,
+          scrollTop: Math.max(0, scrollTo),
         },
         800
       );
