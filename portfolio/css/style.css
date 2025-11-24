@@ -122,14 +122,14 @@ a {
   background-color: #f3e5d2;
 }
 .top-content {
-  padding: 0px 166px 0px 162px;
+  padding: 0px 5% 0px 5%; /* 유연한 % 패딩으로 변경 */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   align-self: stretch;
   flex-shrink: 0;
-  /* height: 53px; */
+  /* height: 53px;*/
   height: auto;
   position: relative;
 }
@@ -692,26 +692,27 @@ a {
   .menu {
     gap: 40px;
   }
-
+  .main-content {
+    width: 90%;
+  }
   .portfolio {
     font-size: 25vw;
     top: 35%;
   }
-
-  .main-content {
-    width: 90%;
-  }
-
   .card-list {
     gap: 3%;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .html-css,
+  .ui {
+    margin-bottom: 40px;
+  }
   .top-content {
     flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     height: auto;
   }
   .menu {
@@ -719,59 +720,66 @@ a {
     gap: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
+    height: auto;
   }
   .lee-yoing-suk a {
     font-size: 20px;
-    white-space: nowrap;
   }
-
   .visual {
-    padding-top: 150px;
+    padding-top: 200px;
     min-height: 80vh;
   }
-
-  .portfolio {
-    font-size: 10vw;
-    top: 40%;
+  .visual-1 {
+    display: block;
+    width: 90vw;
+    height: auto;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    max-width: none;
   }
-
+  .portfolio {
+    font-size: 20vw;
+    position: absolute;
+    top: 50%;
+  }
+  .project-section {
+    gap: 50px;
+  }
   .card-list {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 auto;
   }
   .project-card-1,
   .project-card-2,
   .project-card-3 {
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
   }
   .html-css,
   .ui {
     width: 95%;
   }
 
-  .about-section {
-    gap: 50px;
-  }
   .main-content {
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     padding: 0 20px;
+    gap: 40px;
   }
+
   .image-group {
     width: 80%;
     height: auto;
     order: -1;
+    margin-bottom: 20px;
   }
   .profile-info {
     width: 100%;
     padding: 0 10px;
-  }
-
-  .project-section {
-    gap: 50px;
+    gap: 30px;
   }
 
   .star,
@@ -784,9 +792,24 @@ a {
 
   .thank-you {
     font-size: 20vw;
+    margin-top: -100px;
   }
   ._010-3462-9492 {
     font-size: 8vw;
     text-align: center;
+    margin-bottom: -1000px;
+  }
+
+  .info-block,
+  .edu-block,
+  .cert-block,
+  .tool-block {
+    margin-top: 1px;
+    margin-bottom: 20px;
+  }
+
+  .about-section {
+    padding-bottom: 80px;
+    gap: 50px;
   }
 }
