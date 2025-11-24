@@ -109,7 +109,7 @@ a {
   gap: 10px;
   align-items: center;
   justify-content: flex-start;
-  height: 4320px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -129,7 +129,8 @@ a {
   justify-content: space-between;
   align-self: stretch;
   flex-shrink: 0;
-  height: 53px;
+  /* height: 53px; */
+  height: auto;
   position: relative;
 }
 .lee-yoing-suk {
@@ -191,8 +192,8 @@ a {
   padding-top: 80px;
   /* padding: 0px 0px 0px 125px; */
   flex-shrink: 0;
-  width: 1920px;
-  height: 1020px;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
 }
 .visual-1 {
@@ -200,7 +201,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 814.13px;
+  /* width: 814.13px; */
   height: auto;
   position: absolute;
   left: calc(50% - 382px);
@@ -226,8 +227,8 @@ a {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: auto;
   position: relative;
 }
 .section-title {
@@ -302,7 +303,7 @@ a {
 }
 .thumbnail {
   flex-shrink: 0;
-  width: 444.28px;
+  /* width: 444.28px; */
   height: 510.42px;
   position: relative;
   overflow: visible;
@@ -335,7 +336,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 444.28px;
+  /* width: 444.28px; */
   position: relative;
 }
 .thumbnail2 {
@@ -390,7 +391,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 1920px;
+  width: 100%;
   height: 1020px;
   position: relative;
 }
@@ -680,5 +681,112 @@ a {
   font-size: 100px;
   font-weight: 900;
   position: relative;
-  width: 1715px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .top-content {
+    padding: 0px 30px;
+  }
+  .menu {
+    gap: 40px;
+  }
+
+  .portfolio {
+    font-size: 25vw;
+    top: 35%;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+  .card-list {
+    gap: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .lee-yoing-suk a {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .visual {
+    padding-top: 150px;
+    min-height: 80vh;
+  }
+
+  .portfolio {
+    font-size: 10vw;
+    top: 40%;
+  }
+
+  .card-list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .project-card-1,
+  .project-card-2,
+  .project-card-3 {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .html-css,
+  .ui {
+    width: 95%;
+  }
+
+  .about-section {
+    gap: 50px;
+  }
+  .main-content {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .image-group {
+    width: 80%;
+    height: auto;
+    order: -1;
+  }
+  .profile-info {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .project-section {
+    gap: 50px;
+  }
+
+  .star,
+  .w-line,
+  .h-line,
+  .flower,
+  .mask-group {
+    display: none;
+  }
+
+  .thank-you {
+    font-size: 20vw;
+  }
+  ._010-3462-9492 {
+    font-size: 8vw;
+    text-align: center;
+  }
 }
