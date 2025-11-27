@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자유게시판</title>
+  </head>
+  <body>
+    <h1>자유게시판</h1>
+    <div class="con">
+      <iframe
+        src="https://lysuxui.dothome.co.kr/gnuboard5/bbs/board.php?bo_table=board"
+        id="iframe"
+        style="width: 100%"
+        onload="Height();"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+    <script>
+      function Height() {
+        let the_height =
+          document.getElementById("iframe").contentWindow.document.body
+            .scrollHeight;
+        document.getElementById("iframe").height = the_height + 50;
+        document.getElementById("iframe").style.overflow = "hidden";
+      }
+    </script>
+  </body>
+</html>
