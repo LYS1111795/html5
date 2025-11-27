@@ -14,7 +14,8 @@
   margin: 0;
   padding: 0;
 }
-ul {
+ul,
+li {
   list-style: none;
 }
 a {
@@ -203,14 +204,18 @@ header nav .main_menu > li .sub li a {
 /**/
 
 .wrap-con {
-  margin-top: 300px;
+  margin-top: 100px !important;
+  position: relative !important;
+  z-index: 99 !important;
 }
 
 .wrap-con > h3 {
-  text-align: center;
-  margin-bottom: 100px;
-  font-size: 30px;
-  font-family: "SeoulNotice";
+  color: #333 !important;
+  margin-top: 0 !important;
+  margin-bottom: 50px !important;
+  font-size: 30px !important;
+  text-align: center !important;
+  display: block !important;
 }
 
 ul.yb li .txt h3 {
@@ -324,7 +329,7 @@ ul.yb li:nth-child(even) {
   list-style: none;
   width: 1480px;
   height: 500px;
-  margin: 50px auto;
+  margin: 30px auto;
   display: flex;
   gap: 16px;
 }
@@ -373,4 +378,448 @@ ul.yb li:nth-child(even) {
   justify-content: center;
   align-items: center;
   margin-top: 50%;
+}
+/*여기부터*/
+.news-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1480px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.right-area {
+  width: 75%;
+  border-top: 2px solid #000;
+}
+
+.left-area h3 {
+  font-family: "SeoulNotice";
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.left-area .more-btn {
+  font-size: 16px;
+  color: #000;
+}
+
+.right-area {
+  width: 75%;
+}
+
+.right-area li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.right-area li p {
+  flex: 1;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+  padding-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right-area li span {
+  font-size: 14px;
+  color: #888;
+}
+
+footer {
+  border-bottom: none;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.f-menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.f-menu li {
+  position: relative;
+  padding: 0 15px;
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.f-menu li:first-child {
+  padding-left: 0;
+}
+
+.f-menu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background-color: #ddd;
+}
+
+.f-menu li.bold {
+  font-weight: 800;
+  color: #4567ad;
+}
+
+.f-sns {
+  display: flex;
+  gap: 10px;
+}
+
+.f-sns li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #222;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+}
+
+.yellow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  font-size: 15px;
+}
+
+.yellow img {
+  display: block;
+  height: 10px;
+}
+
+.yellow p {
+  margin: 0;
+}
+
+.yellow p:first-child {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+section.foot {
+  margin-top: 0;
+  padding-top: 20px;
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.foot-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.company-info {
+  width: 65%;
+  border-right: 1px solid #ddd;
+}
+
+.company-info span {
+  color: #ddd;
+  margin: 0 8px;
+}
+
+.company-info p,
+.contact-info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.company-info p:last-child,
+.contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+.biz-btn {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #333;
+  margin-left: 5px;
+}
+
+.contact-info {
+  width: 33%;
+  padding-left: 30px;
+}
+
+.contact-info p span {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+  color: #555;
+}
+
+.awards {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.awards img {
+  max-width: 100%;
+}
+.copyright {
+  text-align: left;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .section,
+  header,
+  footer {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .wrap-con {
+    margin-top: 0 !important;
+    padding-top: 120px !important;
+
+    position: relative !important;
+    z-index: 999 !important;
+
+    background-color: #fff !important;
+    width: 100%;
+  }
+
+  .wrap-con > h3 {
+    color: #333 !important;
+    display: block !important;
+    text-align: center !important;
+
+    margin-bottom: 50px !important;
+    margin-top: 0 !important;
+  }
+
+  .content {
+    width: 90%;
+    font-size: 24px !important;
+    line-height: 1.4;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content h1 {
+    white-space: nowrap;
+  }
+
+  .content2 {
+    top: 10%;
+    left: 5%;
+    width: 90%;
+  }
+  .content2 h3 {
+    font-size: 20px !important;
+    line-height: 1.5;
+  }
+
+  .content3 {
+    flex-direction: column;
+    height: auto;
+    bottom: 5%;
+    gap: 30px;
+  }
+
+  .number1 {
+    margin: 0;
+  }
+
+  .number1 h1 {
+    font-size: 40px !important;
+    margin: 5px 0;
+  }
+  .number1 h3 {
+    font-size: 14px;
+  }
+
+  .news-container {
+    flex-direction: column;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .left-area {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .left-area h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .right-area {
+    width: 100%;
+    border-top: 2px solid #000;
+  }
+
+  .right-area li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;
+    gap: 5px;
+  }
+
+  .right-area li p {
+    font-size: 15px;
+    white-space: normal;
+    line-height: 1.4;
+    padding-right: 0;
+    width: 100%;
+  }
+  .right-area li span {
+    align-self: flex-end;
+    font-size: 12px;
+  }
+
+  .footer-inner,
+  .info-container {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    gap: 20px;
+  }
+
+  .f-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    line-height: 2;
+  }
+
+  .f-sns {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .company-info,
+  .contact-info {
+    width: 100% !important;
+    border: none !important;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  .company-info span,
+  .contact-info span {
+    display: none;
+  }
+
+  .company-info p {
+    word-break: keep-all;
+    margin-bottom: 15px;
+  }
+
+  .awards {
+    margin-top: 20px;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+  .trip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+
+    height: auto !important;
+    padding: 0 20px !important;
+    margin: 30px auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .trip li {
+    flex: 0 0 calc(50% - 6px) !important;
+    width: calc(50% - 6px) !important;
+    max-width: calc(50% - 6px) !important;
+    height: 180px !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+  }
+
+  .trip li:hover {
+    flex: 0 0 calc(50% - 6px) !important;
+    width: calc(50% - 6px) !important;
+  }
+
+  .trip > li > p {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 18px !important;
+  }
+  .info-container,
+  .awards {
+    display: none !important;
+  }
+
+  .news-container {
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .trip {
+    margin: 20px auto !important;
+  }
+
+  .footer-inner {
+    gap: 10px;
+    padding: 15px 0;
+  }
+}
+
+.data {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
