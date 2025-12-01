@@ -1,0 +1,23 @@
+ul {
+  background-color: #ccc;
+  border: 1px solid;
+  padding: 10px;
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  color: lime;
+  font-size: 20px;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
+p {
+  background-color: #ccc;
+  border: 1px solid;
+  padding: 10px;
+  color: lime;
+}

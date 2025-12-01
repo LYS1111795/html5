@@ -1,13 +1,33 @@
+$main: #0f0;
+$size: 20px;
+@mixin txt {
+  background-color: #ccc;
+  border: 1px solid;
+  padding: 10px;
+}
+@mixin txet($bg, $height, $margin) {
+  background-color: $bg;
+  line-height: $height;
+  margin: $margin;
+}
 ul {
+  // @include txt;
+  @include text(#ccc, 1.5, 40px);
   list-style: none;
   li {
     display: inline-block;
     a {
       text-decoration: none;
-      color: #000;
+      color: $main;
+      font-size: $size;
       &:hover {
         text-decoration: underline;
       }
     }
   }
+}
+p {
+  // @include txt;
+  @include text(#ddd, 1, 100px);
+  color: $main;
 }
