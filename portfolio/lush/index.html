@@ -6,6 +6,97 @@
     <title>LUSH</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        min-width: 1224px;
+      }
+
+      .lush_category {
+        margin-top: 176px;
+        position: relative;
+        margin-left: calc(50% - 612px);
+        overflow: hidden;
+      }
+      .lush_category .swiper-pagination-bullet {
+        width: 19px;
+        height: 2px;
+        font-size: 0;
+        border-radius: 0;
+        background-color: #757575;
+      }
+      .lush_category .swiper {
+        padding-bottom: 40px;
+        width: 100%;
+        height: 100%;
+      }
+      .lush_category .lush_category_swiper .swiper-wrapper > .swiper-slide {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      .category_img {
+        position: relative;
+        width: 475px;
+        height: 560px;
+      }
+      .category_img img {
+        width: 100%;
+      }
+      .lush_pro {
+        overflow: hidden;
+        width: calc(100% - 475px);
+        padding-left: 50px;
+      }
+      .lush_pro .title_area {
+        padding: 0 0 64px 64px;
+        font-weight: 700;
+      }
+      .lush_pro .title_area .tit {
+        font-size: 18px;
+        margin-bottom: 32px;
+      }
+      .lush_pro .title_area .description {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -2px;
+      }
+      .lush_pro_swiper {
+        padding-left: 64px;
+      }
+      .lush_pro_swiper .swiper-slide {
+        margin-right: 66px;
+        width: 288px;
+        height: 288px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .lush_pro_swiper .pro_img {
+        position: relative;
+      }
+      .lush_pro_swiper .txt {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        line-height: 24px;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+      }
+      .lush_pro_swiper .pro_img:hover .txt {
+        opacity: 1;
+        top: 50%;
+        transition: all ease-in-out 0.5s;
+        z-index: 99;
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -1163,5 +1254,64 @@
       </div>
     </div>
     <script src="js/main.js"></script>
+    <!--카테고리 끝-->
+    <script>
+      /* main 카테고리소개 > 상품이미지 */
+      const $lush = $(".lush_pro_swiper");
+      const lushAll = [];
+
+      $lush.each(function () {
+        const autoSwiper = new Swiper(this, {
+          slidesPerView: "auto",
+          grabCursor: true,
+          autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+          },
+          on: {
+            reachEnd: function () {
+              categorySwiper.slideNext();
+            },
+          },
+        });
+        $(".lush_pro_swiper").on("mouseenter", function () {
+          autoSwiper.autoplay.stop();
+        });
+        $(".lush_pro_swiper").on("mouseleave", function () {
+          autoSwiper.autoplay.start();
+        });
+        lushAll.push(autoSwiper);
+      });
+
+      // main 카테고리소개 > 상품이미지 초기화
+      function lushInitiator() {
+        lushAll.forEach(function (eachSWiper) {
+          eachSWiper.autoplay.stop();
+        });
+      }
+      lushInitiator();
+
+      // main 카테고리소개
+      const categorySwiper = new Swiper(".lush_category_swiper", {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        speed: 500,
+        grabCursor: true,
+        rewind: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        on: {
+          slideChange: function () {
+            lushInitiator();
+            lushAll[categorySwiper.realIndex].slideTo(0, 0, false);
+            lushAll[categorySwiper.realIndex].autoplay.start();
+          },
+        },
+      });
+    </script>
   </body>
 </html>
