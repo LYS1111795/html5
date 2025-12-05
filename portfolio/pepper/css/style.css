@@ -82,9 +82,9 @@
 }
 
 body {
-  font-family: "Pretendard" "Noto Sans KR", sans-serif;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
   color: #111;
-  line-height: 1.5;
+  background: #f1f1f5;
 }
 
 ul {
@@ -96,70 +96,462 @@ a {
   color: inherit;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header {
   width: 100%;
-  padding: 2.75rem 2.875rem;
-  gap: 2.875rem;
+  height: 60%;
+  margin: 0;
 }
 
-header {
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.header ul {
+  display: flex;
+}
+
+.header .top-menu {
+  display: flex;
+  gap: 5.64475rem;
+  font-family: "PEPPERS";
+}
+
+.top-menu a {
+  line-height: 60px;
+  color: #111;
+}
+
+.header .right-icons {
   display: flex;
   align-items: center;
-  height: 80px;
-  padding: 0 40px;
-  border-bottom: 1px solid #e0e0e0;
-  background-color: white;
-  width: 100%;
+  gap: 1.5625rem;
+  /* width: 2rem;
+  height: 2rem; */
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: bold;
+.slide1 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.2;
-  color: #555;
-  cursor: pointer;
-  flex-shrink: 0;
+  margin: 0 auto;
+  width: 1824px;
+  height: 500px;
+  padding: 30px 300px;
+  align-items: center;
+  gap: 100px;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #ffe5e5 0%, #ff8f8f 100%);
 }
 
-.logo span {
-  color: #d6001c;
-  font-size: 1.4rem;
+.txt1 {
+  color: #111;
+  font-family: "Pretendard";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: -4.2px;
 }
 
-nav {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 60px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
+.txt2 {
+  color: #111;
+  font-family: PEPPERS;
+  font-size: 70px;
+  font-style: normal;
   font-weight: 700;
-  font-size: 1.1rem;
-  white-space: nowrap;
+  line-height: 100px;
 }
 
-.header-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
+.slide1 {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 1824px;
+  height: 500px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 300px;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #ffe5e5 0%, #ff8f8f 100%);
 }
 
-.header-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.slide1 .btn {
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 100px;
+  border: 1px solid #000;
+  display: flex;
+  width: 320px;
+  height: 60px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneImg {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  display: flex;
+  width: 764px;
+  height: 460px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: -100px;
+}
+
+.quick-menu {
+  display: flex;
+  width: 721px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 599px;
+  border-radius: 50px;
+  background: #cf4844;
+  z-index: 10;
+  position: absolute;
+  top: 520px;
+}
+
+.quick-menu ul {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-menu ul li {
+  border-right: 1px solid #ff9494;
+  padding-right: 26px;
+  line-height: 25px;
+  height: 21px;
+}
+
+.quick-menu ul li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.quick-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "PEPPERS";
+  font-size: 25px;
+  font-style: normal;
+}
+
+.info {
+  width: 1585px;
+  height: 589px;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
+}
+
+.info h1 {
+  color: #000;
+  font-family: "PEPPERS";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; /* 100% */
+  color: #000;
+}
+
+.line {
+  width: 450px;
+  height: 18px;
+  position: absolute;
+  left: -10px;
+  top: 120px;
+  background: #fbc3c3;
+  z-index: -1;
+}
+
+.info h3 {
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 100% */
+}
+
+.info p {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 135% */
+}
+
+.hand {
+  width: 270px;
+  height: 270px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  right: 35px;
+  bottom: -200px;
+  left: 240px;
+}
+
+.Rcard {
+  display: flex;
+  width: 447px;
+  height: 550px;
+  padding: 40px 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 50px 50px 20px;
+  background: #fff;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.badge {
+  color: #fff;
+  text-align: center;
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  display: flex;
+  width: 106px;
+  height: 32px;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #000;
+}
+
+.Rcard h2 {
+  color: #000;
+  font-family: "PEPPERS";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 100% */
+  letter-spacing: -2.4px;
+}
+
+.Rcard ul li:first-child {
+  align-self: stretch;
+  color: #666;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  letter-spacing: -1.2px;
+  margin-bottom: 60px;
+}
+
+.Rcard ul li span {
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -1.2px;
+}
+
+.Rcard ul li:nth-child(2) {
+  align-self: stretch;
+  color: #cf4844;
+  font-family: "Pretendard";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -1.4px;
+}
+
+.Rcard ul li:nth-child(3) {
+  align-self: stretch;
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  letter-spacing: -1.2px;
+}
+
+.Rcard h5 {
+  color: #fff;
+  text-align: center;
+  font-family: "Pretendard";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px; /* 112% */
+  letter-spacing: -1.5px;
+  display: flex;
+  width: 270px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #cf4844;
+}
+
+/* =================================================== */
+/* 1. ESG 섹션 전체 (.esg-section) 스타일 */
+/* =================================================== */
+.esg-section {
+  display: flex;
+  width: 1920px; /* 고정된 너비 */
+  height: 1062px;
+  padding-top: 70px;
+  flex-direction: column; /* 제목과 카드를 세로로 쌓음 */
+  align-items: center; /* 가로 중앙 정렬 */
+  background: #fff;
+  margin: 0 auto; /* 섹션 자체를 페이지 중앙에 배치 (필요시) */
+}
+
+/* 섹션 제목 (h1) 스타일 */
+.esg-section h1 {
+  font-size: 40px;
+  font-family: "PEPPERS"; /* 사용하시는 폰트 */
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 50px; /* 카드 그룹과의 간격 */
+}
+
+/* =================================================== */
+/* 2. 카드 묶음 (.esg-wrap) 스타일: 가로 정렬 담당 */
+/* =================================================== */
+.esg-wrap {
+  display: flex; /* ✨ 핵심: 카드들을 가로로 나란히 배치 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  gap: 100px; /* 카드들 사이의 간격 */
+  width: 100%;
+  max-width: 1200px; /* (옵션) 콘텐츠의 최대 너비 제한 */
+}
+
+/* =================================================== */
+/* 3. 개별 카드 (.esg-item) 스타일 */
+/* =================================================== */
+.esg-item {
+  display: flex;
+  flex-direction: column; /* 카드 내부 요소를 세로로 쌓음 */
+  align-items: center; /* 카드 내부 요소를 가로 중앙에 정렬 */
+  width: 330px; /* 카드 개별 너비 설정 */
+  text-align: center;
+  gap: 15px; /* 카드 내부 요소 간 간격 */
+
+  /* 카드 사이 세로선 */
+  border-right: 1px solid #ddd;
+  padding-right: 50px;
+}
+
+/* 마지막 카드에는 세로선 제거 */
+.esg-wrap .esg-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* =================================================== */
+/* 4. 카드 내부 요소 스타일 */
+/* =================================================== */
+
+/* 아이콘 컨테이너 */
+.icon-box {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.icon-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* 서브타이틀 (Green Finance) */
+.esg-item .subtitle {
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* 카드 제목 (녹색금융) */
+.esg-item h4 {
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 5px; /* 리스트와의 간격 */
+}
+
+/* 피쳐 리스트 (친환경 차량 담보 대출 등) */
+.esg-item .features {
+  list-style-type: none; /* 리스트 점 제거 */
+  padding-left: 0; /* 리스트 들여쓰기 제거 */
+  margin-top: 0;
+  color: #000;
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6; /* 줄 간격 */
+}
+
+/* 상세보기 버튼 */
+.btn-detail {
+  color: #cf4844;
+  text-decoration: none; /* 밑줄 제거 */
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  width: 180px; /* 버튼 너비 축소 */
+  height: 50px; /* 버튼 높이 축소 */
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid #cf4844;
+  margin-top: 30px; /* 리스트와의 간격 */
 }

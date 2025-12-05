@@ -1,167 +1,103 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>페퍼저축은행</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
+    <div class="home">
+      <header class="header">
         <div class="header-inner">
-          <h1 class="logo">
-            <a href="#">
-              <img src="./images/Logo.svg" alt="페퍼저축은행" />
-            </a>
-          </h1>
-          <nav class="gnb">
-            <ul>
-              <li><a href="#">예금</a></li>
-              <li><a href="#">대출</a></li>
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">은행소개</a></li>
-            </ul>
-          </nav>
-
-          <div class="utils">
-            <button type="button" class="btn-search">
-              <img src="./images/search.svg" alt="검색" />
-            </button>
-            <button type="button" class="btn-menu">
-              <img src="./images/hambuger.svg" alt="전체메뉴" />
-            </button>
-          </div>
+          <img class="logo" src="images/Logo.svg" alt="페퍼저축은행로고" />
+          <ul class="top-menu">
+            <li><a href="#">예금</a></li>
+            <li><a href="#">대출</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">은행소개</a></li>
+          </ul>
+          <ul class="right-icons">
+            <li><img src="./images/search.svg" alt="검색" /></li>
+            <li><img src="./images/hambuger.svg" alt="메뉴" /></li>
+          </ul>
         </div>
       </header>
 
-      <main>
-        <section class="hero-section">
-          <div class="banner-box">
-            <button type="button" class="arrow prev"></button>
-            <div class="banner-content">
-              <div class="text-group">
-                <h2>저축할땐, 디지털 페퍼</h2>
-                <h2>페퍼저축은행</h2>
-                <button type="button" class="btn-app">APP 안내보러가기</button>
-              </div>
-              <div class="image-group">
-                <img src="./images/phone.svg" alt="앱 화면" class="phone-img" />
-              </div>
-            </div>
-            <button type="button" class="arrow next"></button>
+      <section class="slide1">
+        <div class="left-content">
+          <h1>
+            <span class="txt1">저축할땐, 디지털 페퍼</span>
+            <br />
+            <span class="txt2">페퍼저축은행</span>
+          </h1>
+          <p class="btn">APP 안내보러가기</p>
+        </div>
+        <div class="phoneImg">
+          <img src="./images/phone.png" alt="앱안내" />
+        </div>
+      </section>
+
+      <section class="quick-menu">
+        <ul class="q-mnue">
+          <li><a href="#">인터넷뱅킹</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">금융소비자포털</a></li>
+          <li><a href="#">상품공시실</a></li>
+        </ul>
+      </section>
+
+      <section class="info">
+        <div class="left-txt">
+          <h1>
+            최고의 그림<br />
+            가장 빠른 성장
+          </h1>
+          <span class="line"></span>
+          <h3>
+            당신의 일상을 바꾸는 <br />
+            스마트한 금융 설계
+          </h3>
+          <p>페퍼저축은행이 드리는 단 하나의 확실한 기회</p>
+          <div class="hand">
+            <img src="./images/hand.svg" alt="손이미지" />
           </div>
-          <div class="quick-links">
-            <ul>
-              <li><a href="#">인터넷뱅킹</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">금융소비자포털</a></li>
-              <li><a href="#">상품공시실</a></li>
+        </div>
+
+        <div class="right-card">
+          <div class="Rcard">
+            <span class="badge">대출</span>
+            <h2>페퍼비지니스론</h2>
+            <ul class="loanCard">
+              <li>
+                개인사업자를 위한 넉넉한 대출한도와 합리적인 금리의
+                주택담보대출! <br />
+                <span>가입대상 : </span>개인사업자
+              </li>
+              <li>20억원 미만까지</li>
+              <li>최저 연 5.74% ~ 최고 연 10.84%</li>
             </ul>
+            <a href="#"><h5>상세보기</h5></a>
           </div>
-        </section>
-        <section class="product-section">
-          <div class="product-intro">
-            <h3>최고의 금리<br />가장 빠른 성장</h3>
-            <p>당신의 일상을 바꾸는<br />스마트한 금융 설계</p>
-          </div>
-          <div class="product-cards">
-            <article class="card">
-              <span class="badge">대출</span>
-              <h4>페퍼비즈니스론</h4>
-              <p>사업자금을 위한 넉넉한 대출한도와 합리적인 금리</p>
-              <div class="card-info">
-                <strong>20억원 미만까지</strong>
-                <span>최저 연 5.74% ~ 최고 연 10.84%</span>
-              </div>
-              <a href="#">상세보기</a>
-            </article>
-            <article class="card">
-              <span class="badge">예금</span>
-              <h4>자유적립예금</h4>
-              <p>자유롭게 납입할 수 있는 목돈 만들기</p>
-              <div class="card-info">
-                <strong>최저 연 2.30% ~<br />최고 연 2.60%</strong>
-                <span>(세전/월복리)</span>
-              </div>
-              <a href="#">상세보기</a>
-            </article>
-          </div>
-        </section>
-        <section class="esg-section">
-          <h3>ESG 경영선도</h3>
-          <div class="esg-list">
-            <article class="esg-item">
-              <img src="./images/icon-green.svg" alt="녹색금융 아이콘" />
-              <span>Green Finance</span>
-              <h4>녹색금융</h4>
-              <ul>
-                <li>친환경 자동차 담보 대출</li>
-                <li>녹색건축물 금리 우대</li>
-              </ul>
-              <a href="#">자세히 보기</a>
-            </article>
-            <article class="esg-item">
-              <img src="./images/icon-sports.svg" alt="스포츠 후원 아이콘" />
-              <span>Sports Sponsorship</span>
-              <h4>스포츠 후원</h4>
-              <ul>
-                <li>AI 페퍼스 배구단 운영</li>
-                <li>장애인 양궁 실업팀 운영</li>
-              </ul>
-              <a href="#">자세히 보기</a>
-            </article>
-            <article class="esg-item">
-              <img src="./images/icon-scholarship.svg" alt="장학금 아이콘" />
-              <span>Scholarship</span>
-              <h4>장학금</h4>
-              <ul>
-                <li>페퍼 희망장학금</li>
-              </ul>
-              <a href="#">자세히 보기</a>
-            </article>
-          </div>
-        </section>
-        <section class="news-section">
-          <h3>페퍼소식</h3>
-          <div class="news-list">
-            <article class="news-card">
-              <h4>페퍼저축은행, 소비자 추천 1위 브랜드 7년 연속 선정</h4>
-              <span class="date">2025-05-22</span>
-              <a href="#">자세히 보기</a>
-            </article>
-            <article class="news-card">
-              <h4>페퍼저축은행, 소비자 추천 1위 브랜드 6년 연속 선정</h4>
-              <span class="date">2024-05-07</span>
-              <a href="#">자세히 보기</a>
-            </article>
-            <article class="news-card">
-              <h4>핫페퍼스 8기 해단식</h4>
-              <span class="date">2024-02-21</span>
-              <a href="#">자세히 보기</a>
-            </article>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="footer-links">
-          <ul>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">보호금융상품등록부</a></li>
-            <li><a href="#">서민금융 1332</a></li>
-            <li><a href="#">저축은행위법행위신고</a></li>
-            <li><a href="#">상담사로그인</a></li>
-          </ul>
         </div>
-        <div class="company-info">
-          <p>[주]페퍼저축은행</p>
-          <address>
-            주소 : 경기도 성남시 분당구 황새울로 340 (서현동 262-1)
-          </address>
-          <p>대표번호 : 1599-0722</p>
-          <p>Copyright © PEPPER SAVINGS BANK. ALL rights reserved.</p>
+          <div class="Rcard">
+            <span class="badge">예·적금</span>
+            <h2>자유적립예금</h2>
+            <ul class="loanCard">
+              <li>
+               자유롭게 납입할 수 있는 예금 상품 <br />
+                <span>가입대상 : </span>제한없음
+              </li>
+              <li>최저 연 2.30%~ <br>
+                최고 연 2.60% <br>
+              <li>(세전/월복리)</li>
+              </li>
+            </ul>
+            <a href="#"><h5>상세보기</h5></a>
+          </div>
         </div>
-      </footer>
-    </div>
+      </section>
+      <div>
+        <p>안녕</p>
+      </div>
   </body>
 </html>
