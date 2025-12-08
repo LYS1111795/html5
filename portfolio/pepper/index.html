@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <div class="home">
@@ -23,17 +24,39 @@
         </div>
       </header>
 
-      <section class="slide1">
-        <div class="left-content">
-          <h1>
-            <span class="txt1">저축할땐, 디지털 페퍼</span>
-            <br />
-            <span class="txt2">페퍼저축은행</span>
-          </h1>
-          <p class="btn">APP 안내보러가기</p>
-        </div>
-        <div class="phoneImg">
-          <img src="./images/phone.png" alt="앱안내" />
+      <section class="main-slider">
+        <div class="slider-wrapper">
+          <div class="slide">
+            <section class="slide1">
+              <div class="left-content">
+                <h1>
+                  <span class="txt1">저축할땐, 디지털 페퍼</span>
+                  <br />
+                  <span class="txt2">페퍼저축은행</span>
+                </h1>
+                <p class="btn">APP 안내보러가기</p>
+              </div>
+              <div class="phoneImg">
+                <img src="./images/phone.png" alt="앱안내" />
+              </div>
+            </section>
+          </div>
+
+          <!-- <div class="slide">
+            <section class="slide2">
+              <div class="left-content">
+                <h1>
+                  <span class="txt1">불법 앱 설치 유도 스미싱 주의!</span>
+                  <br />
+                  <span class="txt2">금융사기 주의 안내</span>
+                </h1>
+                <p class="btn">자세히 보기</p>
+              </div>
+              <div class="phoneImg">
+                <img src="./images/PhoneImg2.png" alt="스미싱 주의 안내" />
+              </div>
+            </section>
+          </div> -->
         </div>
       </section>
 
@@ -59,7 +82,7 @@
           </h3>
           <p>페퍼저축은행이 드리는 단 하나의 확실한 기회</p>
           <div class="hand">
-            <img src="./images/hand.svg" alt="손이미지" />
+            <img src="./images/hand.png" alt="손이미지" />
           </div>
         </div>
 
@@ -78,24 +101,110 @@
             </ul>
             <a href="#"><h5>상세보기</h5></a>
           </div>
-        </div>
+
           <div class="Rcard">
             <span class="badge">예·적금</span>
             <h2>자유적립예금</h2>
             <ul class="loanCard">
               <li>
-               자유롭게 납입할 수 있는 예금 상품 <br />
+                자유롭게 납입할 수 있는 예금 상품 <br />
                 <span>가입대상 : </span>제한없음
               </li>
-              <li>최저 연 2.30%~ <br>
-                최고 연 2.60% <br>
-              <li>(세전/월복리)</li>
+              <li>
+                최저 연 2.30%~ <br />
+                최고 연 2.60% <br />
               </li>
+              <li>(세전/월복리)</li>
             </ul>
             <a href="#"><h5>상세보기</h5></a>
           </div>
         </div>
       </section>
 
+      <section class="esg-section">
+        <h3>ESG 경영선도</h3>
+        <div class="esg-list">
+          <article class="esg-item">
+            <img src="./images/icon-green.png" alt="녹색금융 아이콘" />
+            <span>Green Finance</span>
+            <h4>녹색금융</h4>
+            <ul>
+              <li>- 친환경 자동차 담보 대출</li>
+              <li>- 녹색건축물 금리 우대</li>
+            </ul>
+            <a href="#">자세히 보기 ></a>
+          </article>
+          <article class="esg-item">
+            <img src="./images/icon-sports.png" alt="스포츠 후원 아이콘" />
+            <span>Sports Sponsorship</span>
+            <h4>스포츠 후원</h4>
+            <ul>
+              <li>- AI 페퍼스 배구단 운영</li>
+              <li>- 장애인 양궁 실업팀 운영</li>
+            </ul>
+            <a href="#">자세히 보기 ></a>
+          </article>
+          <article class="esg-item">
+            <img src="./images/icon-scholarship.png" alt="장학금 아이콘" />
+            <span>Scholarship</span>
+            <h4>장학금</h4>
+            <ul>
+              <li>- 페퍼 희망장학금</li>
+            </ul>
+            <a href="#">자세히 보기 ></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="news-section">
+        <h3>페퍼소식</h3>
+        <div class="news-list">
+          <article class="news-card">
+            <h4>페퍼저축은행, 소비자 추천 1위 브랜드 7년 연속 선정</h4>
+            <span class="date">2025-05-22</span>
+            <a href="#">자세히 보기</a>
+          </article>
+          <article class="news-card">
+            <h4>페퍼저축은행, 소비자 추천 1위 브랜드 6년 연속 선정</h4>
+            <span class="date">2024-05-07</span>
+            <a href="#">자세히 보기</a>
+          </article>
+          <article class="news-card">
+            <h4>핫페퍼스 8기 해단식</h4>
+            <span class="date">2024-02-21</span>
+            <a href="#">자세히 보기</a>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-links">
+          <div class="inner">
+            <ul>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">보호금융상품등록부</a></li>
+              <li><a href="#">서민금융 1332</a></li>
+              <li><a href="#">저축은행위법행위신고</a></li>
+              <li><a href="#">상담사로그인</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="company-info">
+          <div class="inner">
+            <p>(주)페퍼저축은행</p>
+            <p>
+              주소 : 경기도 성남시 분당구 황새울로 340 (서현동 262-1) 페퍼존빌딩
+              | 대표번호 : 1599-0722 | 금융사기 신고 야간콜센터 : 02-397-8600,
+              8800
+            </p>
+            <p class="copyright">
+              Copyright © PEPPER SAVINGS BANK. ALL rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>

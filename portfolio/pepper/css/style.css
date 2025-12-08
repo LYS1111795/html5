@@ -161,7 +161,7 @@ a {
 
 .txt2 {
   color: #111;
-  font-family: PEPPERS;
+  font-family: "PEPPERS";
   font-size: 70px;
   font-style: normal;
   font-weight: 700;
@@ -172,7 +172,7 @@ a {
   position: relative;
   display: flex;
   margin: 0 auto;
-  width: 1824px;
+  /* width: 1824px; */
   height: 500px;
   justify-content: space-between;
   align-items: center;
@@ -332,6 +332,14 @@ a {
   left: 240px;
 }
 
+.right-card {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  margin-left: 200px;
+}
+
 .Rcard {
   display: flex;
   width: 447px;
@@ -438,120 +446,253 @@ a {
   background: #cf4844;
 }
 
-/* =================================================== */
-/* 1. ESG 섹션 전체 (.esg-section) 스타일 */
-/* =================================================== */
+/**/
+
 .esg-section {
-  display: flex;
-  width: 1920px; /* 고정된 너비 */
-  height: 1062px;
-  padding-top: 70px;
-  flex-direction: column; /* 제목과 카드를 세로로 쌓음 */
-  align-items: center; /* 가로 중앙 정렬 */
-  background: #fff;
-  margin: 0 auto; /* 섹션 자체를 페이지 중앙에 배치 (필요시) */
-}
-
-/* 섹션 제목 (h1) 스타일 */
-.esg-section h1 {
-  font-size: 40px;
-  font-family: "PEPPERS"; /* 사용하시는 폰트 */
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 50px; /* 카드 그룹과의 간격 */
-}
-
-/* =================================================== */
-/* 2. 카드 묶음 (.esg-wrap) 스타일: 가로 정렬 담당 */
-/* =================================================== */
-.esg-wrap {
-  display: flex; /* ✨ 핵심: 카드들을 가로로 나란히 배치 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  gap: 100px; /* 카드들 사이의 간격 */
+  background-color: #fff !important;
+  padding: 80px 0;
+  text-align: left;
   width: 100%;
-  max-width: 1200px; /* (옵션) 콘텐츠의 최대 너비 제한 */
+  font-family: "Pretendard";
 }
 
-/* =================================================== */
-/* 3. 개별 카드 (.esg-item) 스타일 */
-/* =================================================== */
-.esg-item {
-  display: flex;
-  flex-direction: column; /* 카드 내부 요소를 세로로 쌓음 */
-  align-items: center; /* 카드 내부 요소를 가로 중앙에 정렬 */
-  width: 330px; /* 카드 개별 너비 설정 */
+.esg-section h3 {
+  font-family: "PEPPERS";
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 80px;
+  color: #000;
   text-align: center;
-  gap: 15px; /* 카드 내부 요소 간 간격 */
-
-  /* 카드 사이 세로선 */
-  border-right: 1px solid #ddd;
-  padding-right: 50px;
 }
 
-/* 마지막 카드에는 세로선 제거 */
-.esg-wrap .esg-item:last-child {
+.esg-list {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.esg-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  border-right: 1px solid #cf4844;
+}
+
+.esg-item:last-child {
   border-right: none;
-  padding-right: 0;
 }
 
-/* =================================================== */
-/* 4. 카드 내부 요소 스타일 */
-/* =================================================== */
-
-/* 아이콘 컨테이너 */
-.icon-box {
-  width: 100px;
-  height: 100px;
+.esg-item img {
+  width: 450px;
+  height: auto;
   margin-bottom: 10px;
 }
 
-.icon-box img {
-  width: 100%;
-  height: auto;
-}
-
-/* 서브타이틀 (Green Finance) */
-.esg-item .subtitle {
-  color: #000;
-  font-family: "Pretendard";
-  font-size: 18px;
-  font-weight: 400;
-}
-
-/* 카드 제목 (녹색금융) */
-.esg-item h4 {
-  color: #000;
-  font-family: "Pretendard";
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 5px; /* 리스트와의 간격 */
-}
-
-/* 피쳐 리스트 (친환경 차량 담보 대출 등) */
-.esg-item .features {
-  list-style-type: none; /* 리스트 점 제거 */
-  padding-left: 0; /* 리스트 들여쓰기 제거 */
-  margin-top: 0;
-  color: #000;
-  font-family: "Pretendard";
+.esg-item span {
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6; /* 줄 간격 */
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-/* 상세보기 버튼 */
-.btn-detail {
-  color: #cf4844;
-  text-decoration: none; /* 밑줄 제거 */
-  font-family: Pretendard;
+.esg-item h4 {
+  font-family: "PEPPERS";
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.esg-item ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+  color: #111;
   font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  width: 180px; /* 버튼 너비 축소 */
-  height: 50px; /* 버튼 높이 축소 */
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
+  line-height: 1.5;
+}
+
+.esg-item a {
+  display: inline-block;
+  padding: 15px 60px;
   border: 2px solid #cf4844;
-  margin-top: 30px; /* 리스트와의 간격 */
+  border-radius: 50px;
+  color: #cf4844;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  background: #fff;
+  transition: all 0.3s;
+  margin-top: auto;
+}
+
+.esg-item a:hover {
+  background: #cf4844;
+  color: #fff;
+}
+
+/**/
+
+.news-section {
+  background-color: #f5f6f8;
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Pretendard";
+}
+
+.news-section h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto 60px auto;
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+  white-space: nowrap;
+}
+
+.news-section h3::before,
+.news-section h3::after {
+  content: "";
+  height: 1px;
+  background-color: #dbdbdb;
+  flex: 1;
+}
+.news-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news-card {
+  background-color: #fff;
+  width: 590px;
+  height: 200px;
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.35;
+  margin: 0;
+  word-break: keep-all;
+  width: 90%;
+}
+
+.news-card .date {
+  position: absolute;
+  bottom: 35px;
+  left: 40px;
+  font-size: 15px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.news-card a {
+  position: absolute;
+  bottom: 35px;
+  right: 40px;
+  font-size: 15px;
+  color: #333;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/**/
+
+footer {
+  background-color: #4b4b4b;
+  width: 100%;
+  font-family: "Pretendard";
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  border-bottom: 1px solid #5d5d5d;
+  padding: 20px 0;
+}
+
+.footer-links ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 15px;
+}
+
+.footer-links li::after {
+  content: "|";
+  color: #888;
+  font-size: 12px;
+}
+
+.footer-links li:last-child::after {
+  display: none;
+}
+
+.company-info {
+  padding: 40px 0 60px 0;
+  color: #999;
+  font-family: "pre";
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.company-info p {
+  margin: 5px 0;
+}
+
+.company-info address {
+  font-style: normal;
+  display: inline;
+}
+
+.company-info .copyright {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #777;
 }
