@@ -99,24 +99,21 @@ a {
 
 /**/
 
-/* 슬라이드 전체를 감싸는 틀 (보여지는 화면) */
 .main-slider {
   width: 100%;
-  overflow: hidden; /* 틀 밖으로 나간 배너는 안 보이게 숨김 */
-  position: relative; /* 나중에 화살표 버튼 위치 잡을 때 기준 */
+  overflow: hidden;
+  position: relative;
 }
 
-/* 배너들이 일렬로 서 있는 긴 기차 (실제로 움직이는 부분) */
 .slider-wrapper {
-  display: flex; /* 배너들을 가로로 나열 */
+  display: flex;
   width: 100%;
-  transition: transform 0.5s ease; /* 움직일 때 부드럽게 쓱- */
+  transition: transform 0.5s ease;
 }
 
-/* 개별 슬라이드 구역 */
 .slide {
-  min-width: 100%; /* 슬라이드 하나가 화면(틀) 너비를 꽉 채우게 */
-  display: flex; /* 내용물 중앙 정렬을 위해 */
+  min-width: 100%;
+  display: flex;
   justify-content: center;
 }
 
@@ -147,6 +144,7 @@ a {
   display: flex;
   gap: 5.64475rem;
   font-family: "PEPPERS";
+  font-size: 20px;
 }
 
 .top-menu a {
@@ -275,37 +273,45 @@ a {
 }
 
 .info {
-  width: 1585px;
-  height: 589px;
-  margin: 200px auto;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  min-height: 600px;
+  margin: 150px auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 100px;
   align-items: flex-start;
 }
-
 .left-txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 60px;
+  gap: 40px;
   position: relative;
+  margin-top: -8px;
+}
+
+.left-txt h1 {
+  margin-top: 0;
+  line-height: 1.1;
 }
 
 .info h1 {
   color: #000;
   font-family: "PEPPERS";
-  font-size: 70px;
+  font-size: 65px;
   font-style: normal;
   font-weight: 700;
   line-height: 70px;
 }
 
 .line {
-  width: 450px;
+  width: 430px;
   height: 18px;
   position: absolute;
-  left: -10px;
+  left: -15px;
   top: 120px;
   background: #fbc3c3;
   z-index: -1;
@@ -339,25 +345,25 @@ a {
   left: 240px;
 }
 
-.right-card {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  justify-content: center;
-  margin-left: 200px;
-}
-
 .Rcard {
+  width: 48%;
+  height: 550px !important;
+  flex-shrink: 0;
+  padding: 40px 30px;
   display: flex;
-  width: 447px;
-  height: 550px;
-  padding: 40px 50px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 20px 50px 50px 20px;
   background: #fff;
   box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.Rcard .badge {
+  margin-bottom: 25px;
 }
 
 .badge {
@@ -382,29 +388,50 @@ a {
 .Rcard h2 {
   color: #000;
   font-family: "PEPPERS";
-  font-size: 40px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -2.4px;
+  margin-bottom: 25px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.Rcard ul.loanCard {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .Rcard ul li:first-child {
   align-self: stretch;
   color: #666;
   font-family: "Pretendard";
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
   letter-spacing: -1.2px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  height: 84px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: keep-all;
+  text-align: left;
 }
 
 .Rcard ul li span {
   color: #000;
   font-family: "Pretendard";
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
@@ -415,7 +442,7 @@ a {
   align-self: stretch;
   color: #cf4844;
   font-family: "Pretendard";
-  font-size: 40px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 800;
   line-height: 40px;
@@ -433,6 +460,12 @@ a {
   letter-spacing: -1.2px;
 }
 
+.Rcard a {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .Rcard h5 {
   color: #fff;
   text-align: center;
@@ -443,7 +476,8 @@ a {
   line-height: 28px;
   letter-spacing: -1.5px;
   display: flex;
-  width: 270px;
+  width: 100%; /* 버튼 h5도 꽉 채우기 */
+  max-width: 320px; /* 최대 너비 설정 */
   height: 50px;
   justify-content: center;
   align-items: center;
@@ -781,4 +815,109 @@ footer {
 
 .next-btn {
   right: 50px;
+}
+
+/**/
+
+.right-card {
+  width: 833px !important;
+  padding: 0 30px 90px 30px;
+  box-sizing: content-box;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  transform: translateX(50px);
+}
+.card-wrapper {
+  display: flex;
+  width: max-content;
+  gap: 0 !important;
+}
+
+.card-group {
+  width: 833px !important;
+  margin-right: 60px !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.Rcard {
+  width: 48%;
+  margin-right: 20px;
+  height: 550px !important;
+  flex-shrink: 0;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 50px 50px 20px;
+  background: #fff;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin: 0 !important;
+  border: 1px solid #eee;
+}
+
+.card-pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background-color: #cf4844;
+  width: 30px;
+  border-radius: 100px;
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff0000;
+  width: 30px;
+  border-radius: 10px;
+}
+
+/**/
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hand img {
+  animation: floating 2.5s ease-in-out infinite;
 }
