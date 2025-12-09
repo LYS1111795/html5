@@ -283,6 +283,7 @@ a {
   justify-content: center;
   gap: 100px;
   align-items: flex-start;
+  padding-top: 80px;
 }
 .left-txt {
   display: flex;
