@@ -102,7 +102,7 @@ a {
   width: 100%;
   overflow: visible;
   position: relative;
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 .slider-wrapper {
@@ -217,7 +217,7 @@ a {
   border-top: 1px solid #eee;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   display: none;
-  padding: 40px 0 60px 0;
+  padding: 8px 0 60px 0;
   text-align: center;
 }
 
@@ -232,53 +232,6 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-}
-
-.cs-box {
-  position: absolute;
-  left: 20px;
-  top: 0;
-  width: 300px;
-  background: #f8f9fa;
-  padding: 30px;
-  border-radius: 16px;
-  text-align: left;
-}
-
-.cs-title {
-  font-family: "Pretendard";
-  font-size: 20px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cs-number {
-  font-family: "Pretendard";
-  font-size: 40px;
-  font-weight: 900;
-  color: #cf4844;
-  margin-bottom: 30px;
-  letter-spacing: -1px;
-}
-
-.cs-time p.tit {
-  font-family: "Pretendard";
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-.cs-time p {
-  font-family: "Pretendard";
-  font-size: 15px;
-  color: #666;
-  line-height: 1.5;
-  margin: 0;
 }
 
 .menu-list-group {
@@ -395,10 +348,9 @@ a {
   align-items: center;
   position: absolute;
   top: auto;
-  bottom: -35px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-
   border-radius: 50px;
   background: #cf4844;
   z-index: 100;
