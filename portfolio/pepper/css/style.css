@@ -72,7 +72,6 @@
 
 @font-face {
   font-family: "PEPPERS";
-  /* 점 두 개(..)가 핵심입니다! '내 위쪽 폴더로 나가서' 라는 뜻입니다 */
   src: url("../webfonts/PEPPERS_Bold.ttf") format("truetype");
 }
 
@@ -101,8 +100,9 @@ a {
 
 .main-slider {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+  margin-top: 0;
 }
 
 .slider-wrapper {
@@ -121,10 +121,12 @@ a {
 
 .header {
   width: 100%;
-  height: 60%;
-  margin: 0;
+  height: 80px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 9999;
 }
-
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -158,6 +160,162 @@ a {
   gap: 1.5625rem;
 }
 
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  position: relative;
+}
+
+.logo a,
+.right-icons {
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.gnb-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.gnb {
+  display: flex;
+  gap: 0;
+  margin: 0;
+}
+
+.gnb li {
+  width: 180px;
+  text-align: center;
+}
+
+.gnb li a {
+  font-family: "PEPPERS";
+  font-size: 20px;
+  color: #111;
+  line-height: 80px;
+  display: block;
+}
+
+.full-dropdown {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  display: none;
+  padding: 40px 0 60px 0;
+  text-align: center;
+}
+
+.header:hover .full-dropdown {
+  display: block;
+}
+
+.dropdown-inner {
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.cs-box {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 300px;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.cs-title {
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs-number {
+  font-family: "Pretendard";
+  font-size: 40px;
+  font-weight: 900;
+  color: #cf4844;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+.cs-time p.tit {
+  font-family: "Pretendard";
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.cs-time p {
+  font-family: "Pretendard";
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.menu-list-group {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding-top: 10px;
+}
+
+.sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 180px;
+  align-items: center;
+}
+
+.sub-list li {
+  width: 100%;
+}
+
+.sub-list li a {
+  font-family: "Pretendard";
+  font-size: 17px;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: block;
+}
+
+.sub-list li a:hover {
+  color: #cf4844;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/**/
 .slide1 {
   position: relative;
   display: flex;
@@ -236,12 +394,15 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: auto;
+  bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
-  top: 520px;
+
   border-radius: 50px;
   background: #cf4844;
-  z-index: 10;
+  z-index: 100;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .quick-menu ul {
