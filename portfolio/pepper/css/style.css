@@ -997,9 +997,21 @@ footer {
   }
 }
 
+/* =========================================
+   [수정됨] 모바일 화면 (768px 이하)
+   ========================================= */
 @media screen and (max-width: 768px) {
+  /* --- 1. 헤더 & 로고 --- */
   .header {
     height: 60px;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .header-inner {
+    width: 100% !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
   }
 
   .header .logo img {
@@ -1014,6 +1026,7 @@ footer {
     display: none;
   }
 
+  /* --- 2. 배너(슬라이더) 삭제 --- */
   .slider-wrapper,
   .prev-btn,
   .next-btn {
@@ -1027,34 +1040,33 @@ footer {
     height: 0 !important;
   }
 
+  /* --- 3. 퀵 메뉴 (최상단 이동 & 그리드) --- */
   .quick-menu {
     position: static !important;
     transform: none !important;
-    width: 100% !important; /* 좌우 꽉 차게 */
+    width: 100% !important;
     margin: 0 0 40px 0 !important;
     padding: 20px 20px !important;
-    background: #fff !important; /* 흰색 배경으로 깔끔하게 */
-    box-shadow: none !important; /* 그림자 제거 (플랫하게) */
+    background: #fff !important;
+    box-shadow: none !important;
     height: auto !important;
     border-radius: 0 !important;
   }
 
-  /* 2. UL 리스트: 2행 2열 그리드 형태로 변경 */
   .quick-menu ul {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important; /* 1:1 비율로 2개씩 */
-    gap: 12px !important; /* 버튼 사이 간격 */
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
     width: 100% !important;
   }
 
-  /* 3. 각 메뉴 아이템 (LI): 카드 형태의 버튼으로 디자인 */
   .quick-menu ul li {
     width: 100% !important;
-    border: 1px solid #eee !important; /* 테두리 추가 */
+    border: 1px solid #eee !important;
     border-radius: 12px !important;
     padding: 15px 0 !important;
     text-align: center !important;
-    background-color: #f9f9f9 !important; /* 연한 회색 배경 */
+    background-color: #f9f9f9 !important;
     transition: background-color 0.2s;
   }
 
@@ -1070,6 +1082,7 @@ footer {
     color: #333 !important;
     font-weight: 600 !important;
     text-decoration: none !important;
+    line-height: normal !important; /* 폰트 높이 초기화 */
   }
 
   .quick-menu ul li:first-child {
@@ -1079,99 +1092,150 @@ footer {
   .quick-menu ul li:first-child a {
     color: #fff !important;
   }
-}
 
-.info {
-  padding: 0 20px;
-  margin: 50px auto;
-  gap: 40px;
-}
+  /* --- 4. Info 섹션 (세로 정렬) --- */
+  .info {
+    padding: 0 20px !important;
+    margin: 50px auto !important;
+    gap: 40px !important;
+    flex-direction: column !important; /* PC 영향 안 받게 여기 들어와 있어야 함 */
+  }
 
-.left-txt h1 {
-  font-size: 40px;
-}
+  .left-txt {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
 
-.left-txt h3 {
-  font-size: 22px;
-}
+  .left-txt h1 {
+    font-size: 40px !important;
+  }
 
-.left-txt .line {
-  display: none;
-}
+  .left-txt h3 {
+    font-size: 22px !important;
+  }
 
-.tab-header {
-  justify-content: center;
-}
+  .left-txt .line {
+    display: none !important;
+  }
 
-.tab-btn {
-  font-size: 22px;
-  padding: 10px;
-}
+  /* --- 5. 탭 버튼 & 카드 섹션 --- */
+  .tab-header {
+    justify-content: center !important;
+  }
 
-.card-wrapper {
-  flex-direction: column;
-}
+  .tab-btn {
+    font-size: 22px !important;
+    padding: 10px !important;
+  }
 
-.Rcard {
-  width: 100%;
-  height: auto;
-  min-height: 350px;
-}
+  .card-wrapper {
+    flex-direction: column !important; /* 세로 정렬 */
+    align-items: center !important;
+    gap: 20px !important;
+  }
 
-.esg-section {
-  padding: 50px 0;
-}
+  .Rcard {
+    width: 92% !important;
+    max-width: 400px !important;
+    height: auto !important;
+    min-height: 350px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 
-.esg-section h3 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
+  /* 카드 내용 중앙 정렬 */
+  .Rcard h2 {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .Rcard ul.loanCard {
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .Rcard ul.loanCard li {
+    text-align: center !important;
+    word-break: keep-all !important;
+  }
 
-.esg-list {
-  flex-direction: column;
-  gap: 40px;
-}
+  /* 버튼만 꽉 채우기 */
+  .Rcard > a {
+    width: 100% !important;
+    align-self: stretch !important;
+    margin-top: 20px !important;
+  }
+  .Rcard h5 {
+    width: 100% !important;
+  }
 
-.esg-item {
-  border-right: none;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 40px;
-}
+  /* --- 6. ESG 섹션 --- */
+  .esg-section {
+    padding: 50px 0 !important;
+  }
 
-.esg-item:last-child {
-  border-bottom: none;
-}
+  .esg-section h3 {
+    font-size: 28px !important; /* 글자 크기 축소 */
+    margin-bottom: 40px !important;
+    text-align: center !important;
+  }
 
-.news-section {
-  padding: 50px 20px;
-}
+  .esg-list {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
 
-.news-section h3 {
-  font-size: 36px;
-  gap: 15px;
-  margin-bottom: 40px;
-}
+  .esg-item {
+    border-right: none !important;
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 40px !important;
+  }
 
-.news-list {
-  flex-direction: column;
-}
+  .esg-item:last-child {
+    border-bottom: none !important;
+  }
 
-.news-card {
-  width: 100%;
-  height: auto;
-  min-height: 180px;
-}
+  .esg-item h4 {
+    font-size: 22px !important;
+  }
+  .esg-item span {
+    font-size: 14px !important;
+  }
 
-.footer-links ul {
-  flex-wrap: wrap;
-  gap: 10px;
-  line-height: 1.5;
-}
+  /* --- 7. 뉴스 섹션 --- */
+  .news-section {
+    padding: 50px 20px !important;
+  }
 
-.footer-links li a {
-  margin: 0 5px;
-}
+  .news-section h3 {
+    font-size: 28px !important;
+    gap: 15px !important;
+    margin-bottom: 40px !important;
+  }
 
-.company-info {
-  text-align: center;
-}
+  .news-list {
+    flex-direction: column !important;
+  }
+
+  .news-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px !important;
+  }
+
+  /* --- 8. 푸터 --- */
+  .footer-links ul {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    line-height: 1.5 !important;
+  }
+
+  .footer-links li a {
+    margin: 0 5px !important;
+  }
+
+  .company-info {
+    text-align: center !important;
+  }
+} /* <--- ★★★ 여기가 진짜 끝입니다! 이 괄호가 파일의 가장 마지막에 있어야 해요! ★★★ */
