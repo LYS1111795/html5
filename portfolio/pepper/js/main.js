@@ -67,76 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
     startAuto();
   }
 
-  // 하단 카드 슬라이드
+  const tabBtns = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
 
-  const cardWrapper = document.querySelector(".card-wrapper");
-  const cardGroups = document.querySelectorAll(".card-group");
-  const paginationContainer = document.querySelector(".card-pagination");
+  if (tabBtns.length > 0 && tabContents.length > 0) {
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
 
-  if (cardWrapper && cardGroups.length > 0) {
-    const groupClone = cardGroups[0].cloneNode(true);
-    cardWrapper.appendChild(groupClone);
+        tabBtns.forEach((b) => b.classList.remove("active"));
 
-    let groupIndex = 0;
-    const groupCount = cardGroups.length;
-    let groupInterval;
+        tabContents.forEach((c) => c.classList.remove("active"));
+        tabContents.forEach((c) => (c.style.display = "none"));
 
-    const groupWidth = 893;
-    if (paginationContainer) {
-      paginationContainer.innerHTML = "";
-      for (let i = 0; i < groupCount; i++) {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-        if (i === 0) dot.classList.add("active");
+        btn.classList.add("active");
 
-        dot.addEventListener("click", () => {
-          stopGroupAuto();
-          moveGroupSlide(i);
-          startGroupAuto();
-        });
-        paginationContainer.appendChild(dot);
-      }
-    }
+        const targetId = btn.getAttribute("data-tab");
+        const targetContent = document.getElementById(targetId);
 
-    const dots = document.querySelectorAll(".dot");
-
-    function updateDots(index) {
-      dots.forEach((dot) => dot.classList.remove("active"));
-      let activeIndex = index;
-      if (index === groupCount) activeIndex = 0;
-      if (dots[activeIndex]) dots[activeIndex].classList.add("active");
-    }
-
-    function moveGroupSlide(index) {
-      cardWrapper.style.transition = "transform 1.0s ease";
-
-      cardWrapper.style.transform = `translateX(-${index * groupWidth}px)`;
-      groupIndex = index;
-      updateDots(index);
-
-      if (index === groupCount) {
-        setTimeout(() => {
-          cardWrapper.style.transition = "none";
-          cardWrapper.style.transform = "translateX(0px)";
-          groupIndex = 0;
-          updateDots(0);
-        }, 1000);
-      }
-    }
-
-    function nextGroup() {
-      if (groupIndex >= groupCount) return;
-      moveGroupSlide(groupIndex + 1);
-    }
-
-    function startGroupAuto() {
-      groupInterval = setInterval(nextGroup, 3000);
-    }
-
-    function stopGroupAuto() {
-      clearInterval(groupInterval);
-    }
-
-    startGroupAuto();
+        if (targetContent) {
+          targetContent.classList.add("active");
+          targetContent.style.display = "block";
+        }
+      });
+    });
+  } else {
+    console.error(
+      "탭 버튼이나 내용을 찾을 수 없습니다. HTML 클래스명을 확인하세요."
+    );
   }
 });
