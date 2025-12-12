@@ -997,11 +997,8 @@ footer {
   }
 }
 
-/* =========================================
-   [수정됨] 모바일 화면 (768px 이하)
-   ========================================= */
 @media screen and (max-width: 768px) {
-  /* --- 1. 헤더 & 로고 --- */
+  /* 1. 헤더 & 로고  */
   .header {
     height: 60px;
     width: 100% !important;
@@ -1026,7 +1023,7 @@ footer {
     display: none;
   }
 
-  /* --- 2. 배너(슬라이더) 삭제 --- */
+  /* 2. 배너(슬라이더) 삭제 */
   .slider-wrapper,
   .prev-btn,
   .next-btn {
@@ -1040,7 +1037,7 @@ footer {
     height: 0 !important;
   }
 
-  /* --- 3. 퀵 메뉴 (최상단 이동 & 그리드) --- */
+  /*  3. 퀵 메뉴  */
   .quick-menu {
     position: static !important;
     transform: none !important;
@@ -1082,7 +1079,7 @@ footer {
     color: #333 !important;
     font-weight: 600 !important;
     text-decoration: none !important;
-    line-height: normal !important; /* 폰트 높이 초기화 */
+    line-height: normal !important;
   }
 
   .quick-menu ul li:first-child {
@@ -1093,12 +1090,12 @@ footer {
     color: #fff !important;
   }
 
-  /* --- 4. Info 섹션 (세로 정렬) --- */
+  /*  4. Info 섹션 (세로 정렬)  */
   .info {
     padding: 0 20px !important;
     margin: 50px auto !important;
     gap: 40px !important;
-    flex-direction: column !important; /* PC 영향 안 받게 여기 들어와 있어야 함 */
+    flex-direction: column !important;
   }
 
   .left-txt {
@@ -1119,7 +1116,7 @@ footer {
     display: none !important;
   }
 
-  /* --- 5. 탭 버튼 & 카드 섹션 --- */
+  /*  5. 탭 버튼 & 카드 섹션  */
   .tab-header {
     justify-content: center !important;
   }
@@ -1130,7 +1127,7 @@ footer {
   }
 
   .card-wrapper {
-    flex-direction: column !important; /* 세로 정렬 */
+    flex-direction: column !important;
     align-items: center !important;
     gap: 20px !important;
   }
@@ -1170,13 +1167,13 @@ footer {
     width: 100% !important;
   }
 
-  /* --- 6. ESG 섹션 --- */
+  /*  6. ESG 섹션  */
   .esg-section {
     padding: 50px 0 !important;
   }
 
   .esg-section h3 {
-    font-size: 28px !important; /* 글자 크기 축소 */
+    font-size: 28px !important;
     margin-bottom: 40px !important;
     text-align: center !important;
   }
@@ -1203,7 +1200,7 @@ footer {
     font-size: 14px !important;
   }
 
-  /* --- 7. 뉴스 섹션 --- */
+  /*  7. 뉴스 섹션  */
   .news-section {
     padding: 50px 20px !important;
   }
@@ -1224,7 +1221,7 @@ footer {
     min-height: 180px !important;
   }
 
-  /* --- 8. 푸터 --- */
+  /*  8. 푸터  */
   .footer-links ul {
     flex-wrap: wrap !important;
     gap: 10px !important;
@@ -1238,4 +1235,129 @@ footer {
   .company-info {
     text-align: center !important;
   }
-} /* <--- ★★★ 여기가 진짜 끝입니다! 이 괄호가 파일의 가장 마지막에 있어야 해요! ★★★ */
+}
+
+/* 모바일 메뉴 디자인 */
+
+.mobile-nav-layer {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 99999;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.mobile-nav-layer.active {
+  right: 0 !important;
+}
+
+.mobile-nav-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 2px solid #cf4844;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobile-nav-content {
+  padding: 0 !important;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+.ridi-gnb {
+  width: 100%;
+}
+
+.ridi-gnb > li {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* 대메뉴 버튼 디자인 */
+.depth1 {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 20px 25px !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  background-color: #fff !important;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.depth1.active {
+  color: #cf4844 !important;
+  background-color: #fff !important;
+}
+
+.arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  transform: rotate(135deg);
+  transition: transform 0.3s;
+  margin-top: -5px;
+}
+
+.depth1.active .arrow {
+  border-color: #cf4844 !important;
+  transform: rotate(-45deg) !important;
+  margin-top: 5px;
+}
+
+.ridi-sub {
+  display: none;
+  background-color: #f7f9fa !important;
+  padding: 15px 0 !important;
+  border-top: 1px solid #eee;
+}
+
+.ridi-sub li a {
+  display: block !important;
+  padding: 14px 30px !important;
+  font-size: 15px !important;
+  color: #666 !important;
+  font-weight: 500 !important;
+  text-decoration: none;
+}
+
+.ridi-sub li a:hover,
+.ridi-sub li a:active {
+  color: #cf4844 !important;
+  background-color: rgba(31, 140, 230, 0.05) !important;
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-nav-layer {
+    display: none !important;
+  }
+}

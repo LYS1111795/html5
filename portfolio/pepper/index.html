@@ -27,7 +27,9 @@
 
           <div class="right-icons">
             <a href="#"><img src="./images/search.svg" alt="검색" /></a>
-            <a href="#"><img src="./images/hambuger.svg" alt="전체메뉴" /></a>
+            <a href="#" class="menu-trigger">
+              <img src="./images/hambuger.svg" alt="전체메뉴" />
+            </a>
           </div>
         </div>
 
@@ -323,9 +325,10 @@
       </footer>
     </div>
     <script src="./js/main.js"></script>
+
     <div class="mobile-nav-layer">
       <div class="mobile-nav-header">
-        <span class="logo-text">전체메뉴</span>
+        <h2 class="menu-title">전체메뉴</h2>
         <button class="btn-close">
           <svg
             width="24"
@@ -343,6 +346,66 @@
         </button>
       </div>
 
-    
+      <div class="mobile-nav-content">
+        <ul class="ridi-gnb">
+          <li>
+            <a href="#" class="depth1">
+              예금
+              <span class="arrow"></span>
+            </a>
+            <ul class="ridi-sub">
+              <li><a href="#">입출금예금</a></li>
+              <li><a href="#">목돈모으기적금</a></li>
+              <li><a href="#">목돈굴리기예금</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="depth1">
+              대출
+              <span class="arrow"></span>
+            </a>
+            <ul class="ridi-sub">
+              <li><a href="#">신용대출</a></li>
+              <li><a href="#">담보대출</a></li>
+              <li><a href="#">자동차대출</a></li>
+              <li><a href="#">기업대출</a></li>
+              <li><a href="#">대출상담사 조회</a></li>
+              <li><a href="#">대출모집수수료율 공시</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="depth1">
+              고객센터
+              <span class="arrow"></span>
+            </a>
+            <ul class="ridi-sub">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이용안내게시판</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">서식자료실</a></li>
+              <li><a href="#">서식다운로드</a></li>
+              <li><a href="#">전화권유판매직원 조회</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="depth1">
+              은행소개
+              <span class="arrow"></span>
+            </a>
+            <ul class="ridi-sub">
+              <li><a href="#">은행안내</a></li>
+              <li><a href="#">경영공시</a></li>
+              <li><a href="#">ESG 경영</a></li>
+              <li><a href="#">페퍼소식</a></li>
+              <li><a href="#">인재채용</a></li>
+              <li><a href="#">영업점안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

@@ -99,19 +99,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //
-
 $(document).ready(function () {
-  // 1. 햄버거 버튼 클릭 시 메뉴 열기
-  // (.right-icons 안에 있는 두 번째 a태그가 햄버거라고 가정)
-  $(".right-icons a:last-child").click(function (e) {
-    e.preventDefault(); // 링크 이동 막기
-    $(".mobile-nav-layer").addClass("active"); // 메뉴 보이기
-    $("body").css("overflow", "hidden"); // 뒤에 본문 스크롤 막기
+  $(".menu-trigger").click(function (e) {
+    e.preventDefault();
+    $(".mobile-nav-layer").addClass("active");
+    $("body").css("overflow", "hidden");
   });
 
-  // 2. 닫기(X) 버튼 클릭 시 메뉴 닫기
   $(".btn-close").click(function () {
-    $(".mobile-nav-layer").removeClass("active"); // 메뉴 숨기기
-    $("body").css("overflow", "auto"); // 스크롤 다시 허용
+    $(".mobile-nav-layer").removeClass("active");
+    $("body").css("overflow", "auto");
+  });
+
+  $(".depth1").click(function (e) {
+    e.preventDefault();
+
+    $(this).next(".ridi-sub").slideToggle(300);
+
+    $(this).toggleClass("active");
   });
 });
