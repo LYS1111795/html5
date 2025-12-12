@@ -424,7 +424,7 @@ a {
   width: 450px;
   flex-shrink: 0;
   position: relative;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .left-txt h1 {
@@ -442,7 +442,7 @@ a {
   height: 18px;
   background: #fbc3c3;
   position: absolute;
-  top: 170px;
+  top: 200px;
   left: -20px;
   z-index: -1;
 }
@@ -621,7 +621,7 @@ a {
 }
 
 .Rcard ul li:first-child {
-  font-size: 20px;
+  font-size: 18px;
   color: #666;
   line-height: 1.5;
   height: 90px;
@@ -634,7 +634,7 @@ a {
 }
 
 .Rcard ul li:nth-child(2) {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 800;
   color: #cf4844;
   margin-top: auto;
@@ -643,7 +643,7 @@ a {
 }
 
 .Rcard ul li:nth-child(3) {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
   margin-bottom: 20px;
