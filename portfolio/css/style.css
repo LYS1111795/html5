@@ -642,7 +642,6 @@ a {
   width: 100%;
   min-height: 500px;
   position: relative;
-  padding-bottom: 100vh;
 }
 .section-title3 {
   display: flex;
